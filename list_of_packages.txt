@@ -1,0 +1,9 @@
+We use the following packages:
+
+	fx2lib (FX2 Firmware)
+	fx2tools (fx2loader to program EEPROM)
+	cystream
+	Xilinx to generate FPGA code
+	GNU Radio
+	libusb 1.0
+	python-libusb1
