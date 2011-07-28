@@ -1,4 +1,4 @@
 libusb-1.0
 gnuradio
 sdcc (to build firmware)
-fx2load (for loading new fw to the fx2)
+fxload (for loading new fw to the fx2 and eeprom)

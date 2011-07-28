@@ -322,7 +322,7 @@ int main(int argc, char *argv[]){
     	act.sa_flags = 0;
     	sigaction(SIGINT, &act, NULL); //SIGINT = kill process (gracefully)
 	sigaction(SIGUSR1, &act, NULL);//SIGUSR1 = Resume getting data (user clicks "Start")
-	sigaction(SIGUSR2, &act, NULL);//SIGUSR2 = Pause getting data (user clicks "Stop")
+	sigaction(SIGUSR2, &act, NULL);//Pause getting data (user clicks "Stop")
 
 	//wait for a SIGUSR1
 	pause();
