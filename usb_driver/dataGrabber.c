@@ -80,7 +80,7 @@ void callback_fn(struct libusb_transfer *transfer){
 	unsigned char tmp[64];
 	unsigned char i_1,i_2,j_1,j_2; //dont confuse these with our counter vars.
 
-	gettimeofday(&t1, NULL);
+	//gettimeofday(&t1, NULL);
 
 	//find position of the first packet marker
 	i=getNextPacket(i,transfer);	
@@ -113,11 +113,11 @@ void callback_fn(struct libusb_transfer *transfer){
 
 	fflush(fp);
 
-	gettimeofday(&t2, NULL);  
+	//gettimeofday(&t2, NULL);  
 
-	elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-    	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-	printf("%f\n",elapsedTime);
+	//elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
+    	//elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
+	//printf("%f\n",elapsedTime);
 
 	if(_continue){
 		libusb_submit_transfer(transfer);
@@ -265,7 +265,7 @@ int main(int argc, char *argv[]){
 	}
 	else if(live_mode){
 		ret=mkfifo(filename,0777);
-		if(ret==0){
+		if(ret!=0){
 			fprintf(stderr,"Error, unable to create named pipe.\n");
 			exit(-2);
 		}

@@ -6,10 +6,12 @@ from AboutFrame import *
 from RTConfigFrame import *
 from FRConfigFrame import *
 from RAConfigFrame import *
+from gnu_radio import waterfall
 import subprocess
 import signal
 import time
-
+import sys
+import os
 
 # begin wxGlade: dependencies
 # end wxGlade
@@ -21,7 +23,7 @@ import time
 class MainFrame(wx.Frame):
     def __init__(self, *args, **kwds):
         # begin wxGlade: MainFrame.__init__
-        kwds["style"] = wx.CAPTION|wx.CLOSE_BOX|wx.MINIMIZE_BOX|wx.MAXIMIZE|wx.MAXIMIZE_BOX|wx.SYSTEM_MENU|wx.RESIZE_BORDER|wx.FULL_REPAINT_ON_RESIZE|wx.CLIP_CHILDREN
+        kwds["style"] = wx.CAPTION|wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX|wx.SYSTEM_MENU|wx.RESIZE_BORDER|wx.FULL_REPAINT_ON_RESIZE|wx.CLIP_CHILDREN
         wx.Frame.__init__(self, *args, **kwds)
         
         # Menu Bar
@@ -68,6 +70,9 @@ class MainFrame(wx.Frame):
         self.main_toolbar.AddLabelTool(6, "Stop", wx.Bitmap("/home/phil/sdr gui/images/icons/stop.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Stop", "Stop capturing data")
         # Tool Bar end
 
+	self.main_area=TopSplitPanel(self)
+	sys.stdout=self
+
         self.__set_properties()
         self.__do_layout()
 
@@ -87,17 +92,14 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_TOOL, self.OnDAMode, id=4)
         self.Bind(wx.EVT_TOOL, self.OnStart, id=5)
         self.Bind(wx.EVT_TOOL, self.OnStop, id=6)
+	#self.Bind(wx.EVT_CLOSE,self.OnExitButton)
         # end wxGlade
-
+	
 	#popup here to select filepath?
 
-	self.driver=subprocess.Popen(['../usb_driver/data_recorder', '-f', '../testdata.bin' '-l'])
+	self.driver=subprocess.Popen(['sudo','../usb_driver/data_recorder', '-f', '../testdata.bin', '-l'])
 	self.configState=0
-	time.sleep(1)
-	if self.driver.poll() != None:
-		dlg =wx.MessageDialog(None, "Device not found.  Please restart application with device attached.", "Device not found.", wx.OK | wx.ICON_WARNING)
-		dlg.ShowModal()
-		#exit here
+	self.checkprocess()
 
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
@@ -114,9 +116,10 @@ class MainFrame(wx.Frame):
         # begin wxGlade: MainFrame.__do_layout
         main_sizer = wx.BoxSizer(wx.VERTICAL)
         self.SetSizer(main_sizer)
+	main_sizer.Add(self.main_area,2,wx.EXPAND | wx.ALL)
         main_sizer.Fit(self)
         self.Layout()
-        self.Centre()
+       # self.Centre()
         # end wxGlade
 
     def OnExportCSV(self, event): # wxGlade: MainFrame.<event_handler>
@@ -132,7 +135,11 @@ class MainFrame(wx.Frame):
         event.Skip()
 
     def OnExit(self, event): # wxGlade: MainFrame.<event_handler>
-	self.driver.send_signal(signal.SIGINT)
+	try:
+		self.driver.send_signal(signal.SIGINT)
+	except(OSError):
+		pass
+	self.driver.wait()
         self.Close()
 	event.Skip()
 
@@ -175,7 +182,7 @@ class MainFrame(wx.Frame):
         event.Skip()
 
     def OnFRMode(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Running in Data Analysis Mode. Click Start to begin capturing data."
+        print "Running in Full Record Mode. Click Start to begin capturing data."
 	self.configState="FR"
         event.Skip()
 
@@ -185,26 +192,104 @@ class MainFrame(wx.Frame):
         event.Skip()
 
     def OnStart(self, event): # wxGlade: MainFrame.<event_handler>
-        self.driver.send_signal(signal.SIGUSR1)
+        
+	#self.checkprocess()
 	if self.configState==0:
-		dlg =wx.MessageDialog(None, "Error: No mode selected. Set the mode to capture data in.", "Not Configured.", wx.OK | wx.ICON_WARNING)
+		dlg =wx.MessageDialog(None, "Error: No mode selected. Set the mode to capture data in.", "Not Configured.", wx.OK |\
+														 wx.ICON_WARNING)
 		dlg.ShowModal()
 		event.Skip()
 		return None
+	else:
+		try:
+			self.driver.send_signal(signal.SIGUSR1)
+		except(OSError):
+			checkprocess()
 
-	print "Running..."
+		print "Running..."
 
-	#switch statement here, determine which mode, load right module
+		#tb = waterfall.top_block(self)
+		#tb.Run(True)
 
         event.Skip()
 
     def OnStop(self, event): # wxGlade: MainFrame.<event_handler>
-        self.driver.send_signal(signal.SIGUSR2)
+	try:
+        	self.driver.send_signal(signal.SIGUSR2)
+	except(OSError):
+		self.checkprocess()
+
 	if self.configState!=0:
 		self.configState=0
 		print "Stopped."
         event.Skip()
 
+    def write(self, text):
+	self.main_area.console.consoleTextBox.AppendText(text)
+
+    def checkprocess(self):
+	time.sleep(1)
+	if self.driver.poll() != None:
+		dlg =wx.MessageDialog(None, "Oops, an error happened.  Check the output in the console.", "Error.", wx.OK |\
+													wx.ICON_WARNING)
+		dlg.ShowModal()
+		#exit here
+
 # end of class MainFrame
 
+
+#defines the console panel.
+class ConsoleFrame(wx.Panel):
+    def __init__(self,parent):
+        wx.Panel.__init__(self,parent)
+        
+        #create a boxsizer to control how objects are spaced
+        vboxSizer=wx.BoxSizer(wx.VERTICAL)
+        #set the background to white
+        self.SetBackgroundColour(wx.WHITE)
+        
+        #add text so the user knows that area is the console
+        title=wx.StaticText(self,label="Console:")
+        
+        #add a text box which will contain the console text
+        self.consoleTextBox=wx.TextCtrl(self,style=wx.TE_MULTILINE | wx.TE_DONTWRAP | wx.TE_READONLY )
+        
+        #add the text to the sizer
+        vboxSizer.Add(title)
+        #add the text box to the sizer
+        vboxSizer.Add(self.consoleTextBox, 1, wx.EXPAND | wx.ALL)
+        
+        self.SetSizer(vboxSizer)
+
+
+class GraphFrame(wx.Panel):
+	def __init__(self,parent):
+		wx.Panel.__init__(self,parent)
+        
+        	#create a boxsizer to control how objects are spaced
+        	vboxSizer=wx.BoxSizer(wx.VERTICAL)
+        	#set the background to white
+        	self.SetBackgroundColour(wx.WHITE)
+        
+        	#add text so the user knows that area is the console
+        	title=wx.StaticText(self,label="Graph:")
+        
+        	#add the text to the sizer
+        	vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL)
+        	#add the text box to the sizer
+        	#vboxSizer.Add(wx.Panel(self), 0, wx.EXPAND | wx.ALL)
+        
+        	self.SetSizer(vboxSizer)
+
+#this class splits the frame into two sections (one for the interface and one for the console)
+class TopSplitPanel(wx.SplitterWindow):
+    def __init__(self,parent):
+        wx.SplitterWindow.__init__(self,parent)
+        #create the two panels 
+	self.graph_frame=GraphFrame(self)
+        self.console = ConsoleFrame(self)
+        #split the frame and add the panels
+        self.SplitHorizontally(self.graph_frame,self.console, -200)
+	self.graph_frame.Fit()
+        self.SetMinimumPaneSize(100)
 
