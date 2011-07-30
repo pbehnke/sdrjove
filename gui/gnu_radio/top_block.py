@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Top Block
-# Generated: Mon Jul 25 18:51:01 2011
+# Generated: Fri Jul 29 16:44:55 2011
 ##################################################
 
 from gnuradio import eng_notation
@@ -30,7 +30,7 @@ class top_block(grc_wxgui.top_block_gui):
 		# Blocks
 		##################################################
 		self.gr_deinterleave_0 = gr.deinterleave(gr.sizeof_short*1)
-		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "/home/phil/fx2lib-git/fx2lib/examples/fpga_iso_2/multithread_c_app/my_fifo0123", True)
+		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "CHANGEME", True)
 		self.gr_float_to_complex_0 = gr.float_to_complex(1)
 		self.gr_short_to_float_0 = gr.short_to_float()
 		self.gr_short_to_float_1 = gr.short_to_float()

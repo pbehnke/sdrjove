@@ -12,6 +12,9 @@ import signal
 import time
 import sys
 import os
+import random
+import string
+import atexit
 
 # begin wxGlade: dependencies
 # end wxGlade
@@ -94,10 +97,21 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_TOOL, self.OnStop, id=6)
 	#self.Bind(wx.EVT_CLOSE,self.OnExitButton)
         # end wxGlade
-	
-	#popup here to select filepath?
 
-	self.driver=subprocess.Popen(['sudo','../usb_driver/data_recorder', '-f', '../testdata.bin', '-l'])
+
+	#make a random string for the temporary named pipe
+	self.temp_pipe_filename='../'+''.join(random.choice(string.ascii_uppercase) for x in range(6))+".sdrjove"
+	#temp_pipe_filename.join(".sdrjove")
+
+	
+	#popup here to select filepath
+	#file_selection=wx.FileDialog(self, "Choose a file to save data to.",style=wx.FD_SAVE)
+	#file_selection.Show()
+	
+	
+	subprocess.call(['gksudo','--','echo','Loading Driver...'])
+	
+	self.driver=subprocess.Popen(['sudo','--','../usb_driver/data_recorder', '-f', self.temp_pipe_filename, '-l'])
 	self.configState=0
 	self.checkprocess()
 
@@ -141,6 +155,7 @@ class MainFrame(wx.Frame):
 		pass
 	self.driver.wait()
         self.Close()
+	subprocess.call(['rm', '-f', self.temp_pipe_filename])
 	event.Skip()
 
     def OnRA(self, event): # wxGlade: MainFrame.<event_handler>
@@ -193,7 +208,7 @@ class MainFrame(wx.Frame):
 
     def OnStart(self, event): # wxGlade: MainFrame.<event_handler>
         
-	#self.checkprocess()
+	self.checkprocess()
 	if self.configState==0:
 		dlg =wx.MessageDialog(None, "Error: No mode selected. Set the mode to capture data in.", "Not Configured.", wx.OK |\
 														 wx.ICON_WARNING)
@@ -201,15 +216,19 @@ class MainFrame(wx.Frame):
 		event.Skip()
 		return None
 	else:
-		try:
-			self.driver.send_signal(signal.SIGUSR1)
-		except(OSError):
-			checkprocess()
+
+		#try:
+		subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
+		#except(OSError):
+		#	checkprocess()
+		#time.sleep(3)
+		#tb = waterfall.top_block(self,self.temp_pipe_filename)
+		#tb.Run(True)
+		#sleep(3)
+		
 
 		print "Running..."
 
-		#tb = waterfall.top_block(self)
-		#tb.Run(True)
 
         event.Skip()
 
@@ -233,7 +252,9 @@ class MainFrame(wx.Frame):
 		dlg =wx.MessageDialog(None, "Oops, an error happened.  Check the output in the console.", "Error.", wx.OK |\
 													wx.ICON_WARNING)
 		dlg.ShowModal()
-		#exit here
+
+		self.Close()
+		subprocess.call(['rm', '-f', self.temp_pipe_filename])
 
 # end of class MainFrame
 

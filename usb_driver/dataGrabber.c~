@@ -192,9 +192,6 @@ void transfer_factory(void *param){
 	libusb_submit_transfer(iso_xfer6); 
 	libusb_submit_transfer(iso_xfer7); 
 	libusb_submit_transfer(iso_xfer8); 
-		
-	//magic number to sleep to prevent excessive submitted transfers
-	//usleep(3600);
 
 
 }
@@ -213,9 +210,11 @@ void main_signal_handler(int signum)
 
     case SIGUSR1:
 	//do we need anything here?
+	printf("SIGUSR1 Received.  Continuing...\n");
         break;
 
     case SIGUSR2:
+	printf("SIGUSR2 Received.  Pausing Data Collection.\n");
 	pause();  //stop getting data until SIGUSR1
         break;
 
@@ -246,6 +245,16 @@ void init(int argc, char *argv[])
         }
     }
 
+
+    //register a handler for sigint
+    struct sigaction act;
+    act.sa_handler = main_signal_handler;
+    sigemptyset(&act.sa_mask);
+    act.sa_flags = 0;
+    sigaction(SIGINT, &act, NULL); //SIGINT = kill process (gracefully)
+    sigaction(SIGUSR1, &act, NULL);//SIGUSR1 = Resume getting data (user clicks "Start")
+    sigaction(SIGUSR2, &act, NULL);//SIGUSR2 = Pause getting data (user clicks "Stop")
+
 }
 
 /**********************************************************************************************
@@ -271,17 +280,19 @@ int main(int argc, char *argv[]){
 		}
 	}
 
+
+
 	//init libusb
 	printf("Initalizing library...");
-	libusb_init(&mycontext);
+	ret=libusb_init(&mycontext);
+	if(ret!=0){
+		exit(-3);
+	}
 	printf("Done.\n");
 	libusb_set_debug(mycontext,3);
-	
-	//open the file
-	fp=fopen(filename, "wb");
 
 	//open fx2
-	printf("Opening device with VID 0x04b4 and PID 0x0410...");
+	printf("Opening device with VID 0x04b4 and PID 0x8613...");
 	my_dev_handle=libusb_open_device_with_vid_pid(mycontext, 0x04b4,0x0410);
 	if(my_dev_handle==NULL){
 		printf("\nERROR: UNABLE TO OPEN DEVICE.\n");
@@ -303,7 +314,7 @@ int main(int argc, char *argv[]){
 		libusb_exit(mycontext);
 		exit(-1);
 	}
-	printf("Setting Alt Interface Setting to 3\n");
+	printf("Setting Alt Interface Setting to 3...");
 	ret=libusb_set_interface_alt_setting (my_dev_handle, 0, 3);
 	if(ret==0){
 		printf("Successful.\n");
@@ -315,17 +326,11 @@ int main(int argc, char *argv[]){
 		exit(-1);
 	}
 
-	//register a handler for sigint
-    	struct sigaction act;
-    	act.sa_handler = main_signal_handler;
-    	sigemptyset(&act.sa_mask);
-    	act.sa_flags = 0;
-    	sigaction(SIGINT, &act, NULL); //SIGINT = kill process (gracefully)
-	sigaction(SIGUSR1, &act, NULL);//SIGUSR1 = Resume getting data (user clicks "Start")
-	sigaction(SIGUSR2, &act, NULL);//SIGUSR2 = Pause getting data (user clicks "Stop")
-
 	//wait for a SIGUSR1
-	pause();
+	//pause();
+
+	//open the file
+	fp=fopen(filename, "wb");
 
 	transfer_factory(NULL);
 
