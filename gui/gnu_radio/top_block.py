@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Jul 29 16:44:55 2011
+# Generated: Sun Jul 31 00:22:26 2011
 ##################################################
 
 from gnuradio import eng_notation
@@ -23,25 +23,26 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		# Variables
 		##################################################
-		self.sample_rate_each_stream = sample_rate_each_stream = 0
-		self.samp_rate = samp_rate = 5000000
+		self.samp_rate = samp_rate = 20000000
 
 		##################################################
 		# Blocks
 		##################################################
 		self.gr_deinterleave_0 = gr.deinterleave(gr.sizeof_short*1)
-		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "CHANGEME", True)
+		self.gr_file_sink_0 = gr.file_sink(gr.sizeof_short*1, "/home/phil/fx2lib-git/test1_output.txt")
+		self.gr_file_sink_0.set_unbuffered(False)
+		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "/home/phil/fx2lib-git/test1.txt", True)
 		self.gr_float_to_complex_0 = gr.float_to_complex(1)
 		self.gr_short_to_float_0 = gr.short_to_float()
 		self.gr_short_to_float_1 = gr.short_to_float()
-		self.gr_throttle_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate)
+		self.gr_throttle_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate/4)
 		self.wxgui_waterfallsink2_0 = waterfallsink2.waterfall_sink_c(
 			self.GetWin(),
-			baseband_freq=20100000,
+			baseband_freq=19.5e6,
 			dynamic_range=100,
 			ref_level=50,
 			ref_scale=2.0,
-			sample_rate=samp_rate,
+			sample_rate=samp_rate/4,
 			fft_size=512,
 			fft_rate=15,
 			average=False,
@@ -53,20 +54,18 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		# Connections
 		##################################################
-		self.connect((self.gr_file_source_0, 0), (self.gr_deinterleave_0, 0))
-		self.connect((self.gr_deinterleave_0, 0), (self.gr_short_to_float_0, 0))
-		self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
-		self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
-		self.connect((self.gr_short_to_float_0, 0), (self.gr_float_to_complex_0, 0))
-		self.connect((self.gr_float_to_complex_0, 0), (self.gr_throttle_0, 0))
+		self.connect((self.gr_file_source_0, 0), (self.gr_file_sink_0, 0))
 		self.connect((self.gr_throttle_0, 0), (self.wxgui_waterfallsink2_0, 0))
-
-	def set_sample_rate_each_stream(self, sample_rate_each_stream):
-		self.sample_rate_each_stream = sample_rate_each_stream
+		self.connect((self.gr_float_to_complex_0, 0), (self.gr_throttle_0, 0))
+		self.connect((self.gr_short_to_float_0, 0), (self.gr_float_to_complex_0, 0))
+		self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
+		self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
+		self.connect((self.gr_deinterleave_0, 0), (self.gr_short_to_float_0, 0))
+		self.connect((self.gr_file_source_0, 0), (self.gr_deinterleave_0, 0))
 
 	def set_samp_rate(self, samp_rate):
 		self.samp_rate = samp_rate
-		self.wxgui_waterfallsink2_0.set_sample_rate(self.samp_rate)
+		self.wxgui_waterfallsink2_0.set_sample_rate(self.samp_rate/4)
 
 if __name__ == '__main__':
 	parser = OptionParser(option_class=eng_option, usage="%prog: [options]")

@@ -205,6 +205,7 @@ void main_signal_handler(int signum)
 {
     switch (signum) {
     case SIGINT:
+	printf("SIGINT Received.  Exiting...\n");
         _continue=0;
         break;
 
@@ -292,7 +293,7 @@ int main(int argc, char *argv[]){
 	libusb_set_debug(mycontext,3);
 
 	//open fx2
-	printf("Opening device with VID 0x04b4 and PID 0x8613...");
+	printf("Opening device with VID 0x04b4 and PID 0x0410...");
 	my_dev_handle=libusb_open_device_with_vid_pid(mycontext, 0x04b4,0x0410);
 	if(my_dev_handle==NULL){
 		printf("\nERROR: UNABLE TO OPEN DEVICE.\n");
@@ -330,13 +331,38 @@ int main(int argc, char *argv[]){
 	pause();
 
 	//open the file
-	fp=fopen(filename, "wb");
+	if(_continue){
+		fp=fopen(filename, "wb");
+	}
+	else{
+		printf("\nReleasing interface 0...");
+		ret=libusb_release_interface(my_dev_handle,0);
+		if(ret==0){
+			printf("Successful.\n");
+		}
+		else{
+			printf("\nERROR: UNABLE TO RELEASE DEVICE.\n");
+		}
+		printf("Closing device...");
+		libusb_close(my_dev_handle);
+		printf("Done.\n");
+
+		printf("Destroying library...");
+		libusb_exit(mycontext);
+		printf("Done.\n");
+
+		exit(0);
+	}
+
+	struct timeval tv;
+	tv.tv_sec=0;
+	tv.tv_usec=10000;
 
 	transfer_factory(NULL);
 
 	//continuously call handle_events()
 	while(_continue)
-		libusb_handle_events(mycontext);
+		libusb_handle_events_timeout(mycontext,&tv);
 
 	//close the file
 	fclose(fp);

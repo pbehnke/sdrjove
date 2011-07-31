@@ -6,7 +6,7 @@ from AboutFrame import *
 from RTConfigFrame import *
 from FRConfigFrame import *
 from RAConfigFrame import *
-from gnu_radio import waterfall
+from gnu_radio import waterfall2
 import subprocess
 import signal
 import time
@@ -32,12 +32,12 @@ class MainFrame(wx.Frame):
         # Menu Bar
         self.main_menubar = wx.MenuBar()
         wxglade_tmp_menu = wx.Menu()
-        self.exportcsv = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export CSV", "", wx.ITEM_NORMAL)
-        wxglade_tmp_menu.AppendItem(self.exportcsv)
-        self.exportwav = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export WAV", "", wx.ITEM_NORMAL)
-        wxglade_tmp_menu.AppendItem(self.exportwav)
-        self.saveplot = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Save Plot", "", wx.ITEM_NORMAL)
-        wxglade_tmp_menu.AppendItem(self.saveplot)
+      #  self.exportcsv = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export CSV", "", wx.ITEM_NORMAL)
+       # wxglade_tmp_menu.AppendItem(self.exportcsv)
+      #  self.exportwav = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export WAV", "", wx.ITEM_NORMAL)
+       # wxglade_tmp_menu.AppendItem(self.exportwav)
+       # self.saveplot = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Save Plot", "", wx.ITEM_NORMAL)
+       # wxglade_tmp_menu.AppendItem(self.saveplot)
         self.exit = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Exit", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.exit)
         self.main_menubar.Append(wxglade_tmp_menu, "File")
@@ -79,9 +79,9 @@ class MainFrame(wx.Frame):
         self.__set_properties()
         self.__do_layout()
 
-        self.Bind(wx.EVT_MENU, self.OnExportCSV, self.exportcsv)
-        self.Bind(wx.EVT_MENU, self.OnExportWAV, self.exportwav)
-        self.Bind(wx.EVT_MENU, self.OnSavePlot, self.saveplot)
+        #self.Bind(wx.EVT_MENU, self.OnExportCSV, self.exportcsv)
+        #self.Bind(wx.EVT_MENU, self.OnExportWAV, self.exportwav)
+        #self.Bind(wx.EVT_MENU, self.OnSavePlot, self.saveplot)
         self.Bind(wx.EVT_MENU, self.OnExit, self.exit)
         self.Bind(wx.EVT_MENU, self.OnRA, self.ra_mode)
         self.Bind(wx.EVT_MENU, self.OnLiveMode, self.live_mode)
@@ -136,26 +136,28 @@ class MainFrame(wx.Frame):
        # self.Centre()
         # end wxGlade
 
-    def OnExportCSV(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Event handler `OnExportCSV' not implemented!"
-        event.Skip()
+  #  def OnExportCSV(self, event): # wxGlade: MainFrame.<event_handler>
+   #     print "Event handler `OnExportCSV' not implemented!"
+    #    event.Skip()
 
-    def OnExportWAV(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Event handler `OnExportWAV' not implemented!"
-        event.Skip()
+   # def OnExportWAV(self, event): # wxGlade: MainFrame.<event_handler>
+   #     print "Event handler `OnExportWAV' not implemented!"
+   #     event.Skip()
 
-    def OnSavePlot(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Event handler `OnSavePlot' not implemented!"
-        event.Skip()
+  #  def OnSavePlot(self, event): # wxGlade: MainFrame.<event_handler>
+   #     print "Event handler `OnSavePlot' not implemented!"
+   #     event.Skip()
 
     def OnExit(self, event): # wxGlade: MainFrame.<event_handler>
 	try:
-		self.driver.send_signal(signal.SIGINT)
-	except(OSError):
+		self.tb.stop()
+	except (AttributeError):
 		pass
-	self.driver.wait()
+	subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
+	time.sleep(0.5)
         self.Close()
 	subprocess.call(['rm', '-f', self.temp_pipe_filename])
+	os.exit()
 	event.Skip()
 
     def OnRA(self, event): # wxGlade: MainFrame.<event_handler>
@@ -215,31 +217,41 @@ class MainFrame(wx.Frame):
 		dlg.ShowModal()
 		event.Skip()
 		return None
-	else:
 
-		#try:
+	elif self.configState=='RT':
+
 		subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-		#except(OSError):
-		#	checkprocess()
-		#time.sleep(3)
-		#tb = waterfall.top_block(self,self.temp_pipe_filename)
-		#tb.Run(True)
-		#sleep(3)
+		self.tb = waterfall2.top_block(self,self.temp_pipe_filename)
+		self.tb.Run()
+		print "Running Real Time Mode..."
+
+	elif self.configState=='FR':
+		subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
+		self.driver.wait()
+		print "Restarting Driver..."
+		subprocess.call(['gksudo','--','echo','Loading Driver...'])
+		self.driver=subprocess.Popen(['sudo','--','../usb_driver/data_recorder', '-f', self.temp_pipe_filename+".data"])
+		sleep(1)
+		self.checkprocess()
+		subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
 		
 
-		print "Running..."
+	elif self.configState=='DA':
+		pass
+	elif self.configState=='RA':
+		pass
 
 
         event.Skip()
 
     def OnStop(self, event): # wxGlade: MainFrame.<event_handler>
+	self.tb.stop()
 	try:
         	self.driver.send_signal(signal.SIGUSR2)
 	except(OSError):
 		self.checkprocess()
 
 	if self.configState!=0:
-		self.configState=0
 		print "Stopped."
         event.Skip()
 
@@ -288,19 +300,18 @@ class GraphFrame(wx.Panel):
 		wx.Panel.__init__(self,parent)
         
         	#create a boxsizer to control how objects are spaced
-        	vboxSizer=wx.BoxSizer(wx.VERTICAL)
+        	self.vboxSizer=wx.BoxSizer(wx.VERTICAL)
         	#set the background to white
         	self.SetBackgroundColour(wx.WHITE)
         
         	#add text so the user knows that area is the console
         	title=wx.StaticText(self,label="Graph:")
-        
         	#add the text to the sizer
-        	vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL)
+        	self.vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL|wx.ALIGN_CENTER)
         	#add the text box to the sizer
         	#vboxSizer.Add(wx.Panel(self), 0, wx.EXPAND | wx.ALL)
         
-        	self.SetSizer(vboxSizer)
+        	self.SetSizer(self.vboxSizer)
 
 #this class splits the frame into two sections (one for the interface and one for the console)
 class TopSplitPanel(wx.SplitterWindow):
@@ -310,7 +321,7 @@ class TopSplitPanel(wx.SplitterWindow):
 	self.graph_frame=GraphFrame(self)
         self.console = ConsoleFrame(self)
         #split the frame and add the panels
-        self.SplitHorizontally(self.graph_frame,self.console, -200)
+        self.SplitHorizontally(self.graph_frame,self.console, -150)
 	self.graph_frame.Fit()
         self.SetMinimumPaneSize(100)
 
