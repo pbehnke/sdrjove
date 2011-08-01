@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <errno.h>
 
 #define NUM_PACKETS 32
 
@@ -273,11 +274,13 @@ int main(int argc, char *argv[]){
                     argv[0]);
             exit(-1);
 	}
-	else if(live_mode){
+	else if(live_mode){  //make the named pipe
 		ret=mkfifo(filename,0777);
 		if(ret!=0){
-			fprintf(stderr,"Error, unable to create named pipe.\n");
-			exit(-2);
+			if(errno!=EEXIST){
+				fprintf(stderr,"Error, unable to create named pipe.\n");
+				exit(-2);
+			}
 		}
 	}
 

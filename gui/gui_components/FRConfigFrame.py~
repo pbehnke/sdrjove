@@ -19,7 +19,7 @@ class FRConfigFrame(wx.Dialog):
         self.static_line_3 = wx.StaticLine(self, -1)
         self.file_size_radio_box = wx.RadioBox(self, -1, "Maximum File Size", choices=["Record Until Out of Disk Space", "Record Until Specified File Size is Reached"], majorDimension=0, style=wx.RA_SPECIFY_ROWS)
         self.file_label = wx.StaticText(self, -1, "File Size (MB):")
-        self.spin_ctrl_1 = wx.SpinCtrl(self, -1, "", min=1, max=1000000)
+        self.spin_ctrl_1 = wx.SpinCtrl(self, -1, "", min=0, max=1000000)
         self.plot_checkbox = wx.CheckBox(self, -1, "Display Waterfall Plot?")
         self.save_button = wx.Button(self, -1, "Save")
         self.cancel_button = wx.Button(self, -1, "Cancel")

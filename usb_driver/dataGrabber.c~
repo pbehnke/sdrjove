@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <errno.h>
 
 #define NUM_PACKETS 32
 
@@ -273,7 +274,7 @@ int main(int argc, char *argv[]){
                     argv[0]);
             exit(-1);
 	}
-	else if(live_mode){
+	else if(live_mode){  //make the named pipe
 		ret=mkfifo(filename,0777);
 		if(ret!=0){
 			fprintf(stderr,"Error, unable to create named pipe.\n");
@@ -362,7 +363,7 @@ int main(int argc, char *argv[]){
 
 	//continuously call handle_events()
 	while(_continue)
-		libusb_handle_events(mycontext);
+		libusb_handle_events_timeout(mycontext,&tv);
 
 	//close the file
 	fclose(fp);

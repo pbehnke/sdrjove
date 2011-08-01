@@ -105,6 +105,9 @@ class RTConfigFrame(wx.Dialog):
         self.EndModal(wx.ID_OK)
         event.Skip()
 
+    def gatherConfig(self):
+        pass
+
 
 
 # end of class RTConfigFrame

@@ -7,6 +7,8 @@ from RTConfigFrame import *
 from FRConfigFrame import *
 from RAConfigFrame import *
 from gnu_radio import waterfall2
+from gnu_radio import record_mode
+from gnu_radio import audio_wav
 import subprocess
 import signal
 import time
@@ -14,16 +16,17 @@ import sys
 import os
 import random
 import string
-import atexit
+import stat
 
-# begin wxGlade: dependencies
-# end wxGlade
 
-# begin wxGlade: extracode
-
-# end wxGlade
-
+##########################################################################
+# 
+##########################################################################   
 class MainFrame(wx.Frame):
+
+    ##########################################################################
+    # 
+    ##########################################################################
     def __init__(self, *args, **kwds):
         # begin wxGlade: MainFrame.__init__
         kwds["style"] = wx.CAPTION|wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX|wx.SYSTEM_MENU|wx.RESIZE_BORDER|wx.FULL_REPAINT_ON_RESIZE|wx.CLIP_CHILDREN
@@ -73,8 +76,8 @@ class MainFrame(wx.Frame):
         self.main_toolbar.AddLabelTool(6, "Stop", wx.Bitmap("/home/phil/sdr gui/images/icons/stop.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Stop", "Stop capturing data")
         # Tool Bar end
 
-	self.main_area=TopSplitPanel(self)
-	sys.stdout=self
+        self.main_area=TopSplitPanel(self)
+        sys.stdout=self
 
         self.__set_properties()
         self.__do_layout()
@@ -100,7 +103,7 @@ class MainFrame(wx.Frame):
 
 
 	#make a random string for the temporary named pipe
-	self.temp_pipe_filename='../'+''.join(random.choice(string.ascii_uppercase) for x in range(6))+".sdrjove"
+        self.temp_pipe_filename='../'+''.join(random.choice(string.ascii_uppercase) for x in range(6))+".sdrjove"
 	#temp_pipe_filename.join(".sdrjove")
 
 	
@@ -109,11 +112,9 @@ class MainFrame(wx.Frame):
 	#file_selection.Show()
 	
 	
-	subprocess.call(['gksudo','--','echo','Loading Driver...'])
-	
-	self.driver=subprocess.Popen(['sudo','--','../usb_driver/data_recorder', '-f', self.temp_pipe_filename, '-l'])
-	self.configState=0
-	self.checkprocess()
+        self.isDriverLoaded=False
+        self.LM_audio=False
+        self.configState=0
 
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
@@ -130,7 +131,7 @@ class MainFrame(wx.Frame):
         # begin wxGlade: MainFrame.__do_layout
         main_sizer = wx.BoxSizer(wx.VERTICAL)
         self.SetSizer(main_sizer)
-	main_sizer.Add(self.main_area,2,wx.EXPAND | wx.ALL)
+        main_sizer.Add(self.main_area,2,wx.EXPAND | wx.ALL)
         main_sizer.Fit(self)
         self.Layout()
        # self.Centre()
@@ -148,125 +149,258 @@ class MainFrame(wx.Frame):
    #     print "Event handler `OnSavePlot' not implemented!"
    #     event.Skip()
 
+    ##########################################################################
+    # 
+    ##########################################################################
     def OnExit(self, event): # wxGlade: MainFrame.<event_handler>
-	try:
-		self.tb.stop()
-	except (AttributeError):
-		pass
-	subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
-	time.sleep(0.5)
-        self.Close()
-	subprocess.call(['rm', '-f', self.temp_pipe_filename])
-	os.exit()
-	event.Skip()
+        #try:
+            #self.tb.stop()
+        #except (AttributeError):
+           # pass
 
+        try:
+            subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
+        except (AttributeError):
+            pass
+            
+        time.sleep(0.5)
+        self.Close()
+        subprocess.call(['rm', '-f', self.temp_pipe_filename])
+        sys.exit()
+        event.Skip()
+
+    ##########################################################################
+    # 
+    ##########################################################################
     def OnRA(self, event): # wxGlade: MainFrame.<event_handler>
         raconfig=RAConfigFrame(None, -1, "")
-	raconfig.Show()
+        raconfig.Show()
         event.Skip()
 
+    ##########################################################################
+    # Select the Live Mode configuration box
+    ##########################################################################
     def OnLiveMode(self, event): # wxGlade: MainFrame.<event_handler>
-        rtconfig=RTConfigFrame(None, -1, "")
-	rtconfig.Show()
+        rtconfig=RTConfigFrame(self)
+        ret=rtconfig.ShowModal()
+        if ret==wx.ID_OK:
+            if rtconfig.checkbox_1.GetValue(): #process to audio
+                self.LM_audio=True
+                #TODO: get additional audio stuff
         event.Skip()
 
+    ##########################################################################
+    # Select the Full Record Mode configuration box
+    ##########################################################################
     def OnFullRecord(self, event): # wxGlade: MainFrame.<event_handler>
-        frconfig=FRConfigFrame(None, -1, "")
-	frconfig.Show()
+        frconfig=FRConfigFrame(self)
+        ret=frconfig.ShowModal()
+        if ret==wx.ID_OK:
+            if frconfig.plot_checkbox.IsChecked():
+                self.FR_waterfall=True
+            else:
+                self.FR_waterfall=False
+
+            if frconfig.file_size_radio_box.GetSelection()==1:
+                #setup timer to check file size
+                self.FileSizeTimer=wx.Timer(self)
+                self.Bind(wx.EVT_TIMER,self.OnFileSizeTimer,self.FileSizeTimer)
+                self.maxFileSize=frconfig.spin_ctrl_1.GetValue()
         event.Skip()
 
+    ##########################################################################
+    # Select the Data Analysis Mode configuration box
+    ##########################################################################
     def OnDataAnalysis(self, event): # wxGlade: MainFrame.<event_handler>
         print "Something should happen here."
         event.Skip()
 
+    ##########################################################################
+    # 
+    ##########################################################################
     def OnHelp(self, event): # wxGlade: MainFrame.<event_handler>
         print "Event handler `OnHelp' not implemented!"
         event.Skip()
 
+    ##########################################################################
+    # Select the About Box
+    ##########################################################################
     def OnAbout(self, event): # wxGlade: MainFrame.<event_handler>
         about=AboutFrame(None, -1, "")
-	about.Show()
+        about.Show()
         event.Skip()
 
+    ##########################################################################
+    # Set the current mode to Radio Astronomy
+    ##########################################################################
     def OnRAMode(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Running in Radio Astronomy Mode. Click Start to begin capturing data."
-	self.configState="RA"
+        #load driver
+        if self.isDriverLoaded:
+            pass
+        else:
+            self.loadDriver()
+
+        if self.isDriverLoaded:
+            print "Running in Radio Astronomy Mode. Click Start to begin capturing data."
+            self.configState="RA"
+
         event.Skip()
 
+    ##########################################################################
+    # Set the current mode to Real Time
+    ##########################################################################
     def OnRTMode(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Running in Real Time Mode. Click Start to begin capturing data."
-	self.configState="RT"
+        #load driver
+        if self.isDriverLoaded:
+            pass
+        else:
+            self.loadDriver()
+
+        if self.isDriverLoaded:
+            if self.LM_audio:
+                file_selection=wx.FileDialog(self, "Choose a file to save data to.",style=wx.FD_SAVE)
+                file_selection.ShowModal()
+                self.wav_filename=file_selection.GetPath()
+
+            print "Running in Real Time Mode. Click Start to begin capturing data."
+            self.configState="RT"
+
         event.Skip()
 
+    ##########################################################################
+    # Set the current mode to Full Record
+    ##########################################################################
     def OnFRMode(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Running in Full Record Mode. Click Start to begin capturing data."
-	self.configState="FR"
+        if self.isDriverLoaded:
+            pass
+        else:
+            self.loadDriver()
+
+        if self.isDriverLoaded:
+            self.configState="FR"
+
+            #popup here to select filepath
+            file_selection=wx.FileDialog(self, "Choose a file to save data to.",style=wx.FD_SAVE)
+            file_selection.ShowModal()
+            self.sink_filename=file_selection.GetPath()
+            #os.mknod(self.sink_filename,stat.S_IFREG)
+            print "Running in Full Record Mode. Storing data in file: %s" % self.sink_filename
+            print "Click Start to begin capturing data."
+
         event.Skip()
 
+    ##########################################################################
+    # Set current mode to Data Analysis
+    ##########################################################################
     def OnDAMode(self, event): # wxGlade: MainFrame.<event_handler>
+        #no need to load driver here.
+        #select a source file
         print "Running in Data Analysis Mode. Click Start to begin capturing data."
-	self.configState="DA"
+        self.configState="DA"
         event.Skip()
 
+    ##########################################################################
+    # Start Function
+    ##########################################################################
     def OnStart(self, event): # wxGlade: MainFrame.<event_handler>
-        
-	self.checkprocess()
-	if self.configState==0:
-		dlg =wx.MessageDialog(None, "Error: No mode selected. Set the mode to capture data in.", "Not Configured.", wx.OK |\
+
+        if self.configState==0:
+            dlg =wx.MessageDialog(None, "Error: No mode selected. Set the mode to capture data in.", "Not Configured.", wx.OK |\
 														 wx.ICON_WARNING)
-		dlg.ShowModal()
-		event.Skip()
-		return None
+            dlg.ShowModal()
+            event.Skip()
+            return None
 
-	elif self.configState=='RT':
+        elif self.configState=='RT':
 
-		subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-		self.tb = waterfall2.top_block(self,self.temp_pipe_filename)
-		self.tb.Run()
-		print "Running Real Time Mode..."
+            subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
+            if self.LM_audio:
+                self.tb = audio_wav.top_block(self,self.temp_pipe_filename,self.wav_filename)
+            else:
+                self.tb = waterfall2.top_block(self,self.temp_pipe_filename)
 
-	elif self.configState=='FR':
-		subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
-		self.driver.wait()
-		print "Restarting Driver..."
-		subprocess.call(['gksudo','--','echo','Loading Driver...'])
-		self.driver=subprocess.Popen(['sudo','--','../usb_driver/data_recorder', '-f', self.temp_pipe_filename+".data"])
-		sleep(1)
-		self.checkprocess()
-		subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-		
+            print "Running Real Time Mode..."
+            self.tb.Run()
+            
 
-	elif self.configState=='DA':
-		pass
-	elif self.configState=='RA':
-		pass
+        elif self.configState=='FR':
+            subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
+            print self.sink_filename
+            self.tb = record_mode.top_block(self,self.temp_pipe_filename,self.sink_filename,self.FR_waterfall)
+            self.FileSizeTimer.Start(100)
+            print "Running In Full Record Mode..."
+            self.tb.Run()
 
+        elif self.configState=='DA':
+            pass
+        elif self.configState=='RA':
+            pass
 
         event.Skip()
 
+    ##########################################################################
+    # Stop Function
+    ##########################################################################
     def OnStop(self, event): # wxGlade: MainFrame.<event_handler>
-	self.tb.stop()
-	try:
-        	self.driver.send_signal(signal.SIGUSR2)
-	except(OSError):
-		self.checkprocess()
+        try:
+            self.tb.stop()
+            try:
+                self.driver.send_signal(signal.SIGUSR2)
+            except(OSError):
+                self.checkprocess()
+        except (AttributeError):
+            pass
+        
+        if self.configState!=0:
+            print "Stopped."
 
-	if self.configState!=0:
-		print "Stopped."
-        event.Skip()
+        if event!= None:
+            event.Skip()
 
+    ##########################################################################
+    # Override the write() function so we can just call "print" to write to the console.
+    ##########################################################################
     def write(self, text):
-	self.main_area.console.consoleTextBox.AppendText(text)
+        self.main_area.console.consoleTextBox.AppendText(text)
 
+    ##########################################################################
+    # See if the driver is still loaded
+    ##########################################################################
     def checkprocess(self):
-	time.sleep(1)
-	if self.driver.poll() != None:
-		dlg =wx.MessageDialog(None, "Oops, an error happened.  Check the output in the console.", "Error.", wx.OK |\
+        time.sleep(1)
+        if self.driver.poll() != None:
+            dlg =wx.MessageDialog(None, "Oops, an error happened.  Check the output in the terminal.", "Error.", wx.OK |\
 													wx.ICON_WARNING)
-		dlg.ShowModal()
+            dlg.ShowModal()
+            return False
+        else:
+            return True
 
-		self.Close()
-		subprocess.call(['rm', '-f', self.temp_pipe_filename])
+    ##########################################################################
+    # Load the driver if needed
+    ##########################################################################
+    def loadDriver(self):
+        subprocess.call(['gksudo','--','echo','Loading Driver...'])
+        self.driver=subprocess.Popen(['sudo','--','../usb_driver/data_recorder', '-f', self.temp_pipe_filename, '-l'])
+        self.configState=0
+        if self.checkprocess():
+            self.isDriverLoaded=True
+	
+    ##########################################################################
+    # Called from the timer to check the current file size every 100 ms in DA mode.
+    ##########################################################################	
+    def OnFileSizeTimer(self,event):
+        try:
+            currentFileStat=os.stat(self.sink_filename)
+        except (OSError):
+            return None
+        size=currentFileStat.st_size
+        size=size/(2**20)
+        if size > self.maxFileSize:
+            self.FileSizeTimer.Stop()
+            print "Maximum File Size Reached"
+            self.OnStop(None)
+        event.Skip()
 
 # end of class MainFrame
 
@@ -296,32 +430,32 @@ class ConsoleFrame(wx.Panel):
 
 
 class GraphFrame(wx.Panel):
-	def __init__(self,parent):
-		wx.Panel.__init__(self,parent)
+    def __init__(self,parent):
+        wx.Panel.__init__(self,parent)
         
-        	#create a boxsizer to control how objects are spaced
-        	self.vboxSizer=wx.BoxSizer(wx.VERTICAL)
-        	#set the background to white
-        	self.SetBackgroundColour(wx.WHITE)
+        #create a boxsizer to control how objects are spaced
+        self.vboxSizer=wx.BoxSizer(wx.VERTICAL)
+        #set the background to white
+        self.SetBackgroundColour(wx.WHITE)
         
-        	#add text so the user knows that area is the console
-        	title=wx.StaticText(self,label="Graph:")
-        	#add the text to the sizer
-        	self.vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL|wx.ALIGN_CENTER)
-        	#add the text box to the sizer
-        	#vboxSizer.Add(wx.Panel(self), 0, wx.EXPAND | wx.ALL)
+        #add text so the user knows that area is the console
+        title=wx.StaticText(self,label="Graph:")
+        #add the text to the sizer
+        self.vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL|wx.ALIGN_CENTER)
+        #add the text box to the sizer
+        #vboxSizer.Add(wx.Panel(self), 0, wx.EXPAND | wx.ALL)
         
-        	self.SetSizer(self.vboxSizer)
+        self.SetSizer(self.vboxSizer)
 
 #this class splits the frame into two sections (one for the interface and one for the console)
 class TopSplitPanel(wx.SplitterWindow):
     def __init__(self,parent):
         wx.SplitterWindow.__init__(self,parent)
         #create the two panels 
-	self.graph_frame=GraphFrame(self)
+        self.graph_frame=GraphFrame(self)
         self.console = ConsoleFrame(self)
         #split the frame and add the panels
         self.SplitHorizontally(self.graph_frame,self.console, -150)
-	self.graph_frame.Fit()
+        self.graph_frame.Fit()
         self.SetMinimumPaneSize(100)
 
