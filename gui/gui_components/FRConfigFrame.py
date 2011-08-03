@@ -31,6 +31,7 @@ class FRConfigFrame(wx.Dialog):
         self.Bind(wx.EVT_BUTTON, self.OnCancel, self.cancel_button)
         self.Bind(wx.EVT_BUTTON, self.OnSave, self.save_button)
 
+
     def __set_properties(self):
         # begin wxGlade: FRConfigFrame.__set_properties
         self.SetTitle("frame_5")

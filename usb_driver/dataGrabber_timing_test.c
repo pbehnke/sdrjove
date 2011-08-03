@@ -38,8 +38,10 @@ const unsigned char ZEROS[] = {0x0,0x0,0x0,0x0,0x0,0x0};
 //int buffer_mark=0;
 
 /* Timing variables for testing */
-struct timeval t1, t2;
+struct timeval t1, t2,t3,t4,t5,t6;
 double elapsedTime;
+double elapsedTime1;
+double elapsedTime2;
 
 unsigned char * fill_buffer1;
 unsigned char * fill_buffer2;
@@ -49,6 +51,21 @@ unsigned char * fill_buffer5;
 unsigned char * fill_buffer6;
 unsigned char * fill_buffer7;
 unsigned char * fill_buffer8;
+unsigned char * fill_buffer9;
+unsigned char * fill_buffer10;
+unsigned char * fill_buffer11;
+
+struct libusb_transfer *iso_xfer1;
+struct libusb_transfer *iso_xfer2;
+struct libusb_transfer *iso_xfer3;
+struct libusb_transfer *iso_xfer4;
+struct libusb_transfer *iso_xfer5;
+struct libusb_transfer *iso_xfer6;
+struct libusb_transfer *iso_xfer7;
+struct libusb_transfer *iso_xfer8;
+struct libusb_transfer *iso_xfer9;
+struct libusb_transfer *iso_xfer10;
+struct libusb_transfer *iso_xfer11;
 
 
 /**********************************************************************************************
@@ -56,16 +73,19 @@ unsigned char * fill_buffer8;
 **********************************************************************************************/
 int getNextPacket(int currentIndex, struct libusb_transfer *transfer){
 	int i;
-
-	for(i=currentIndex;i<(3072*NUM_PACKETS)-4;i++){
-		if(!memcmp(&(transfer->buffer[i]),EOP,2)){
+	int count=0;
+	for(i=currentIndex;i<(3072*NUM_PACKETS)-1;i++){
+		count++;
+		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
 			break;
 		}
 		//if we see a bunch of zeros, skip ahead
-		else if(!memcmp(&(transfer->buffer[i]),ZEROS,6)){
-			i=i+1024;
-		}
+		//else if(!memcmp(&(transfer->buffer[i]),ZEROS,6)){
+		//	i=i+1024;
+		//}
 	}
+	//printf("Counts: %d\n",i-currentIndex);
+	usleep(10);
 	return i;
 
 }
@@ -79,18 +99,26 @@ void callback_fn(struct libusb_transfer *transfer){
 	int j;
 	unsigned char tmp[64];
 	unsigned char i_1,i_2,j_1,j_2; //dont confuse these with our counter vars.
+	int count1,count2,count3;
+	count1=0;
+	count2=0;
+	count3=0;
 
-	//gettimeofday(&t1, NULL);
+	gettimeofday(&t1, NULL);
 
 	//find position of the first packet marker
-	i=getNextPacket(i,transfer);	
+	//gettimeofday(&t3, NULL);
+	i=getNextPacket(i,transfer);
+	//gettimeofday(&t4, NULL);
+	//printf("first i: %d\n",i);	
 
 	//process all the data and determine which parts are valid
+	//gettimeofday(&t5, NULL);
 	do{
 		i=i+68;
 		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
-
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
+			count1++;
 
 			//reshuffle the data for the i and j components
 			for(j=0;j<64;j+=4){
@@ -103,10 +131,12 @@ void callback_fn(struct libusb_transfer *transfer){
 				tmp[j+2]=j_1;
 				tmp[j+3]=j_2;
 			}
+			//CHANGE ME BACK!!
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
 		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
+			count3++;
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
@@ -124,17 +154,33 @@ void callback_fn(struct libusb_transfer *transfer){
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 		}
 		else{
+			count2++;
+			
 			i=getNextPacket(i,transfer);
 		}	
 	}while(i<(3072*NUM_PACKETS)-1);
+	//gettimeofday(&t6, NULL);
+
+	//DELETE ME
+	//fwrite(transfer->buffer,(size_t)1,(size_t)(3072*NUM_PACKETS-1),fp);
 
 	fflush(fp);
 
-	//gettimeofday(&t2, NULL);  
+	gettimeofday(&t2, NULL);  
 
-	//elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-    	//elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-	//printf("%f\n",elapsedTime);
+	elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
+    	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
+	//printf("TOTALTIME:::%f::::\n",elapsedTime);
+
+	//elapsedTime1 = (t4.tv_sec - t3.tv_sec) * 1000.0;      // sec to ms
+    	//elapsedTime1 += (t4.tv_usec - t3.tv_usec) / 1000.0;   // us to ms
+	//printf("firstpackettime::%f::\n",elapsedTime1);
+
+	//elapsedTime2 = (t6.tv_sec - t5.tv_sec) * 1000.0;      // sec to ms
+    	//elapsedTime2 += (t6.tv_usec - t5.tv_usec) / 1000.0;   // us to ms
+	//printf("looptime::%f::\n",elapsedTime2);
+	
+	//printf("hits:%d---misses:%d--other:%d\n\n",count1,count2,count3);
 
 	if(_continue){
 		libusb_submit_transfer(transfer);
@@ -150,15 +196,6 @@ void callback_fn(struct libusb_transfer *transfer){
 void transfer_factory(void *param){
 	//create a packet
 
-	struct libusb_transfer *iso_xfer1;
-	struct libusb_transfer *iso_xfer2;
-	struct libusb_transfer *iso_xfer3;
-	struct libusb_transfer *iso_xfer4;
-	struct libusb_transfer *iso_xfer5;
-	struct libusb_transfer *iso_xfer6;
-	struct libusb_transfer *iso_xfer7;
-	struct libusb_transfer *iso_xfer8;
-
 	fill_buffer1=malloc(3072*NUM_PACKETS);
 	fill_buffer2=malloc(3072*NUM_PACKETS);
 	fill_buffer3=malloc(3072*NUM_PACKETS);
@@ -167,6 +204,9 @@ void transfer_factory(void *param){
 	fill_buffer6=malloc(3072*NUM_PACKETS);
 	fill_buffer7=malloc(3072*NUM_PACKETS);
 	fill_buffer8=malloc(3072*NUM_PACKETS);
+	fill_buffer9=malloc(3072*NUM_PACKETS);
+	fill_buffer10=malloc(3072*NUM_PACKETS);
+	fill_buffer11=malloc(3072*NUM_PACKETS);
 
 	//create a new packet
 	iso_xfer1=libusb_alloc_transfer(NUM_PACKETS);
@@ -201,6 +241,18 @@ void transfer_factory(void *param){
 	libusb_fill_iso_transfer(iso_xfer8,my_dev_handle,0x82,fill_buffer8,3072*NUM_PACKETS,NUM_PACKETS,callback_fn, NULL, 0);
 	libusb_set_iso_packet_lengths(iso_xfer8,3072);
 
+	iso_xfer9=libusb_alloc_transfer(NUM_PACKETS);
+	libusb_fill_iso_transfer(iso_xfer9,my_dev_handle,0x82,fill_buffer9,3072*NUM_PACKETS,NUM_PACKETS,callback_fn, NULL, 0);
+	libusb_set_iso_packet_lengths(iso_xfer9,3072);
+
+	iso_xfer10=libusb_alloc_transfer(NUM_PACKETS);
+	libusb_fill_iso_transfer(iso_xfer10,my_dev_handle,0x82,fill_buffer10,3072*NUM_PACKETS,NUM_PACKETS,callback_fn, NULL, 0);
+	libusb_set_iso_packet_lengths(iso_xfer10,3072);
+	
+	iso_xfer11=libusb_alloc_transfer(NUM_PACKETS);
+	libusb_fill_iso_transfer(iso_xfer11,my_dev_handle,0x82,fill_buffer11,3072*NUM_PACKETS,NUM_PACKETS,callback_fn, NULL, 0);
+	libusb_set_iso_packet_lengths(iso_xfer11,3072);
+
 	libusb_submit_transfer(iso_xfer1); 
 	libusb_submit_transfer(iso_xfer2); 
 	libusb_submit_transfer(iso_xfer3); 
@@ -209,6 +261,9 @@ void transfer_factory(void *param){
 	libusb_submit_transfer(iso_xfer6); 
 	libusb_submit_transfer(iso_xfer7); 
 	libusb_submit_transfer(iso_xfer8); 
+	libusb_submit_transfer(iso_xfer9);
+	libusb_submit_transfer(iso_xfer10);
+	libusb_submit_transfer(iso_xfer11);   
 
 
 }
@@ -347,7 +402,8 @@ int main(int argc, char *argv[]){
 	}
 
 	//wait for a SIGUSR1 
-	pause();
+	//CHANGE ME BACK!!
+	//pause();
 
 	//open the file
 	if(_continue){

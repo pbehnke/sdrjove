@@ -2,7 +2,6 @@
 #include <libusb-1.0/libusb.h>
 #include <unistd.h>
 #include <sys/time.h>
-#include <pthread.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -59,7 +58,7 @@ int getNextPacket(int currentIndex, struct libusb_transfer *transfer){
 	int i;
 
 	for(i=currentIndex;i<(3072*NUM_PACKETS)-4;i++){
-		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
+		if(!memcmp(&(transfer->buffer[i]),EOP,2)){
 			break;
 		}
 		//if we see a bunch of zeros, skip ahead
@@ -106,6 +105,24 @@ void callback_fn(struct libusb_transfer *transfer){
 			}
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
+		}
+		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
+			count3++;
+			memcpy(tmp,&(transfer->buffer[i-64]),64);
+
+			//reshuffle the data for the i and j components
+			for(j=0;j<64;j+=4){
+				i_1=tmp[j];
+				i_2=tmp[j+2];
+				j_1=tmp[j+1];
+				j_2=tmp[j+3];
+
+				tmp[j+1]=i_2;
+				tmp[j+2]=j_1;
+				tmp[j+3]=j_2;
+			}
+			//CHANGE ME BACK!!
+			fwrite(tmp,(size_t)1,(size_t)64,fp);
 		}
 		else{
 			i=getNextPacket(i,transfer);
@@ -277,8 +294,10 @@ int main(int argc, char *argv[]){
 	else if(live_mode){  //make the named pipe
 		ret=mkfifo(filename,0777);
 		if(ret!=0){
-			fprintf(stderr,"Error, unable to create named pipe.\n");
-			exit(-2);
+			if(errno!=EEXIST){
+				fprintf(stderr,"Error, unable to create named pipe.\n");
+				exit(-2);
+			}
 		}
 	}
 
@@ -328,7 +347,7 @@ int main(int argc, char *argv[]){
 		exit(-1);
 	}
 
-	//wait for a SIGUSR1
+	//wait for a SIGUSR1 
 	pause();
 
 	//open the file
