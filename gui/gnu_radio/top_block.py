@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Aug  3 01:22:22 2011
+# Generated: Thu Aug  4 01:16:59 2011
 ##################################################
 
 from gnuradio import eng_notation
@@ -28,12 +28,8 @@ class top_block(grc_wxgui.top_block_gui):
 		# Blocks
 		##################################################
 		self.gr_deinterleave_0 = gr.deinterleave(gr.sizeof_short*1)
-		self.gr_file_sink_0 = gr.file_sink(gr.sizeof_short*1, "/home/phil/fx2lib-git/cactus")
-		self.gr_file_sink_0.set_unbuffered(False)
-		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "/home/phil/SDR_JOVE/usb_driver/test_timing", True)
+		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, "/home/phil/testdata", False)
 		self.gr_float_to_complex_0 = gr.float_to_complex(1)
-		self.gr_float_to_short_0 = gr.float_to_short()
-		self.gr_keep_one_in_n_0_0 = gr.keep_one_in_n(gr.sizeof_float*1, 1024)
 		self.gr_rms_xx_0 = gr.rms_cf(0.005)
 		self.gr_short_to_float_0 = gr.short_to_float()
 		self.gr_short_to_float_1 = gr.short_to_float()
@@ -42,7 +38,7 @@ class top_block(grc_wxgui.top_block_gui):
 			self.GetWin(),
 			title="Scope Plot",
 			sample_rate=samp_rate/4,
-			v_scale=5000,
+			v_scale=2000,
 			v_offset=20e3,
 			t_scale=1,
 			ac_couple=False,
@@ -50,6 +46,7 @@ class top_block(grc_wxgui.top_block_gui):
 			num_inputs=1,
 			trig_mode=gr.gr_TRIG_MODE_AUTO,
 			y_axis_label="Counts",
+			size=((550,20)),
 		)
 		self.Add(self.wxgui_scopesink2_0.win)
 
@@ -64,9 +61,6 @@ class top_block(grc_wxgui.top_block_gui):
 		self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
 		self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
 		self.connect((self.gr_file_source_0, 0), (self.gr_deinterleave_0, 0))
-		self.connect((self.gr_float_to_short_0, 0), (self.gr_file_sink_0, 0))
-		self.connect((self.gr_keep_one_in_n_0_0, 0), (self.gr_float_to_short_0, 0))
-		self.connect((self.gr_rms_xx_0, 0), (self.gr_keep_one_in_n_0_0, 0))
 
 	def set_samp_rate(self, samp_rate):
 		self.samp_rate = samp_rate

@@ -9,7 +9,7 @@ if __name__ == "__main__":
     sdrjove_gui = wx.PySimpleApp(0)
     wx.InitAllImageHandlers()
     main_frame = MainFrame(None, -1, "")
-    main_frame.SetMinSize((800,600))
+    main_frame.SetMinSize((800,700))
     sdrjove_gui.SetTopWindow(main_frame)
     main_frame.Show()
     sdrjove_gui.MainLoop()

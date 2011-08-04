@@ -76,7 +76,7 @@ int getNextPacket(int currentIndex, struct libusb_transfer *transfer){
 	int count=0;
 	for(i=currentIndex;i<(3072*NUM_PACKETS)-1;i++){
 		count++;
-		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
+		if(!memcmp(&(transfer->buffer[i]),EOP,2)){
 			break;
 		}
 		//if we see a bunch of zeros, skip ahead
@@ -85,7 +85,7 @@ int getNextPacket(int currentIndex, struct libusb_transfer *transfer){
 		//}
 	}
 	//printf("Counts: %d\n",i-currentIndex);
-	usleep(10);
+	//usleep(10);
 	return i;
 
 }
@@ -104,7 +104,7 @@ void callback_fn(struct libusb_transfer *transfer){
 	count2=0;
 	count3=0;
 
-	gettimeofday(&t1, NULL);
+	//gettimeofday(&t1, NULL);
 
 	//find position of the first packet marker
 	//gettimeofday(&t3, NULL);
@@ -118,7 +118,7 @@ void callback_fn(struct libusb_transfer *transfer){
 		i=i+68;
 		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
-			count1++;
+			//count1++;
 
 			//reshuffle the data for the i and j components
 			for(j=0;j<64;j+=4){
@@ -132,11 +132,12 @@ void callback_fn(struct libusb_transfer *transfer){
 				tmp[j+3]=j_2;
 			}
 			//CHANGE ME BACK!!
-			fwrite(tmp,(size_t)1,(size_t)64,fp);
+			//fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
 		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
-			count3++;
+			//count3++;
+			//printf("hola\n");
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
@@ -151,10 +152,10 @@ void callback_fn(struct libusb_transfer *transfer){
 				tmp[j+3]=j_2;
 			}
 			//CHANGE ME BACK!!
-			fwrite(tmp,(size_t)1,(size_t)64,fp);
+			//fwrite(tmp,(size_t)1,(size_t)64,fp);
 		}
 		else{
-			count2++;
+			//count2++;
 			
 			i=getNextPacket(i,transfer);
 		}	
@@ -162,16 +163,16 @@ void callback_fn(struct libusb_transfer *transfer){
 	//gettimeofday(&t6, NULL);
 
 	//DELETE ME
-	//fwrite(transfer->buffer,(size_t)1,(size_t)(3072*NUM_PACKETS-1),fp);
+	fwrite(transfer->buffer,(size_t)1,(size_t)(3072*NUM_PACKETS-1),fp);
 
 	fflush(fp);
-
+/*
 	gettimeofday(&t2, NULL);  
 
 	elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
     	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-	//printf("TOTALTIME:::%f::::\n",elapsedTime);
-
+	printf("TOTALTIME:::%f::::\n",elapsedTime);
+*/
 	//elapsedTime1 = (t4.tv_sec - t3.tv_sec) * 1000.0;      // sec to ms
     	//elapsedTime1 += (t4.tv_usec - t3.tv_usec) / 1000.0;   // us to ms
 	//printf("firstpackettime::%f::\n",elapsedTime1);

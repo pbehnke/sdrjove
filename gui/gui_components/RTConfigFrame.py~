@@ -17,22 +17,22 @@ class RTConfigFrame(wx.Dialog):
         wx.Dialog.__init__(self, parent)
         self.rt_title_label = wx.StaticText(self, -1, "Configuration Setting for\nReal Time Mode")
         self.static_line_1 = wx.StaticLine(self, -1)
-        self.checkbox_1 = wx.RadioButton(self, -1, "Process Spectrum to Audio?",style=wx.RB_GROUP)
+        self.checkbox_1 = wx.CheckBox(self, -1, "Process Spectrum to Audio?")
         self.filler_panel_1 = wx.Panel(self, -1)
         self.filler_panel_2 = wx.Panel(self, -1)
-        self.ce_freq_label = wx.StaticText(self, -1, "Center Frequency of Spectrum")
-        self.ce_freq_slider = wx.Slider(self, -1, 0, 0, 5000)
-        self.ce_freq_spin_ctrl = wx.SpinCtrl(self, -1, "", min=19600, max=20600)
-        self.bw_label = wx.StaticText(self, -1, "Bandwidth of Processed Audio", style=wx.ALIGN_CENTRE)
-        self.bw_slider = wx.Slider(self, -1, 0, 0, 10)
-        self.bw_spin_ctrl = wx.SpinCtrl(self, -1, "", min=0, max=100)
+        self.ce_freq_label = wx.StaticText(self, -1, "Adjust Mixer Frequency")
+        self.ce_freq_slider = wx.Slider(self, -1, 0, -1000, 1000)
+        self.ce_freq_spin_ctrl = wx.SpinCtrl(self, -1, "0", min=-1000, max=1000)
+        self.bw_label = wx.StaticText(self, -1, "Bandwidth of Processed Audio (kHz)", style=wx.ALIGN_CENTRE)
+        self.bw_slider = wx.Slider(self, -1, 25, 1, 30)
+        self.bw_spin_ctrl = wx.SpinCtrl(self, -1, "25", min=1, max=30)
         self.save_audio_checkbox = wx.CheckBox(self, -1, "Save Audio?")
         self.filler_panel_3 = wx.Panel(self, -1)
         self.filler_panel_4 = wx.Panel(self, -1)
         self.speaker_checkbox = wx.CheckBox(self, -1, "Output Audio to Speakers? (Experimental)")
         self.filler_panel_5 = wx.Panel(self, -1)
         self.filler_panel_7 = wx.Panel(self, -1)
-        self.waterfall_checkbox = wx.RadioButton(self, -1, "Display Waterfall Plot?")
+        self.waterfall_checkbox = wx.CheckBox(self, -1, "Display Waterfall Plot?")
         self.filler_panel_6 = wx.Panel(self, -1)
         self.filler_panel_8 = wx.Panel(self, -1)
         self.filler_panel_10 = wx.Panel(self, -1)
@@ -45,6 +45,10 @@ class RTConfigFrame(wx.Dialog):
 
         self.Bind(wx.EVT_BUTTON, self.OnCancel, self.cancel_button)
         self.Bind(wx.EVT_BUTTON, self.OnSave, self.save_button)
+        self.Bind(wx.EVT_SPINCTRL,self.OnSpinMixer, self.ce_freq_spin_ctrl)
+        self.Bind(wx.EVT_SPINCTRL,self.OnSpinBW, self.bw_spin_ctrl)
+        self.Bind(wx.EVT_SCROLL,self.OnSlideMixer,self.ce_freq_slider)
+        self.Bind(wx.EVT_SCROLL,self.OnSlideBW,self.bw_slider)
         
         # end wxGlade
 
@@ -54,7 +58,7 @@ class RTConfigFrame(wx.Dialog):
         self.rt_title_label.SetFont(wx.Font(16, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, "Sans"))
         self.ce_freq_slider.SetMinSize((300, 40))
         self.bw_slider.SetMinSize((300, 40))
-        self.save_audio_checkbox.SetValue(1)
+        #self.save_audio_checkbox.SetValue(1)
         self.waterfall_checkbox.SetValue(1)
         # end wxGlade
 
@@ -105,9 +109,17 @@ class RTConfigFrame(wx.Dialog):
         self.EndModal(wx.ID_OK)
         event.Skip()
 
-    def gatherConfig(self):
-        pass
+    def OnSpinMixer(self, event):
+        self.ce_freq_slider.SetValue(self.ce_freq_spin_ctrl.GetValue())
 
+    def OnSpinBW(self, event):
+        self.bw_slider.SetValue(self.bw_spin_ctrl.GetValue())
+
+    def OnSlideMixer(self, event):
+        self.ce_freq_spin_ctrl.SetValue(self.ce_freq_slider.GetValue())
+
+    def OnSliderBW(self, event):
+        self.bw_spin_ctrl.SetValue(self.bw_slider.GetValue())
 
 
 # end of class RTConfigFrame

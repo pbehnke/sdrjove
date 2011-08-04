@@ -6,9 +6,9 @@ from AboutFrame import *
 from RTConfigFrame import *
 from FRConfigFrame import *
 from RAConfigFrame import *
-from gnu_radio import waterfall2
+from gnu_radio import live_mode
 from gnu_radio import record_mode
-from gnu_radio import audio_wav
+from gnu_radio import radio_astronomy
 import subprocess
 import signal
 import time
@@ -35,31 +35,21 @@ class MainFrame(wx.Frame):
         # Menu Bar
         self.main_menubar = wx.MenuBar()
         wxglade_tmp_menu = wx.Menu()
-      #  self.exportcsv = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export CSV", "", wx.ITEM_NORMAL)
-       # wxglade_tmp_menu.AppendItem(self.exportcsv)
-      #  self.exportwav = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Export WAV", "", wx.ITEM_NORMAL)
-       # wxglade_tmp_menu.AppendItem(self.exportwav)
-       # self.saveplot = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Save Plot", "", wx.ITEM_NORMAL)
-       # wxglade_tmp_menu.AppendItem(self.saveplot)
         self.exit = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Exit", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.exit)
         self.main_menubar.Append(wxglade_tmp_menu, "File")
         wxglade_tmp_menu = wx.Menu()
-       # self.ra_mode = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Radio Astronomy", "", wx.ITEM_NORMAL)
-        #wxglade_tmp_menu.AppendItem(self.ra_mode)
         self.live_mode = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Live Mode", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.live_mode)
         self.full_record = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Full Record", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.full_record)
-       #self.data_analysis = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Data Analysis", "", wx.ITEM_NORMAL)
-       # wxglade_tmp_menu.AppendItem(self.data_analysis)
         self.main_menubar.Append(wxglade_tmp_menu, "Configure")
         wxglade_tmp_menu = wx.Menu()
-        self.help = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Help", "", wx.ITEM_NORMAL)
-        wxglade_tmp_menu.AppendItem(self.help)
+       # self.help = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "Help", "", wx.ITEM_NORMAL)
+        #wxglade_tmp_menu.AppendItem(self.help)
         self.about = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "About", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.about)
-        self.main_menubar.Append(wxglade_tmp_menu, "Help")
+        #self.main_menubar.Append(wxglade_tmp_menu, "Help")
         self.SetMenuBar(self.main_menubar)
         # Menu Bar end
         self.main_statusbar = self.CreateStatusBar(1, 0)
@@ -67,13 +57,13 @@ class MainFrame(wx.Frame):
         # Tool Bar
         self.main_toolbar = wx.ToolBar(self, -1, style=wx.TB_HORIZONTAL|wx.TB_FLAT|wx.TB_DOCKABLE|wx.TB_3DBUTTONS|wx.TB_HORZ_LAYOUT)
         self.SetToolBar(self.main_toolbar)
-        self.main_toolbar.AddLabelTool(1, "Radio Astronomy", wx.Bitmap("/home/phil/sdr gui/images/icons/ra.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Radio Astronomy Mode", "Radio Astronomy mode will plot the average energy over the entire spectrum over time.")
-        self.main_toolbar.AddLabelTool(2, "Real Time Mode", wx.Bitmap("/home/phil/sdr gui/images/icons/realtime.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Real Time Mode", "Real Time mode will display a waterplot plot of the spectrum, and optionally mix a selected bandwidth to audio.")
-        self.main_toolbar.AddLabelTool(3, "Full Record", wx.Bitmap("/home/phil/sdr gui/images/icons/record.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Full Record Mode", "Full Record mode will save unprocessed spectral data to a WAV file.")
-        self.main_toolbar.AddLabelTool(4, "Data Analysis", wx.Bitmap("/home/phil/sdr gui/images/icons/da.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Data Analysis Mode", "Data Analysis mode will process data captured in Full Record mode in Radio Astronomy mode")
+        self.main_toolbar.AddLabelTool(1, "Radio Astronomy", wx.Bitmap("./images/icons/ra.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Radio Astronomy Mode", "Radio Astronomy mode will plot the average energy over the entire spectrum over time.")
+        self.main_toolbar.AddLabelTool(2, "Real Time Mode", wx.Bitmap("./images/icons/realtime.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Real Time Mode", "Real Time mode will display a waterplot plot of the spectrum, and optionally mix a selected bandwidth to audio.")
+        self.main_toolbar.AddLabelTool(3, "Full Record", wx.Bitmap("./images/icons/record.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Full Record Mode", "Full Record mode will save unprocessed spectral data to a WAV file.")
+        self.main_toolbar.AddLabelTool(4, "Data Analysis", wx.Bitmap("./images/icons/da.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Enter Data Analysis Mode", "Data Analysis mode will process data captured in Full Record mode in Radio Astronomy mode")
         self.main_toolbar.AddSeparator()
-        self.main_toolbar.AddLabelTool(5, "Start", wx.Bitmap("/home/phil/sdr gui/images/icons/start.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Start", "Start capturing data")
-        self.main_toolbar.AddLabelTool(6, "Stop", wx.Bitmap("/home/phil/sdr gui/images/icons/stop.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Stop", "Stop capturing data")
+        self.main_toolbar.AddLabelTool(5, "Start", wx.Bitmap("./images/icons/start.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Start", "Start capturing data")
+        self.main_toolbar.AddLabelTool(6, "Stop", wx.Bitmap("./images/icons/stop.bmp", wx.BITMAP_TYPE_ANY), wx.NullBitmap, wx.ITEM_NORMAL, "Stop", "Stop capturing data")
         # Tool Bar end
 
         self.main_area=TopSplitPanel(self)
@@ -82,15 +72,10 @@ class MainFrame(wx.Frame):
         self.__set_properties()
         self.__do_layout()
 
-        #self.Bind(wx.EVT_MENU, self.OnExportCSV, self.exportcsv)
-        #self.Bind(wx.EVT_MENU, self.OnExportWAV, self.exportwav)
-        #self.Bind(wx.EVT_MENU, self.OnSavePlot, self.saveplot)
         self.Bind(wx.EVT_MENU, self.OnExit, self.exit)
-        #self.Bind(wx.EVT_MENU, self.OnRA, self.ra_mode)
         self.Bind(wx.EVT_MENU, self.OnLiveMode, self.live_mode)
         self.Bind(wx.EVT_MENU, self.OnFullRecord, self.full_record)
-        #self.Bind(wx.EVT_MENU, self.OnDataAnalysis, self.data_analysis)
-        self.Bind(wx.EVT_MENU, self.OnHelp, self.help)
+        #self.Bind(wx.EVT_MENU, self.OnHelp, self.help)
         self.Bind(wx.EVT_MENU, self.OnAbout, self.about)
         self.Bind(wx.EVT_TOOL, self.OnRAMode, id=1)
         self.Bind(wx.EVT_TOOL, self.OnRTMode, id=2)
@@ -98,19 +83,11 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_TOOL, self.OnDAMode, id=4)
         self.Bind(wx.EVT_TOOL, self.OnStart, id=5)
         self.Bind(wx.EVT_TOOL, self.OnStop, id=6)
-	#self.Bind(wx.EVT_CLOSE,self.OnExitButton)
         # end wxGlade
 
 
-	#make a random string for the temporary named pipe
+	    #make a random string for the temporary named pipe
         self.temp_pipe_filename='../'+''.join(random.choice(string.ascii_uppercase) for x in range(6))+".sdrjove"
-	#temp_pipe_filename.join(".sdrjove")
-
-	
-	#popup here to select filepath
-	#file_selection=wx.FileDialog(self, "Choose a file to save data to.",style=wx.FD_SAVE)
-	#file_selection.Show()
-	
 	
         self.isDriverLoaded=False
         self.LM_audio=False
@@ -118,6 +95,14 @@ class MainFrame(wx.Frame):
         self.isRTModeConfig=False
         self.isFRModeConfig=False
         self.FR_waterfall=True
+        self.RT_shouldGraph=True
+        self.RT_shouldWAV=False
+        self.RT_shouldAudio=False
+        self.RT_mixer_adj=0
+        self.RT_bw=25
+
+        self.time_database=open('./time_database.txt','a')
+        #print time.localtime()
 
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
@@ -137,29 +122,12 @@ class MainFrame(wx.Frame):
         main_sizer.Add(self.main_area,2,wx.EXPAND | wx.ALL)
         main_sizer.Fit(self)
         self.Layout()
-       # self.Centre()
-        # end wxGlade
 
-  #  def OnExportCSV(self, event): # wxGlade: MainFrame.<event_handler>
-   #     print "Event handler `OnExportCSV' not implemented!"
-    #    event.Skip()
-
-   # def OnExportWAV(self, event): # wxGlade: MainFrame.<event_handler>
-   #     print "Event handler `OnExportWAV' not implemented!"
-   #     event.Skip()
-
-  #  def OnSavePlot(self, event): # wxGlade: MainFrame.<event_handler>
-   #     print "Event handler `OnSavePlot' not implemented!"
-   #     event.Skip()
 
     ##########################################################################
     # 
     ##########################################################################
     def OnExit(self, event): # wxGlade: MainFrame.<event_handler>
-        #try:
-            #self.tb.stop()
-        #except (AttributeError):
-           # pass
 
         try:
             subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
@@ -168,18 +136,12 @@ class MainFrame(wx.Frame):
 
         subprocess.call(['rm', '-f', self.temp_pipe_filename])
         time.sleep(0.5)
-        #self.Close()
+        self.time_database.close()
         
-        sys.exit()
+        sys.exit(0)
         event.Skip()
 
-    ##########################################################################
-    # 
-    ##########################################################################
-    #def OnRA(self, event): # wxGlade: MainFrame.<event_handler>
-    #    raconfig=RAConfigFrame(None, -1, "")
-    #    raconfig.Show()
-    #    event.Skip()
+
 
     ##########################################################################
     # Select the Live Mode configuration box
@@ -187,11 +149,27 @@ class MainFrame(wx.Frame):
     def OnLiveMode(self, event): # wxGlade: MainFrame.<event_handler>
         rtconfig=RTConfigFrame(self)
         ret=rtconfig.ShowModal()
+        self.RT_shouldGraph=True
+        self.RT_shouldWAV=False
+        self.RT_shouldAudio=False
         if ret==wx.ID_OK:
             if rtconfig.checkbox_1.GetValue(): #process to audio
                 self.LM_audio=True
-                #TODO: get additional audio stuff
+
+                if rtconfig.save_audio_checkbox.GetValue():
+                    self.RT_shouldWAV=True
+
+                if rtconfig.speaker_checkbox.GetValue():
+                    self.RT_shouldAudio=True
+
+            if rtconfig.waterfall_checkbox.GetValue():
+                self.RT_shouldGraph=True
+
+            self.RT_mixer_adj=rtconfig.ce_freq_spin_ctrl.GetValue()
+            self.RT_bw=rtconfig.bw_spin_ctrl.GetValue()
+            
             self.isRTModeConfig=True
+
         event.Skip()
 
     ##########################################################################
@@ -215,20 +193,6 @@ class MainFrame(wx.Frame):
         event.Skip()
 
     ##########################################################################
-    # Select the Data Analysis Mode configuration box
-    ##########################################################################
-    #def OnDataAnalysis(self, event): # wxGlade: MainFrame.<event_handler>
-    #    print "Something should happen here."
-    #    event.Skip()
-
-    ##########################################################################
-    # 
-    ##########################################################################
-    def OnHelp(self, event): # wxGlade: MainFrame.<event_handler>
-        print "Event handler `OnHelp' not implemented!"
-        event.Skip()
-
-    ##########################################################################
     # Select the About Box
     ##########################################################################
     def OnAbout(self, event): # wxGlade: MainFrame.<event_handler>
@@ -236,6 +200,7 @@ class MainFrame(wx.Frame):
         about.Show()
         event.Skip()
 
+######################################################################################################################################
     ##########################################################################
     # Set the current mode to Radio Astronomy
     ##########################################################################
@@ -247,6 +212,7 @@ class MainFrame(wx.Frame):
             self.loadDriver()
 
         if self.isDriverLoaded:
+            self.RA_sink_filename=""
             dlg =wx.MessageDialog(None, "Would you like to record to a file?","Live Mode Not Configured", wx.YES_NO | wx.ICON_QUESTION)
             ret=dlg.ShowModal()
             if ret == wx.ID_YES:
@@ -255,6 +221,8 @@ class MainFrame(wx.Frame):
                 ret=file_selection.ShowModal()
                 if ret==wx.ID_OK:
                     self.RA_sink_filename=file_selection.GetPath()
+            else:
+                self.RA_should_save_file=False
             print "Running in Radio Astronomy Mode. Click Start to begin capturing data."
             self.configState="RA"
 
@@ -344,6 +312,8 @@ class MainFrame(wx.Frame):
         
         event.Skip()
 
+####################################################################################################################################
+
     ##########################################################################
     # Start Function
     ##########################################################################
@@ -359,33 +329,43 @@ class MainFrame(wx.Frame):
         elif self.configState=='RT':
 
             subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-            if self.LM_audio:
-                self.tb = audio_wav.top_block(self.temp_pipe_filename,self.wav_filename)
-            else:
-                self.tb = waterfall2.top_block(self,self.temp_pipe_filename)
+            self.tb = live_mode.top_block(self,self.temp_pipe_filename,self.wav_filename,self.RT_shouldGraph,self.RT_shouldWAV,self.RT_shouldAudio)
 
             print "Running Real Time Mode..."
+            if self.RT_shouldWAV:
+                #store wav file timestamp
+                self.storeTime(self.wav_filename)
+    
             self.tb.Run()
             
 
         elif self.configState=='FR':
             subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
             self.tb = record_mode.top_block(self,self.temp_pipe_filename,self.FR_sink_filename,self.FR_waterfall)
-            self.FileSizeTimer.Start(100)
+            try:
+                self.FileSizeTimer.Start(100)
+            except (AttributeError):
+                pass
             print "Running In Full Record Mode..."
+            
+            #store sink file timestamp
+            self.storeTime(self.FR_sink_filename)
             self.tb.Run()
 
         elif self.configState=='DA':
 
             subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
             self.tb = radio_astronomy.top_block(self,self.DA_souce_file,self.DA_sink_filename,self.DA_should_save_file)
+            print "Running In Data Analysis Mode..."
             self.tb.Run()
 
         elif self.configState=='RA':
             subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
             self.tb = radio_astronomy.top_block(self,self.temp_pipe_filename,self.RA_sink_filename,self.RA_should_save_file)
+            print "Running In Radio Astronomy Mode..."
             self.tb.Run()
 
+        self.running=True
         event.Skip()
 
     ##########################################################################
@@ -408,16 +388,22 @@ class MainFrame(wx.Frame):
                 self.tb.wxgui_waterfallsink2_0.win.Close()
 
         elif self.configState=='FR':
+            try:
+                self.FileSizeTimer.Stop()
+            except (AttributeError):
+                pass
             if self.FR_waterfall==True:
                 self.tb.wxgui_waterfallsink2_0.win.Close()
 
         elif self.configState=='RA':
-            self.
+            self.tb.wxgui_scopesink2_0.win.Close()
         elif self.configState=='DA':
-            pass
+            self.tb.wxgui_scopesink2_0.win.Close()
 
         if self.configState!=0:
             print "Stopped."
+
+        self.running=False
 
         if event!= None:
             event.Skip()
@@ -456,7 +442,7 @@ class MainFrame(wx.Frame):
     ##########################################################################	
     def OnFileSizeTimer(self,event):
         try:
-            currentFileStat=os.stat(self.sink_filename)
+            currentFileStat=os.stat(self.FR_sink_filename)
         except (OSError):
             return None
         size=currentFileStat.st_size
@@ -466,6 +452,19 @@ class MainFrame(wx.Frame):
             print "Maximum File Size Reached"
             self.OnStop(None)
         event.Skip()
+
+    def storeTime(self,filename):
+        time_struct=time.localtime()
+        year=time_struct.tm_year
+        month=time_struct.tm_month
+        day=time_struct.tm_mday
+        hour=time_struct.tm_hour
+        minutes=time_struct.tm_min
+        secs=time_struct.tm_sec
+
+        line=""+str(filename)+':'+str(year)+':'+str(month)+':'+str(day)+':'+str(hour)+':'+str(minutes)+':'+str(secs)
+
+        self.time_database.write(line)
 
 # end of class MainFrame
 
@@ -507,8 +506,6 @@ class GraphFrame(wx.Panel):
         title=wx.StaticText(self,label="Graph:")
         #add the text to the sizer
         self.vboxSizer.Add(title, 1, wx.EXPAND | wx.ALL|wx.ALIGN_CENTER)
-        #add the text box to the sizer
-        #vboxSizer.Add(wx.Panel(self), 0, wx.EXPAND | wx.ALL)
         
         self.SetSizer(self.vboxSizer)
 

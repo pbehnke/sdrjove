@@ -43,14 +43,14 @@ class top_block(grc_wxgui.top_block_gui):
 			parent.main_area.graph_frame,
 			title="Scope Plot",
 			sample_rate=samp_rate/4,
-			v_scale=5000,
+			v_scale=2000,
 			v_offset=20e3,
-			t_scale=0,
+			t_scale=1,
 			ac_couple=False,
 			xy_mode=False,
 			num_inputs=1,
 			trig_mode=gr.gr_TRIG_MODE_AUTO,
-			y_axis_label="Counts",
+			y_axis_label="Signal Strength",
 		)
 		#self.Add(self.wxgui_scopesink2_0.win)
 
