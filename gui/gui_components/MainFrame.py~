@@ -49,7 +49,7 @@ class MainFrame(wx.Frame):
         #wxglade_tmp_menu.AppendItem(self.help)
         self.about = wx.MenuItem(wxglade_tmp_menu, wx.NewId(), "About", "", wx.ITEM_NORMAL)
         wxglade_tmp_menu.AppendItem(self.about)
-        #self.main_menubar.Append(wxglade_tmp_menu, "Help")
+        self.main_menubar.Append(wxglade_tmp_menu, "Help")
         self.SetMenuBar(self.main_menubar)
         # Menu Bar end
         self.main_statusbar = self.CreateStatusBar(1, 0)
@@ -100,6 +100,10 @@ class MainFrame(wx.Frame):
         self.RT_shouldAudio=False
         self.RT_mixer_adj=0
         self.RT_bw=25
+        self.running=False
+        self.DA_sink_filename=""
+        self.DA_source=""
+        self.DA_should_save_file=False
 
         self.time_database=open('./time_database.txt','a')
         #print time.localtime()
@@ -129,7 +133,10 @@ class MainFrame(wx.Frame):
     ##########################################################################
     def OnExit(self, event): # wxGlade: MainFrame.<event_handler>
 
+        if self.running:
+            self.tb.stop()
         try:
+            subprocess.call(['gksudo','--','echo','Unloading Driver...'])
             subprocess.call(['sudo','--','kill','-SIGINT',str(self.driver.pid+1)])
         except (AttributeError):
             pass
@@ -246,7 +253,8 @@ class MainFrame(wx.Frame):
             self.loadDriver()
 
         if self.isDriverLoaded:
-            if self.LM_audio:
+            self.wav_filename=""
+            if self.RT_shouldWAV:
                 file_selection=wx.FileDialog(self, "Choose a file to save data to.",style=wx.FD_SAVE)
                 ret=file_selection.ShowModal()
                 if ret==wx.ID_OK:
@@ -309,6 +317,8 @@ class MainFrame(wx.Frame):
                 ret=file_selection.ShowModal()
                 if ret==wx.ID_OK:
                     self.DA_sink_filename=file_selection.GetPath()
+                else:	    
+                    self.DA_should_save_file=False
         
         event.Skip()
 
@@ -327,9 +337,9 @@ class MainFrame(wx.Frame):
             return None
 
         elif self.configState=='RT':
-
+            subprocess.call(['gksudo','--','echo','Sudo Permissions Granted'])
             subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-            self.tb = live_mode.top_block(self,self.temp_pipe_filename,self.wav_filename,self.RT_shouldGraph,self.RT_shouldWAV,self.RT_shouldAudio)
+            self.tb = live_mode.top_block(self,self.temp_pipe_filename,self.wav_filename,self.RT_shouldGraph,self.RT_shouldWAV,self.RT_shouldAudio,self.RT_mixer_adj,self.RT_bw)
 
             print "Running Real Time Mode..."
             if self.RT_shouldWAV:
@@ -353,9 +363,7 @@ class MainFrame(wx.Frame):
             self.tb.Run()
 
         elif self.configState=='DA':
-
-            subprocess.call(['sudo','--','kill','-SIGUSR1',str(self.driver.pid+1)])
-            self.tb = radio_astronomy.top_block(self,self.DA_souce_file,self.DA_sink_filename,self.DA_should_save_file)
+            self.tb = radio_astronomy.top_block(self,self.DA_source,self.DA_sink_filename,self.DA_should_save_file)
             print "Running In Data Analysis Mode..."
             self.tb.Run()
 
@@ -382,7 +390,7 @@ class MainFrame(wx.Frame):
             if event!= None:
                 event.Skip()
                 return None
-        
+
         if self.configState=='RT':
             if self.LM_audio == False:
                 self.tb.wxgui_waterfallsink2_0.win.Close()
@@ -456,13 +464,13 @@ class MainFrame(wx.Frame):
     def storeTime(self,filename):
         time_struct=time.localtime()
         year=time_struct.tm_year
-        month=time_struct.tm_month
+        month=time_struct.tm_mon
         day=time_struct.tm_mday
         hour=time_struct.tm_hour
         minutes=time_struct.tm_min
         secs=time_struct.tm_sec
 
-        line=""+str(filename)+':'+str(year)+':'+str(month)+':'+str(day)+':'+str(hour)+':'+str(minutes)+':'+str(secs)
+        line=""+str(filename)+':'+str(year)+':'+str(month)+':'+str(day)+':'+str(hour)+':'+str(minutes)+':'+str(secs)+"\n"
 
         self.time_database.write(line)
 

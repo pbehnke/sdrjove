@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Thu Aug  4 00:50:43 2011</timestamp>
+  <timestamp>Thu Aug  4 23:52:03 2011</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -80,60 +80,6 @@
     </param>
   </block>
   <block>
-    <key>gr_multiply_xx</key>
-    <param>
-      <key>id</key>
-      <value>gr_multiply_xx_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(329, 427)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_float_to_complex</key>
-    <param>
-      <key>id</key>
-      <value>gr_float_to_complex_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(647, 74)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>gr_short_to_float</key>
     <param>
       <key>id</key>
@@ -203,26 +149,22 @@
     </param>
   </block>
   <block>
-    <key>gr_file_source</key>
+    <key>gr_keep_one_in_n</key>
     <param>
       <key>id</key>
-      <value>gr_file_source_0</value>
+      <value>gr_keep_one_in_n_1</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/phil/testdata</value>
+      <value>False</value>
     </param>
     <param>
       <key>type</key>
-      <value>short</value>
+      <value>float</value>
     </param>
     <param>
-      <key>repeat</key>
-      <value>False</value>
+      <key>n</key>
+      <value>114</value>
     </param>
     <param>
       <key>vlen</key>
@@ -230,7 +172,42 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(55, 79)</value>
+      <value>(745, 637)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>audio_sink</key>
+    <param>
+      <key>id</key>
+      <value>audio_sink_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>44100</value>
+    </param>
+    <param>
+      <key>device_name</key>
+      <value>plughw:0,0</value>
+    </param>
+    <param>
+      <key>ok_to_block</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(934, 648)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -254,41 +231,6 @@
     <param>
       <key>_coordinate</key>
       <value>(764, 408)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_wavfile_sink</key>
-    <param>
-      <key>id</key>
-      <value>gr_wavfile_sink_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/phil/SDR_JOVE/gui/gnu_radio/test.wav</value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>44100</value>
-    </param>
-    <param>
-      <key>bits_per_sample</key>
-      <value>16</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(928, 562)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -355,61 +297,6 @@
     <param>
       <key>_rotation</key>
       <value>180</value>
-    </param>
-  </block>
-  <block>
-    <key>low_pass_filter</key>
-    <param>
-      <key>id</key>
-      <value>low_pass_filter_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fir_filter_ccf</value>
-    </param>
-    <param>
-      <key>decim</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>interp</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>gain</key>
-      <value>0.0025</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate/4</value>
-    </param>
-    <param>
-      <key>cutoff_freq</key>
-      <value>25e3</value>
-    </param>
-    <param>
-      <key>width</key>
-      <value>250000</value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>firdes.WIN_RECTANGULAR</value>
-    </param>
-    <param>
-      <key>beta</key>
-      <value>6.76</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(464, 291)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
     </param>
   </block>
   <block>
@@ -487,6 +374,99 @@
     </param>
   </block>
   <block>
+    <key>gr_wavfile_sink</key>
+    <param>
+      <key>id</key>
+      <value>gr_wavfile_sink_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/phil/SDR_JOVE/gui/remove.wav</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>44100</value>
+    </param>
+    <param>
+      <key>bits_per_sample</key>
+      <value>16</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(928, 562)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_float_to_complex</key>
+    <param>
+      <key>id</key>
+      <value>gr_float_to_complex_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(647, 74)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_file_source</key>
+    <param>
+      <key>id</key>
+      <value>gr_file_source_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/phil/SDR_JOVE/gui/removeme.dat</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>short</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(55, 79)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>gr_throttle</key>
     <param>
       <key>id</key>
@@ -510,7 +490,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(851, 87)</value>
+      <value>(896, 27)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -541,7 +521,148 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1017, 87)</value>
+      <value>(1113, 24)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>low_pass_filter</key>
+    <param>
+      <key>id</key>
+      <value>low_pass_filter_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>fir_filter_ccf</value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate/4</value>
+    </param>
+    <param>
+      <key>cutoff_freq</key>
+      <value>1000000</value>
+    </param>
+    <param>
+      <key>width</key>
+      <value>100000</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>firdes.WIN_RECTANGULAR</value>
+    </param>
+    <param>
+      <key>beta</key>
+      <value>6.76</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(878, 142)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_multiply_xx</key>
+    <param>
+      <key>id</key>
+      <value>gr_multiply_xx_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(329, 427)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>low_pass_filter</key>
+    <param>
+      <key>id</key>
+      <value>low_pass_filter_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>fir_filter_ccf</value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>0.0025</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate/4</value>
+    </param>
+    <param>
+      <key>cutoff_freq</key>
+      <value>25e3</value>
+    </param>
+    <param>
+      <key>width</key>
+      <value>250000</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>firdes.WIN_RECTANGULAR</value>
+    </param>
+    <param>
+      <key>beta</key>
+      <value>6.76</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(485, 332)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -584,7 +705,7 @@
     </param>
     <param>
       <key>ref_scale</key>
-      <value>2.0</value>
+      <value>2</value>
     </param>
     <param>
       <key>fft_size</key>
@@ -592,7 +713,7 @@
     </param>
     <param>
       <key>fft_rate</key>
-      <value>15</value>
+      <value>30</value>
     </param>
     <param>
       <key>average</key>
@@ -600,15 +721,15 @@
     </param>
     <param>
       <key>avg_alpha</key>
-      <value>0</value>
+      <value>0.90</value>
     </param>
     <param>
       <key>win</key>
-      <value>None</value>
+      <value>window.rectangular</value>
     </param>
     <param>
       <key>win_size</key>
-      <value></value>
+      <value>(600,500)</value>
     </param>
     <param>
       <key>grid_pos</key>
@@ -620,109 +741,13 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1195, 38)</value>
+      <value>(1157, 158)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
   </block>
-  <block>
-    <key>audio_sink</key>
-    <param>
-      <key>id</key>
-      <value>audio_sink_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>44100</value>
-    </param>
-    <param>
-      <key>device_name</key>
-      <value>plughw:0,0</value>
-    </param>
-    <param>
-      <key>ok_to_block</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(934, 648)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_keep_one_in_n</key>
-    <param>
-      <key>id</key>
-      <value>gr_keep_one_in_n_1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>n</key>
-      <value>114</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(745, 637)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>gr_sig_source_x_0</source_block_id>
-    <sink_block_id>gr_multiply_xx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>gr_multiply_xx_0</source_block_id>
-    <sink_block_id>low_pass_filter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>gr_complex_to_float_0</source_block_id>
-    <sink_block_id>gr_throttle_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>gr_float_to_complex_0</source_block_id>
-    <sink_block_id>gr_multiply_xx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>gr_float_to_complex_0</source_block_id>
-    <sink_block_id>gr_throttle_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
   <connection>
     <source_block_id>gr_short_to_float_0</source_block_id>
     <sink_block_id>gr_float_to_complex_0</sink_block_id>
@@ -750,6 +775,42 @@
   <connection>
     <source_block_id>gr_file_source_0</source_block_id>
     <sink_block_id>gr_deinterleave_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_multiply_const_vxx_1</source_block_id>
+    <sink_block_id>wxgui_waterfallsink2_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_keep_one_in_n_1</source_block_id>
+    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_throttle_0</source_block_id>
+    <sink_block_id>gr_multiply_const_vxx_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_sig_source_x_0</source_block_id>
+    <sink_block_id>gr_multiply_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_multiply_xx_0</source_block_id>
+    <sink_block_id>low_pass_filter_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_complex_to_float_0</source_block_id>
+    <sink_block_id>gr_throttle_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -784,20 +845,20 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_throttle_0</source_block_id>
-    <sink_block_id>gr_multiply_const_vxx_1</sink_block_id>
+    <source_block_id>gr_float_to_complex_0</source_block_id>
+    <sink_block_id>low_pass_filter_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_multiply_const_vxx_1</source_block_id>
-    <sink_block_id>wxgui_waterfallsink2_0</sink_block_id>
+    <source_block_id>low_pass_filter_1</source_block_id>
+    <sink_block_id>gr_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_keep_one_in_n_1</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_block_id>low_pass_filter_1</source_block_id>
+    <sink_block_id>gr_multiply_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

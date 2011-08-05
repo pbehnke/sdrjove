@@ -29,13 +29,13 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		self.gr_deinterleave_0 = gr.deinterleave(gr.sizeof_short*1)
 		if should_save_file==True:
-			self.gr_file_sink_0 = gr.file_sink(gr.sizeof_float*1, str(sink_filename))
+			self.gr_file_sink_0 = gr.file_sink(gr.sizeof_short*1, str(sink_filename))
 			self.gr_file_sink_0.set_unbuffered(False)
 			self.gr_keep_one_in_n_0_0 = gr.keep_one_in_n(gr.sizeof_float*1, 1024)
 			self.gr_float_to_short_0 = gr.float_to_short()
 		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, str(source_filename), True)
 		self.gr_float_to_complex_0 = gr.float_to_complex(1)
-		self.gr_rms_xx_0 = gr.rms_cf(0.005)
+		self.gr_rms_xx_0 = gr.rms_cf(0.00005)
 		self.gr_short_to_float_0 = gr.short_to_float()
 		self.gr_short_to_float_1 = gr.short_to_float()
 		self.gr_throttle_0 = gr.throttle(gr.sizeof_float*1, samp_rate/4)
@@ -43,27 +43,31 @@ class top_block(grc_wxgui.top_block_gui):
 			parent.main_area.graph_frame,
 			title="Scope Plot",
 			sample_rate=samp_rate/4,
-			v_scale=2000,
-			v_offset=20e3,
-			t_scale=1,
+			v_scale=1000,
+			v_offset=18e3,
+			t_scale=0.25,
 			ac_couple=False,
 			xy_mode=False,
 			num_inputs=1,
-			trig_mode=gr.gr_TRIG_MODE_AUTO,
+			trig_mode=gr.gr_TRIG_MODE_STRIPCHART,
 			y_axis_label="Signal Strength",
+			size=((640,450))
 		)
+		self.low_pass_filter_1 = gr.fir_filter_ccf(1, firdes.low_pass(
+			1, samp_rate/4, 1000000, 100000, firdes.WIN_RECTANGULAR, 6.76))
 		#self.Add(self.wxgui_scopesink2_0.win)
 
 		##################################################
 		# Connections
 		##################################################
-		
+		self.connect((self.low_pass_filter_1, 0), (self.gr_rms_xx_0, 0))
 		self.connect((self.gr_deinterleave_0, 0), (self.gr_short_to_float_0, 0))
 		self.connect((self.gr_short_to_float_0, 0), (self.gr_float_to_complex_0, 0))
 		self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
 		self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
 		self.connect((self.gr_file_source_0, 0), (self.gr_deinterleave_0, 0))
-		self.connect((self.gr_float_to_complex_0, 0), (self.gr_rms_xx_0, 0))
+		self.connect((self.gr_float_to_complex_0, 0), (self.low_pass_filter_1, 0))
+		#self.connect((self.gr_float_to_complex_0, 0), (self.gr_rms_xx_0, 0))
 		self.connect((self.gr_rms_xx_0, 0), (self.gr_throttle_0, 0))
 		self.connect((self.gr_throttle_0, 0), (self.wxgui_scopesink2_0, 0))
 		if should_save_file==True:

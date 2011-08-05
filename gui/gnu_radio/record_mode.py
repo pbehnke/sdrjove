@@ -31,6 +31,8 @@ class top_block(grc_wxgui.top_block_gui):
 		self.gr_file_sink_0 = gr.file_sink(gr.sizeof_short*1, str(sink_filename))
 		self.gr_file_sink_0.set_unbuffered(False)
 		self.gr_file_source_0 = gr.file_source(gr.sizeof_short*1, source_filename, True)
+		self.low_pass_filter_1 = gr.fir_filter_ccf(1, firdes.low_pass(
+			1, samp_rate/4, 1000000, 100000, firdes.WIN_RECTANGULAR, 6.76))
 		if displayGraph==True:
 			self.gr_multiply_const_vxx_0 = gr.multiply_const_vcc((0.0014125375456228, ))
 			self.gr_deinterleave_0 = gr.deinterleave(gr.sizeof_short*1)
@@ -40,16 +42,17 @@ class top_block(grc_wxgui.top_block_gui):
 			self.gr_throttle_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate/4)
 			self.wxgui_waterfallsink2_0 = waterfallsink2.waterfall_sink_c(
 				parent.main_area.graph_frame,
-				baseband_freq=19.5e6,
+				baseband_freq=19.6e6,
 				dynamic_range=100,
 				ref_level=50,
 				ref_scale=2.0,
 				sample_rate=samp_rate/4,
 				fft_size=512,
-				fft_rate=15,
+				fft_rate=30,
 				average=False,
 				avg_alpha=None,
 				title="Waterfall Plot",
+				size=((640,450))
 			)
 		#self.Add(self.wxgui_waterfallsink2_0.win)
 
@@ -60,7 +63,9 @@ class top_block(grc_wxgui.top_block_gui):
 		if displayGraph==True:
 			self.connect((self.gr_throttle_0, 0), (self.gr_multiply_const_vxx_0, 0))
 			self.connect((self.gr_multiply_const_vxx_0, 0), (self.wxgui_waterfallsink2_0, 0))
-			self.connect((self.gr_float_to_complex_0, 0), (self.gr_throttle_0, 0))
+			#self.connect((self.gr_float_to_complex_0, 0), (self.gr_throttle_0, 0))
+			self.connect((self.low_pass_filter_1, 0), (self.gr_throttle_0, 0))
+			self.connect((self.gr_float_to_complex_0, 0), (self.low_pass_filter_1, 0))
 			self.connect((self.gr_short_to_float_0, 0), (self.gr_float_to_complex_0, 0))
 			self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
 			self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
