@@ -43,7 +43,7 @@ class top_block(grc_wxgui.top_block_gui):
 			parent.main_area.graph_frame,
 			title="Scope Plot",
 			sample_rate=samp_rate/4,
-			v_scale=1000,
+			v_scale=5000,
 			v_offset=18e3,
 			t_scale=0.25,
 			ac_couple=False,
@@ -60,13 +60,14 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		# Connections
 		##################################################
-		self.connect((self.low_pass_filter_1, 0), (self.gr_rms_xx_0, 0))
+		
 		self.connect((self.gr_deinterleave_0, 0), (self.gr_short_to_float_0, 0))
 		self.connect((self.gr_short_to_float_0, 0), (self.gr_float_to_complex_0, 0))
 		self.connect((self.gr_short_to_float_1, 0), (self.gr_float_to_complex_0, 1))
 		self.connect((self.gr_deinterleave_0, 1), (self.gr_short_to_float_1, 0))
 		self.connect((self.gr_file_source_0, 0), (self.gr_deinterleave_0, 0))
 		self.connect((self.gr_float_to_complex_0, 0), (self.low_pass_filter_1, 0))
+		self.connect((self.low_pass_filter_1, 0), (self.gr_rms_xx_0, 0))
 		#self.connect((self.gr_float_to_complex_0, 0), (self.gr_rms_xx_0, 0))
 		self.connect((self.gr_rms_xx_0, 0), (self.gr_throttle_0, 0))
 		self.connect((self.gr_throttle_0, 0), (self.wxgui_scopesink2_0, 0))

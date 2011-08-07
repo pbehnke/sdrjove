@@ -43,7 +43,7 @@ class top_block(grc_wxgui.top_block_gui):
 			parent.main_area.graph_frame,
 			title="Scope Plot",
 			sample_rate=samp_rate/4,
-			v_scale=6000,
+			v_scale=5000,
 			v_offset=18e3,
 			t_scale=0.25,
 			ac_couple=False,

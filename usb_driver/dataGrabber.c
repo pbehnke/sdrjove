@@ -106,7 +106,7 @@ void callback_fn(struct libusb_transfer *transfer){
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
-		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
+		/*else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
@@ -122,7 +122,7 @@ void callback_fn(struct libusb_transfer *transfer){
 			}
 			//CHANGE ME BACK!!
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
-		}
+		}*/
 		else{
 			i=getNextPacket(i,transfer);
 		}	

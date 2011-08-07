@@ -132,7 +132,7 @@ void callback_fn(struct libusb_transfer *transfer){
 				tmp[j+3]=j_2;
 			}
 			//CHANGE ME BACK!!
-			//fwrite(tmp,(size_t)1,(size_t)64,fp);
+			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
 		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
@@ -152,7 +152,7 @@ void callback_fn(struct libusb_transfer *transfer){
 				tmp[j+3]=j_2;
 			}
 			//CHANGE ME BACK!!
-			//fwrite(tmp,(size_t)1,(size_t)64,fp);
+			fwrite(tmp,(size_t)1,(size_t)64,fp);
 		}
 		else{
 			//count2++;
@@ -163,7 +163,7 @@ void callback_fn(struct libusb_transfer *transfer){
 	//gettimeofday(&t6, NULL);
 
 	//DELETE ME
-	fwrite(transfer->buffer,(size_t)1,(size_t)(3072*NUM_PACKETS-1),fp);
+	//fwrite(transfer->buffer,(size_t)1,(size_t)(3072*NUM_PACKETS-1),fp);
 
 	fflush(fp);
 /*

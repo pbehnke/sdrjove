@@ -107,7 +107,6 @@ void callback_fn(struct libusb_transfer *transfer){
 
 		}
 		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
-			count3++;
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
