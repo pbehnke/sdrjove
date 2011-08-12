@@ -1,0 +1,63 @@
+##############################################################
+#
+# Xilinx Core Generator version K.39
+# Date: Thu Jun 16 00:55:57 2011
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatParenNotRipped
+SET createndf = True
+SET designentry = VHDL
+SET device = xc3s100e
+SET devicefamily = spartan3e
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Edif
+SET package = vq100
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -5
+SET verilogsim = True
+SET vhdlsim = True
+# END Project Options
+# BEGIN Select
+SELECT Multiplier family Xilinx,_Inc. 7.0
+# END Select
+# BEGIN Parameters
+CSET asynchronous_clear=false
+CSET clk_cycles_per_input=1
+CSET clock_enable=true
+CSET component_name=multiplier_spartan3e_7_0_3ea0672ed784ab3c
+CSET create_rpm=false
+CSET memory_type=Distributed_Memory
+CSET multiplier_type=Parallel
+CSET nd=false
+CSET output_hold_register=true
+CSET output_options=Registered
+CSET output_width=35
+CSET pipelined=Maximum
+CSET port_a_data=Signed
+CSET port_a_width=16
+CSET port_b_constant=true
+CSET port_b_constant_value=131072
+CSET port_b_data=Unsigned
+CSET port_b_width=19
+CSET rdy=false
+CSET register_input=false
+CSET rfd=false
+CSET synchronous_clear=true
+# END Parameters
+GENERATE
+# CRC: cfa204b5
+

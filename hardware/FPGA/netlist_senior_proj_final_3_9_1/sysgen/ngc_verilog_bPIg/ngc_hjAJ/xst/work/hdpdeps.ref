@@ -1,0 +1,63 @@
+V3 32
+FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f.vhd" 2011/08/03.14:56:35 K.39
+EN work/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f 1312410556 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f.vhd" \
+      PB ieee/std_logic_1164 1217055545
+AR work/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f_a 1312410557 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f.vhd" \
+      EN work/distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f 1312410556
+FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" 2011/08/03.15:29:14 K.39
+PH work/conv_pkg 1312410558 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PH ieee/NUMERIC_STD 1217055545
+PB work/conv_pkg 1312410559 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PH work/conv_pkg 1312410558
+PH work/clock_pkg 1312410560 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545
+EN work/srl17e 1312410561 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/srl17e/structural 1312410562 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/srl17e 1312410561 CP srl16e CP fde
+EN work/synth_reg 1312410563 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/synth_reg/structural 1312410564 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/synth_reg 1312410563 CP srl17e
+EN work/synth_reg_reg 1312410565 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/synth_reg_reg/behav 1312410566 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/synth_reg_reg 1312410565
+EN work/single_reg_w_init 1312410567 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/single_reg_w_init/structural 1312410568 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/single_reg_w_init 1312410567 CP fdre CP fdse
+EN work/synth_reg_w_init 1312410569 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/synth_reg_w_init/structural 1312410570 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/synth_reg_w_init 1312410569 CP single_reg_w_init
+EN work/wrapped_xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91 1312410571 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/wrapped_xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91/behavior 1312410572 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/wrapped_xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91 1312410571 \
+      CP fds CP distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f \
+      CP synth_reg_w_init CP synth_reg
+EN work/xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91 1312410573 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410559
+AR work/xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91/behavior 1312410574 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_bPIg/ngc_hjAJ/template_results.vhd" \
+      EN work/xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91 1312410573 \
+      CP work/wrapped_xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91

@@ -1,0 +1,1 @@
+C:/Xilinx/10.1/DSP_Tools/sysgen/bin/saferun.exe -a "C:\Documents and Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1\sysgen\senior_project_final_3_9_cw_import.log" -- c:/xilinx/10.1/ise/bin/nt/xtclsh.exe senior_project_final_3_9_cw_import.tcl

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="nt" product="ISE" version="10.1.03">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Wed Aug 03 15:58:23 2011">
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="448"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="C_DA_FIR_V9_0, Xilinx CORE Generator 10.1.03_ip3"/>
+        <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+          <section stringID="NGDBUILD_CORE_INSTANCES">
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="binary_counter_spartan3e_10_0_4aaa5fd2f698d138">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_counter_binary_v10_0" value="binary_counter_spartan3e_10_0_4aaa5fd2f698d138"/>
+              <item c_ainit_val="0" c_ce_overrides_sync="0" c_count_by="11001000" c_count_mode="0" c_count_to="1000" c_fb_latency="0" c_has_ce="1" c_has_load="0" c_has_sclr="0" c_has_sinit="1" c_has_sset="0" c_has_thresh0="0" c_implementation="0" c_latency="1" c_load_low="0" c_restrict_count="0" c_sclr_overrides_sset="1" c_sinit_val="0" c_thresh0_value="1" c_width="10" component_name="binary_counter_spartan3e_10_0_4aaa5fd2f698d138" stringID="NGDBUILD_CORE_PARAMETERS" value="binary_counter_spartan3e_10_0_4aaa5fd2f698d138"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="multiplier_spartan3e_10_1_e5c402dfa5ce3ecc">
+              <item stringID="NGDBUILD_CORE_INFO" type="mult_gen_v10_1" value="multiplier_spartan3e_10_1_e5c402dfa5ce3ecc"/>
+              <item c_a_type="0" c_a_width="19" c_b_type="0" c_b_value="10000001" c_b_width="19" c_ccm_imp="0" c_ce_overrides_sclr="1" c_has_ce="1" c_has_sclr="1" c_has_zero_detect="0" c_latency="5" c_mult_type="1" c_optimize_goal="1" c_out_high="37" c_out_low="0" c_round_output="0" c_round_pt="0" component_name="multiplier_spartan3e_10_1_e5c402dfa5ce3ecc" stringID="NGDBUILD_CORE_PARAMETERS" value="multiplier_spartan3e_10_1_e5c402dfa5ce3ecc"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="senior_project_final_3_9">
+              <item stringID="NGDBUILD_CORE_INFO" type="sysgen_core_10_1_3_1386" value="senior_project_final_3_9"/>
+              <item stringID="NGDBUILD_CORE_PARAMETERS" total_blocks="53" value="senior_project_final_3_9" xilinx_bitbasher_block="2" xilinx_black_box_block="1" xilinx_clock_enable_probe_block="1" xilinx_constant_multiplier_block="1" xilinx_counter_block="1" xilinx_down_sampler_block="5" xilinx_fdatool_interface_block="3" xilinx_finite_impulse_response_filter_block="4" xilinx_gateway_in_block="3" xilinx_gateway_out_block="11" xilinx_multiplier_block="2" xilinx_resource_estimator_block="1" xilinx_sine_cosine_generator_block="1" xilinx_system_generator_block="1" xilinx_time_division_multiplexer_block="1" xilinx_type_converter_block="7"/>
+            </scope>
+          </section>
+        </section>
+      </section>
+    </task>
+  </application>
+
+</document>

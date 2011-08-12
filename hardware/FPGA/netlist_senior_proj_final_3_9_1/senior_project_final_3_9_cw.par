@@ -1,0 +1,449 @@
+Release 10.1.03 par K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+DAN::  Wed Aug 03 16:01:53 2011
+
+par -w -intstyle ise -ol high -t 1 senior_project_final_3_9_cw_map.ncd
+senior_project_final_3_9_cw.ncd senior_project_final_3_9_cw.pcf 
+
+
+Constraints file: senior_project_final_3_9_cw.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+   "senior_project_final_3_9_cw" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+WARNING:Timing:3223 - Timing constraint TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_2_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_10_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 100 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_10_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_10_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_10_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 50 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_20_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 100 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_20_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_20_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_2_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_2_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_2_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_2_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_4_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 40 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_4_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_4_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 40 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_5_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 50 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_5_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+           "ce_5_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored during timing analysis.
+WARNING:Timing:3175 - clk does not clock data to f_addr[0]
+WARNING:Timing:3225 - Timing constraint COMP "f_addr[0]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_addr[1]
+WARNING:Timing:3225 - Timing constraint COMP "f_addr[1]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[0]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[0]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[1]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[1]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[2]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[2]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[3]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[3]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[4]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[4]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[5]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[5]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[6]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[6]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[7]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[7]" OFFSET = OUT 10 ns AFTER COMP "clk"; ignored during timing
+   analysis
+WARNING:Timing:3175 - clk does not clock data from fb[0]
+WARNING:Timing:3225 - Timing constraint COMP "fb[0]" OFFSET = IN 50 ns BEFORE COMP "clk"; ignored during timing analysis
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more information see the TSI report.
+
+Device speed data version:  "PRODUCTION 1.27 2008-01-09".
+
+
+
+Design Summary Report:
+
+ Number of External IOBs                          38 out of 232    16%
+
+   Number of External Input IOBs                 19
+
+      Number of External Input IBUFs             19
+        Number of LOCed External Input IBUFs     19 out of 19    100%
+
+
+   Number of External Output IOBs                19
+
+      Number of External Output IOBs             19
+        Number of LOCed External Output IOBs     19 out of 19    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of MULT18X18SIOs                   8 out of 20     40%
+   Number of RAMB16s                         1 out of 20      5%
+   Number of Slices                       3184 out of 4656   68%
+      Number of SLICEMs                    322 out of 2328   13%
+
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 33 secs 
+Finished initial Timing Analysis.  REAL time: 33 secs 
+
+Starting Router
+
+Phase 1: 19445 unrouted;       REAL time: 38 secs 
+
+Phase 2: 14094 unrouted;       REAL time: 40 secs 
+
+Phase 3: 3291 unrouted;       REAL time: 45 secs 
+
+Phase 4: 3291 unrouted; (315)      REAL time: 46 secs 
+
+Phase 5: 3291 unrouted; (162)      REAL time: 48 secs 
+
+Phase 6: 3291 unrouted; (0)      REAL time: 49 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 1 mins 
+
+Phase 8: 0 unrouted; (0)      REAL time: 1 mins 5 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 1 mins 18 secs 
+
+WARNING:Route - CLK Net:ce_5_sg_x0_REPLICA_32 is being routed on general routing resources. If you are trying to use
+   local clocking techniques, evaluate the placement of the clock's source and loads to ensure it meets the guidelines
+   for local clocking. Otherwise, consider placing this clock on a dedicated clock routing resource. For more
+   information on clock routing resources, see the target architecture's user guide.
+
+Total REAL time to Router completion: 1 mins 20 secs 
+Total CPU time to Router completion: 59 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP |  BUFGMUX_X1Y1| No   | 3180 |  0.086     |  0.203      |
++---------------------+--------------+------+------+------------+-------------+
+|          ce_5_sg_x0 |         Local|      |    1 |  0.000     |  1.157      |
++---------------------+--------------+------+------+------------+-------------+
+|ce_5_sg_x0_REPLICA_2 |              |      |      |            |             |
+|                   9 |         Local|      |    6 |  0.002     |  1.466      |
++---------------------+--------------+------+------+------------+-------------+
+|ce_5_sg_x0_REPLICA_3 |              |      |      |            |             |
+|                   0 |         Local|      |    5 |  0.006     |  1.487      |
++---------------------+--------------+------+------+------------+-------------+
+|ce_5_sg_x0_REPLICA_3 |              |      |      |            |             |
+|                   1 |         Local|      |    1 |  0.000     |  1.156      |
++---------------------+--------------+------+------+------------+-------------+
+|ce_5_sg_x0_REPLICA_3 |              |      |      |            |             |
+|                   2 |         Local|      |    4 |  0.681     |  1.706      |
++---------------------+--------------+------+------+------------+-------------+
+|ce_5_sg_x0_REPLICA_3 |              |      |      |            |             |
+|                   4 |         Local|      |    1 |  0.000     |  3.444      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no
+   requested value.
+Number of Timing Constraints that were not applied: 30
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_clk_cd4c7e50 = PERIOD TIMEGRP "clk_cd4 | SETUP   |     0.240ns|     9.760ns|       0|           0
+  c7e50" 10 ns HIGH 50%                     | HOLD    |     0.673ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  COMP "rst_ddc[0]" OFFSET = IN 10 ns BEFOR | SETUP   |     6.240ns|     3.760ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[1]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.787ns|     1.213ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[8]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.856ns|     1.144ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[4]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.873ns|     1.127ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[6]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.897ns|     1.103ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[9]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.957ns|     1.043ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[5]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.984ns|     1.016ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[2]" OFFSET = IN 10 ns BEFOR | SETUP   |     8.993ns|     1.007ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[7]" OFFSET = IN 10 ns BEFOR | SETUP   |     9.014ns|     0.986ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[12]" OFFSET = IN 10 ns BEFO | SETUP   |     9.150ns|     0.850ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[13]" OFFSET = IN 10 ns BEFO | SETUP   |     9.156ns|     0.844ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[10]" OFFSET = IN 10 ns BEFO | SETUP   |     9.166ns|     0.834ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[0]" OFFSET = IN 10 ns BEFOR | SETUP   |     9.185ns|     0.815ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[11]" OFFSET = IN 10 ns BEFO | SETUP   |     9.228ns|     0.772ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[14]" OFFSET = IN 10 ns BEFO | SETUP   |     9.503ns|     0.497ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[15]" OFFSET = IN 10 ns BEFO | SETUP   |     9.528ns|     0.472ns|       0|           0
+  RE COMP "clk"                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "data_in[3]" OFFSET = IN 10 ns BEFOR | SETUP   |     9.551ns|     0.449ns|       0|           0
+  E COMP "clk"                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_4_cd4c7e50_group_to_ce_20_cd4c7e50_ | SETUP   |    31.592ns|     8.408ns|       0|           0
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _4_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c |         |            |            |        |            
+  7e50_group" 40 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_4_cd4c7e50_group_to_ce_4_cd4c7e50_g | SETUP   |    37.626ns|     2.374ns|       0|           0
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  4_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e |         |            |            |        |            
+  50_group" 40 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_20_cd4c7e50_group_to_ce_5_cd4c7e50_ | SETUP   |    42.621ns|     7.379ns|       0|           0
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _20_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c |         |            |            |        |            
+  7e50_group" 50 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_5_cd4c7e50_group_to_ce_5_cd4c7e50_g | SETUP   |    44.836ns|     5.164ns|       0|           0
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  5_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e |         |            |            |        |            
+  50_group" 50 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_5_cd4c7e50_group_to_ce_20_cd4c7e50_ | SETUP   |    46.503ns|     3.497ns|       0|           0
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _5_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c |         |            |            |        |            
+  7e50_group" 50 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_10_cd4c7e50_group_to_ce_10_cd4c7e50 | SETUP   |    98.554ns|     1.446ns|       0|           0
+  _group = MAXDELAY FROM TIMEGRP         "c |         |            |            |        |            
+  e_10_cd4c7e50_group" TO TIMEGRP "ce_10_cd |         |            |            |        |            
+  4c7e50_group" 100 ns                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_20_cd4c7e50_group_to_ce_20_cd4c7e50 | SETUP   |   196.548ns|     3.452ns|       0|           0
+  _group = MAXDELAY FROM TIMEGRP         "c |         |            |            |        |            
+  e_20_cd4c7e50_group" TO TIMEGRP "ce_20_cd |         |            |            |        |            
+  4c7e50_group" 200 ns                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "if_clk[0]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "fb[0]" OFFSET = IN 50 ns BEFORE COM | N/A     |         N/A|         N/A|     N/A|         N/A
+  P "clk"                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[7]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[6]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[5]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[4]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[3]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[2]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[1]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_data[0]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_addr[1]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "f_addr[0]" OFFSET = OUT 10 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "clk"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  2_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e |         |            |            |        |            
+  50_group" 20 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50 | N/A     |         N/A|         N/A|     N/A|         N/A
+  _group = MAXDELAY FROM TIMEGRP         "c |         |            |            |        |            
+  e_10_cd4c7e50_group" TO TIMEGRP "ce_20_cd |         |            |            |        |            
+  4c7e50_group" 100 ns                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _10_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c |         |            |            |        |            
+  7e50_group" 20 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _10_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c |         |            |            |        |            
+  7e50_group" 40 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _10_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c |         |            |            |        |            
+  7e50_group" 50 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50 | N/A     |         N/A|         N/A|     N/A|         N/A
+  _group = MAXDELAY FROM TIMEGRP         "c |         |            |            |        |            
+  e_20_cd4c7e50_group" TO TIMEGRP "ce_10_cd |         |            |            |        |            
+  4c7e50_group" 100 ns                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _20_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c |         |            |            |        |            
+  7e50_group" 20 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _20_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c |         |            |            |        |            
+  7e50_group" 40 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _2_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c |         |            |            |        |            
+  7e50_group" 20 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _2_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c |         |            |            |        |            
+  7e50_group" 20 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  2_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e |         |            |            |        |            
+  50_group" 20 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  2_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e |         |            |            |        |            
+  50_group" 20 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _4_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c |         |            |            |        |            
+  7e50_group" 40 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  4_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e |         |            |            |        |            
+  50_group" 20 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  4_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e |         |            |            |        |            
+  50_group" 40 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  group = MAXDELAY FROM TIMEGRP         "ce |         |            |            |        |            
+  _5_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c |         |            |            |        |            
+  7e50_group" 50 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  5_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e |         |            |            |        |            
+  50_group" 40 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_g | N/A     |         N/A|         N/A|     N/A|         N/A
+  roup = MAXDELAY FROM TIMEGRP         "ce_ |         |            |            |        |            
+  5_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e |         |            |            |        |            
+  50_group" 20 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 27 secs 
+Total CPU time to PAR completion: 1 mins 2 secs 
+
+Peak Memory Usage:  229 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 41
+Number of info messages: 2
+
+Writing design to file senior_project_final_3_9_cw.ncd
+
+
+
+PAR done!

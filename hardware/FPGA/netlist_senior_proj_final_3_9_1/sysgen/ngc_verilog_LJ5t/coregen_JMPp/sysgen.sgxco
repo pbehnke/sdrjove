@@ -1,0 +1,33 @@
+
+SETPROJECT ./
+SET BusFormat = BusFormatParen
+SET XilinxFamily = Spartan3E
+SET devicefamily = spartan3e
+SET OutputOption = OutputProducts
+SET FlowVendor = Other
+SET FormalVerification = None
+SET OutputProducts = ImpNetlist VHDLSim VerilogSim
+SET SimElabOptions = CreateNdf
+SELECT Distributed_Arithmetic_FIR_Filter Spartan3E Xilinx,_Inc. 9.0
+# 10.1.03i
+CSET clock_cycles_per_sample = 1
+CSET coefficient_data_type = signed
+CSET coefficient_file = [
+ Radix=10;
+Coefdata = 57 236 603 1152 1770 2265 2456 2265 1770 1152 603 236 57 ;
+]
+CSET coefficient_reload = fixed_coefficients
+CSET coefficient_width = 16
+CSET filter_type = single_rate_fir
+CSET impulse_response = symmetric
+CSET input_data_type = signed
+CSET input_data_width = 16
+CSET number_of_channels = 2
+CSET number_of_taps = 13
+CSET optimize_coefficients = true
+CSET register_output = false
+CSET reset = true
+CSET sample_rate_change = 1
+CSET zero_packing_factor = 1
+CSET component_name = distributed_arithmetic_fir_filter_spartan3e_9_0_7845aeed55860293
+GENERATE

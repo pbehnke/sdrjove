@@ -1,0 +1,58 @@
+##############################################################
+#
+# Xilinx Core Generator version K.39
+# Date: Wed Aug 03 21:56:37 2011
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatParenNotRipped
+SET createndf = True
+SET designentry = VHDL
+SET device = xc3s100e
+SET devicefamily = spartan3e
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Edif
+SET package = vq100
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -5
+SET verilogsim = True
+SET vhdlsim = True
+# END Project Options
+# BEGIN Select
+SELECT Distributed_Arithmetic_FIR_Filter family Xilinx,_Inc. 9.0
+# END Select
+# BEGIN Parameters
+CSET clock_cycles_per_sample=1
+CSET coefficient_data_type=signed
+CSET coefficient_file=distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f.coe
+CSET coefficient_reload=fixed_coefficients
+CSET coefficient_width=16
+CSET component_name=distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f
+CSET filter_type=halfband
+CSET impulse_response=symmetric
+CSET input_data_type=signed
+CSET input_data_width=16
+CSET number_of_channels=2
+CSET number_of_taps=7
+CSET optimize_coefficients=true
+CSET register_output=false
+CSET reset=true
+CSET sample_rate_change=1
+CSET zero_packing_factor=1
+# END Parameters
+GENERATE
+# CRC: 2908f4ca
+

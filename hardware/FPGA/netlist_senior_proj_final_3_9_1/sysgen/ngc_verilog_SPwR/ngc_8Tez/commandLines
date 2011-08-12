@@ -1,0 +1,2 @@
+C:/Xilinx/10.1/DSP_Tools/sysgen/bin/saferun.exe -o /dev/null -- c:/xilinx/10.1/ise/bin/nt/xst.exe -ifn xst_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0.scr -ofn xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0.results
+C:/Xilinx/10.1/DSP_Tools/sysgen/bin/saferun.exe -o /dev/null -- c:/xilinx/10.1/ise/bin/nt/ngcbuild.exe -p xc3s500e-4fg320 xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0_complete.ngc

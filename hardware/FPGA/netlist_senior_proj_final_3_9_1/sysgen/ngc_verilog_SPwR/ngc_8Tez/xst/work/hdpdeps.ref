@@ -1,0 +1,80 @@
+V3 38
+FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4.vhd" 2011/06/01.18:39:44 K.39
+EN work/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4 1312410497 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4.vhd" \
+      PB ieee/std_logic_1164 1217055545
+AR work/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4_a 1312410498 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4.vhd" \
+      EN work/distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4 1312410497
+FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" 2011/08/03.15:28:16 K.39
+PH work/conv_pkg 1312410499 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PH ieee/NUMERIC_STD 1217055545
+PB work/conv_pkg 1312410500 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PH work/conv_pkg 1312410499
+PH work/clock_pkg 1312410501 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545
+EN work/srl17e 1312410502 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/srl17e/structural 1312410503 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/srl17e 1312410502 CP srl16e CP fde
+EN work/synth_reg 1312410504 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/synth_reg/structural 1312410505 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/synth_reg 1312410504 CP srl17e
+EN work/synth_reg_reg 1312410506 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/synth_reg_reg/behav 1312410507 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/synth_reg_reg 1312410506
+EN work/single_reg_w_init 1312410508 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/single_reg_w_init/structural 1312410509 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/single_reg_w_init 1312410508 CP fdre CP fdse
+EN work/synth_reg_w_init 1312410510 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/synth_reg_w_init/structural 1312410511 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/synth_reg_w_init 1312410510 CP single_reg_w_init
+EN work/raminfr_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410512 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB ieee/STD_LOGIC_UNSIGNED 1217055547 \
+      PB work/conv_pkg 1312410500
+AR work/raminfr_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0/syn 1312410513 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/raminfr_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410512
+EN work/sync_fifo_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410514 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PH ieee/NUMERIC_STD 1217055545 \
+      PB work/conv_pkg 1312410500
+AR work/sync_fifo_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0/behavior 1312410515 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/sync_fifo_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410514 \
+      CP raminfr_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0
+EN work/wrapped_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410516 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/wrapped_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0/behavior 1312410517 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/wrapped_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410516 \
+      CP fds CP distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4 \
+      CP synth_reg_w_init \
+      CP sync_fifo_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 \
+      CP synth_reg
+EN work/xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410518 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      PB ieee/std_logic_1164 1217055545 PB work/conv_pkg 1312410500
+AR work/xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0/behavior 1312410519 \
+      FL "C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/sysgen/ngc_verilog_SPwR/ngc_8Tez/template_results.vhd" \
+      EN work/xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0 1312410518 \
+      CP work/wrapped_xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0

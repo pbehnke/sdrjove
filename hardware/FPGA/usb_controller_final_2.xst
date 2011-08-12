@@ -1,0 +1,4 @@
+set -tmpdir "./xst/projnav.tmp"
+elaborate
+-ifn usb_controller_final_2.prj
+-ifmt mixed

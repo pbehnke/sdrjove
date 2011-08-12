@@ -463,6 +463,7 @@ class MainFrame(wx.Frame):
             self.running=True
             #kick off the GNU Radio block
             self.tb.Run()
+            print "done"
             self.tb._frame.Show(False)
 
         #radio astronomy mode
@@ -487,7 +488,7 @@ class MainFrame(wx.Frame):
         #stop the GNU Radio block
         try:
             self.tb.stop()
-
+            self.tb._app.Exit()
             #pause the driver
             try:
                 self.driver.send_signal(signal.SIGUSR2)
@@ -504,7 +505,6 @@ class MainFrame(wx.Frame):
         if self.configState=='RT':
             if self.RT_shouldGraph == True:
                 self.tb.wxgui_waterfallsink2_0.win.Close()
-                self.tb._app.Exit()
                 
 
 
@@ -530,6 +530,7 @@ class MainFrame(wx.Frame):
             print "Stopped."
 
         self.running=False
+        self.configState=0
 
         if event!= None:
             event.Skip()

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_2_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_2_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_10_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_20_cd4c7e50_group&quot; 100 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_10_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_2_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_10_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_4_cd4c7e50_group&quot; 40 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_10_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_5_cd4c7e50_group&quot; 50 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_20_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_10_cd4c7e50_group&quot; 100 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_20_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_2_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_20_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_4_cd4c7e50_group&quot; 40 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_2_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_10_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_2_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_20_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_2_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_4_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_2_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_5_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_4_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_10_cd4c7e50_group&quot; 40 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_4_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_2_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_4_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_5_cd4c7e50_group&quot; 40 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_5_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_10_cd4c7e50_group&quot; 50 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_5_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_2_cd4c7e50_group&quot; 20 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3223" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+        &quot;ce_5_cd4c7e50_group&quot; TO TIMEGRP &quot;ce_4_cd4c7e50_group&quot; 40 ns;</arg> ignored during timing analysis.</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_addr[0]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_addr[0]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_addr[1]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_addr[1]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[0]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[0]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[1]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[1]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[2]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[2]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[3]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[3]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[4]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[4]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[5]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[5]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[6]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[6]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">to</arg> <arg fmt="%s" index="3">f_data[7]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;f_data[7]&quot; OFFSET = OUT 10 ns AFTER COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="warning" file="Timing" num="3175" delta="unknown" ><arg fmt="%s" index="1">clk</arg> does not clock data <arg fmt="%s" index="2">from</arg> <arg fmt="%s" index="3">fb[0]</arg></msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">COMP &quot;fb[0]&quot; OFFSET = IN 50 ns BEFORE COMP &quot;clk&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="info" file="Timing" num="3377" delta="unknown" >Intersecting Constraints found and resolved.  For more information see the TSI report.</msg>
+
+<msg type="info" file="Timing" num="2752" delta="unknown" >To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in the unconstrained paths section(s) of the report.</msg>
+
+<msg type="info" file="Timing" num="3339" delta="unknown" >The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of this model, and for more information on accounting for different loading conditions, please see the device datasheet.</msg>
+
+</messages>
+

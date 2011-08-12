@@ -50,6 +50,15 @@ unsigned char * fill_buffer6;
 unsigned char * fill_buffer7;
 unsigned char * fill_buffer8;
 
+struct libusb_transfer *iso_xfer1;
+struct libusb_transfer *iso_xfer2;
+struct libusb_transfer *iso_xfer3;
+struct libusb_transfer *iso_xfer4;
+struct libusb_transfer *iso_xfer5;
+struct libusb_transfer *iso_xfer6;
+struct libusb_transfer *iso_xfer7;
+struct libusb_transfer *iso_xfer8;
+
 
 /**********************************************************************************************
 * This function scans the data to look for the next packet (denoted by the NYAN string) in the set
@@ -71,7 +80,7 @@ int getNextPacket(int currentIndex, struct libusb_transfer *transfer){
 }
 
 /**********************************************************************************************
-* Our Callback Function
+* Our Callback Function for libusb
 **********************************************************************************************/
 void callback_fn(struct libusb_transfer *transfer){
 
@@ -90,6 +99,7 @@ void callback_fn(struct libusb_transfer *transfer){
 		i=i+68;
 		if(!memcmp(&(transfer->buffer[i]),EOP,4)){
 
+            //copy the last 64 valid bytes to a temp buffer
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
@@ -106,7 +116,7 @@ void callback_fn(struct libusb_transfer *transfer){
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
-		else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
+		/*else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
 			memcpy(tmp,&(transfer->buffer[i-64]),64);
 
 			//reshuffle the data for the i and j components
@@ -122,7 +132,7 @@ void callback_fn(struct libusb_transfer *transfer){
 			}
 			//CHANGE ME BACK!!
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
-		}
+		}*/
 		else{
 			i=getNextPacket(i,transfer);
 		}	
@@ -136,6 +146,7 @@ void callback_fn(struct libusb_transfer *transfer){
     	//elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
 	//printf("%f\n",elapsedTime);
 
+    //continue by resubmitting the xfer request
 	if(_continue){
 		libusb_submit_transfer(transfer);
 	}
@@ -149,15 +160,6 @@ void callback_fn(struct libusb_transfer *transfer){
 **********************************************************************************************/
 void transfer_factory(void *param){
 	//create a packet
-
-	struct libusb_transfer *iso_xfer1;
-	struct libusb_transfer *iso_xfer2;
-	struct libusb_transfer *iso_xfer3;
-	struct libusb_transfer *iso_xfer4;
-	struct libusb_transfer *iso_xfer5;
-	struct libusb_transfer *iso_xfer6;
-	struct libusb_transfer *iso_xfer7;
-	struct libusb_transfer *iso_xfer8;
 
 	fill_buffer1=malloc(3072*NUM_PACKETS);
 	fill_buffer2=malloc(3072*NUM_PACKETS);
@@ -222,18 +224,18 @@ void main_signal_handler(int signum)
 {
     switch (signum) {
     case SIGINT:
-	printf("SIGINT Received.  Exiting...\n");
+	    printf("SIGINT Received.  Exiting...\n");
         _continue=0;
         break;
 
+    //start getting dataa again
     case SIGUSR1:
-	//do we need anything here?
-	printf("SIGUSR1 Received.  Continuing...\n");
+	    printf("SIGUSR1 Received.  Continuing...\n");
         break;
 
     case SIGUSR2:
-	printf("SIGUSR2 Received.  Pausing Data Collection.\n");
-	pause();  //stop getting data until SIGUSR1
+	    printf("SIGUSR2 Received.  Pausing Data Collection.\n");
+	    pause();  //stop getting data until SIGUSR1
         break;
 
     }

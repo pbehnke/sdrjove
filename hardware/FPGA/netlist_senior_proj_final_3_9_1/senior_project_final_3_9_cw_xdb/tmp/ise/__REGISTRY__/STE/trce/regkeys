@@ -1,0 +1,6 @@
+CommandLine
+C:/Xilinx/10.1/ISE/bin/nt/unwrapped/trce.exe -ise C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/senior_project_final_3_9_cw.ise -intstyle ise -v 3 -s 4 -xml senior_project_final_3_9_cw senior_project_final_3_9_cw.ncd -o senior_project_final_3_9_cw.twr senior_project_final_3_9_cw.pcf -ucf senior_project_final_3_9_cw.ucf
+s
+FormatString
+trce.exe ([-e|-v [<limit:0,2000000000>]] [-l <limit:0,2000000000>] [-n [<limit:0,2000000000>]] [-u [<limit:0,2000000000>]] [-skew] [-a] [--p] [-s <speed>] [-o <report[.twr]>] [--m] [-stamp <stampfile>] [-tsi <tsifile[.tsi]>] [-xml <report[.twx]>] [-nodatasheet] [-timegroups] [-fastpaths] [-intstyle ise|xflow|silent] [-ise <projectfile>] [--ucf <constraint[.ucf]>] <design[.ncd]> [<constraint[.pcf]>]) | ([-run <macro[.xtm]> [<design[.ncd]> [<constraint[.pcf]>]]] [-intstyle ise|xflow|silent] [-ise <projectfile>])
+s

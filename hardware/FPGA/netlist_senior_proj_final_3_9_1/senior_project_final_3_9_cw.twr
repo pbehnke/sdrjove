@@ -1,0 +1,2220 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Documents and Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/senior_project_final_3_9_cw.ise
+-intstyle ise -v 3 -s 4 -xml senior_project_final_3_9_cw
+senior_project_final_3_9_cw.ncd -o senior_project_final_3_9_cw.twr
+senior_project_final_3_9_cw.pcf -ucf senior_project_final_3_9_cw.ucf
+
+Design file:              senior_project_final_3_9_cw.ncd
+Physical constraint file: senior_project_final_3_9_cw.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_2_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+     
+         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 100 ns; 
+   ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_10_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_10_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_10_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 50 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+     
+         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 100 ns; 
+   ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_20_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_20_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_2_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_2_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_2_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_2_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_4_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 40 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_4_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_4_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 40 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+      
+        "ce_5_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 50 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_5_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3223 - Timing constraint 
+   TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY FROM TIMEGRP
+       
+       "ce_5_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 ns; ignored 
+   during timing analysis.
+WARNING:Timing:3175 - clk does not clock data to f_addr[0]
+WARNING:Timing:3225 - Timing constraint COMP "f_addr[0]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_addr[1]
+WARNING:Timing:3225 - Timing constraint COMP "f_addr[1]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[0]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[0]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[1]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[1]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[2]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[2]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[3]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[3]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[4]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[4]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[5]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[5]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[6]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[6]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data to f_data[7]
+WARNING:Timing:3225 - Timing constraint COMP "f_data[7]" OFFSET = OUT 10 ns 
+   AFTER COMP "clk"; ignored during timing analysis
+WARNING:Timing:3175 - clk does not clock data from fb[0]
+WARNING:Timing:3225 - Timing constraint COMP "fb[0]" OFFSET = IN 50 ns BEFORE 
+   COMP "clk"; ignored during timing analysis
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more 
+   information see the TSI report.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk_cd4c7e50 = PERIOD TIMEGRP "clk_cd4c7e50" 10 ns HIGH 
+50%;
+
+ 81796 paths analyzed, 16988 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   9.760ns.
+--------------------------------------------------------------------------------
+Slack:                  0.240ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/sine_cos_counter/comp0.core_instance0/BU2/U0/i_baseblox.i_baseblox_counter/the_addsub/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_q.i_simple.qreg/fd/output_9 (FF)
+  Destination:          senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU171 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.714ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.046ns (0.017 - 0.063)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/sine_cos_counter/comp0.core_instance0/BU2/U0/i_baseblox.i_baseblox_counter/the_addsub/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_q.i_simple.qreg/fd/output_9 to senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU171
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y32.YQ       Tcko                  0.587   senior_project_final_3_9_x0/sine_cos_counter_op_net[7]
+                                                       senior_project_final_3_9_x0/sine_cos_counter/comp0.core_instance0/BU2/U0/i_baseblox.i_baseblox_counter/the_addsub/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_q.i_simple.qreg/fd/output_9
+    SLICE_X14Y30.G2      net (fanout=14)       1.301   senior_project_final_3_9_x0/sine_cos_counter_op_net[8]
+    SLICE_X14Y30.Y       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N968
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU121
+    SLICE_X14Y30.F1      net (fanout=9)        0.588   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N663
+    SLICE_X14Y30.COUT    Topcyf                1.162   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N968
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU123
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU125
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N667_rt
+    SLICE_X14Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N667
+    SLICE_X14Y31.Y       Tciny                 0.883   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N973
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU130
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU136
+    SLICE_X15Y32.F1      net (fanout=3)        0.528   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N94
+    SLICE_X15Y32.COUT    Topcyf                1.162   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N971
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU187
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU188
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU191
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N840
+    SLICE_X15Y33.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N980
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU194
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU197
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N846
+    SLICE_X15Y34.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1914
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU200
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU203
+    SLICE_X15Y35.F4      net (fanout=1)        0.519   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N819
+    SLICE_X15Y35.X       Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N78
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU206
+    SLICE_X15Y30.G1      net (fanout=1)        0.448   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N103
+    SLICE_X15Y30.CLK     Tgck                  0.837   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N105
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU170
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU171
+    -------------------------------------------------  ---------------------------
+    Total                                      9.714ns (6.330ns logic, 3.384ns route)
+                                                       (65.2% logic, 34.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  0.254ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A (RAM)
+  Destination:          senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio (MULT)
+  Requirement:          10.000ns
+  Data Path Delay:      9.745ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.124 - 0.125)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A to senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA0     Tbcko                 2.812   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A
+    SLICE_X16Y30.F3      net (fanout=1)        0.988   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N36
+    SLICE_X16Y30.COUT    Topcyf                1.162   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1923
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU225
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU227
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU232
+    SLICE_X16Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3156
+    SLICE_X16Y31.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1928
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU237
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU242
+    SLICE_X16Y32.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3166
+    SLICE_X16Y32.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1933
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU247
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU252
+    SLICE_X16Y33.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3176
+    SLICE_X16Y33.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N981
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU257
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU262
+    SLICE_X16Y34.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3186
+    SLICE_X16Y34.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1927
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU267
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU272
+    SLICE_X16Y35.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3196
+    SLICE_X16Y35.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1908
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU277
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU282
+    SLICE_X16Y36.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3206
+    SLICE_X16Y36.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N81
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU287
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU292
+    SLICE_X16Y37.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3216
+    SLICE_X16Y37.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N958
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU297
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU302
+    SLICE_X16Y38.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3226
+    SLICE_X16Y38.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N5717
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU307
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU312
+    SLICE_X16Y39.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3236
+    SLICE_X16Y39.X       Tcinx                 0.497   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N7633
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU318
+    MULT18X18_X0Y6.B16   net (fanout=34)       2.862   senior_project_final_3_9_x0/sinecosine/core_sin[18]
+    MULT18X18_X0Y6.CLK   Tmsdck_B              0.384   senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+                                                       senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+    -------------------------------------------------  ---------------------------
+    Total                                      9.745ns (5.895ns logic, 3.850ns route)
+                                                       (60.5% logic, 39.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  0.254ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A (RAM)
+  Destination:          senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio (MULT)
+  Requirement:          10.000ns
+  Data Path Delay:      9.745ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.124 - 0.125)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A to senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA0     Tbcko                 2.812   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/B9.A
+    SLICE_X16Y30.F3      net (fanout=1)        0.988   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N36
+    SLICE_X16Y30.COUT    Topcyf                1.162   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1923
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU225
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU227
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU232
+    SLICE_X16Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3156
+    SLICE_X16Y31.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1928
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU237
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU242
+    SLICE_X16Y32.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3166
+    SLICE_X16Y32.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1933
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU247
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU252
+    SLICE_X16Y33.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3176
+    SLICE_X16Y33.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N981
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU257
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU262
+    SLICE_X16Y34.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3186
+    SLICE_X16Y34.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1927
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU267
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU272
+    SLICE_X16Y35.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3196
+    SLICE_X16Y35.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N1908
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU277
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU282
+    SLICE_X16Y36.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3206
+    SLICE_X16Y36.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N81
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU287
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU292
+    SLICE_X16Y37.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3216
+    SLICE_X16Y37.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N958
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU297
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU302
+    SLICE_X16Y38.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3226
+    SLICE_X16Y38.COUT    Tbyp                  0.130   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N5717
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU307
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU312
+    SLICE_X16Y39.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/N3236
+    SLICE_X16Y39.X       Tcinx                 0.497   senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/N7633
+                                                       senior_project_final_3_9_x0/sinecosine/comp0.core_instance0/BU318
+    MULT18X18_X0Y6.B17   net (fanout=34)       2.862   senior_project_final_3_9_x0/sinecosine/core_sin[18]
+    MULT18X18_X0Y6.CLK   Tmsdck_B              0.384   senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+                                                       senior_project_final_3_9_x0/mixer_i/comp0.core_instance0/BU2/U0/i_synth.i_synth_model/gEMBEDDED_MULT.gEMB_MULTS_only.gMULT18.iMULT18/use_mult18x18sio.appMULTSIO[0].bppMULTSIO[1].m18x18sio
+    -------------------------------------------------  ---------------------------
+    Total                                      9.745ns (5.895ns logic, 3.850ns route)
+                                                       (60.5% logic, 39.5% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_10_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 
+100 ns;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.446ns.
+--------------------------------------------------------------------------------
+Slack:                  98.554ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ce_10_sg_x02 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_ce_reg (FF)
+  Requirement:          100.000ns
+  Data Path Delay:      1.446ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ce_10_sg_x02 to senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_ce_reg
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y19.XQ      Tcko                  0.592   ce_10_sg_x0
+                                                       ce_10_sg_x02
+    SLICE_X46Y21.BY      net (fanout=1)        0.472   ce_10_sg_x0
+    SLICE_X46Y21.CLK     Tdick                 0.382   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/del_core_ce
+                                                       senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_ce_reg
+    -------------------------------------------------  ---------------------------
+    Total                                      1.446ns (0.974ns logic, 0.472ns route)
+                                                       (67.4% logic, 32.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_20_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 
+200 ns;
+
+ 148 paths analyzed, 148 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.452ns.
+--------------------------------------------------------------------------------
+Slack:                  196.548ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ce_20_sg_x02 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_27 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      3.452ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ce_20_sg_x02 to senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y7.YQ       Tcko                  0.652   N0_shift3
+                                                       ce_20_sg_x02
+    SLICE_X47Y5.CE       net (fanout=5)        2.245   ce_20_sg_x0
+    SLICE_X47Y5.CLK      Tceck                 0.555   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0(19)
+                                                       senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_27
+    -------------------------------------------------  ---------------------------
+    Total                                      3.452ns (1.207ns logic, 2.245ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  196.548ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ce_20_sg_x02 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_19 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      3.452ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ce_20_sg_x02 to senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y7.YQ       Tcko                  0.652   N0_shift3
+                                                       ce_20_sg_x02
+    SLICE_X47Y5.CE       net (fanout=5)        2.245   ce_20_sg_x0
+    SLICE_X47Y5.CLK      Tceck                 0.555   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0(19)
+                                                       senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/sampled_dout0_19
+    -------------------------------------------------  ---------------------------
+    Total                                      3.452ns (1.207ns logic, 2.245ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  197.018ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ce_20_sg_x0_REPLICA_27 (FF)
+  Destination:          senior_project_final_3_9_x0/down_sample1/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[9].has_latency.u2 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      2.966ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.016ns (0.055 - 0.071)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ce_20_sg_x0_REPLICA_27 to senior_project_final_3_9_x0/down_sample1/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[9].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y27.YQ      Tcko                  0.587   ce_20_sg_x0_REPLICA_27
+                                                       ce_20_sg_x0_REPLICA_27
+    SLICE_X50Y31.CE      net (fanout=10)       1.824   ce_20_sg_x0_REPLICA_27
+    SLICE_X50Y31.CLK     Tceck                 0.555   senior_project_final_3_9_x0/down_sample1/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[8].has_latency.u2
+                                                       senior_project_final_3_9_x0/down_sample1/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[9].has_latency.u2
+    -------------------------------------------------  ---------------------------
+    Total                                      2.966ns (1.142ns logic, 1.824ns route)
+                                                       (38.5% logic, 61.5% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_2_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_4_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_4_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 
+ns;
+
+ 62 paths analyzed, 62 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   2.374ns.
+--------------------------------------------------------------------------------
+Slack:                  37.626ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_15 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[15].srl16_used.u1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      2.366ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.008ns (0.015 - 0.023)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_15 to senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[15].srl16_used.u1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y34.YQ      Tcko                  0.587   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0(20)
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_15
+    SLICE_X46Y26.BX      net (fanout=1)        1.365   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(15)
+    SLICE_X46Y26.CLK     Tds                   0.414   senior_project_final_3_9_x0/dafir_v9_0_2_dout1_net[15]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[15].srl16_used.u1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.366ns (1.001ns logic, 1.365ns route)
+                                                       (42.3% logic, 57.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  37.674ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_29 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[29].srl16_used.u1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      2.296ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.030ns (0.024 - 0.054)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_29 to senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[29].srl16_used.u1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y42.YQ      Tcko                  0.587   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(29)
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1_29
+    SLICE_X48Y38.BY      net (fanout=1)        1.267   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(29)
+    SLICE_X48Y38.CLK     Tds                   0.442   senior_project_final_3_9_x0/dafir_v9_0_2_dout0_net[29]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[29].srl16_used.u1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.296ns (1.029ns logic, 1.267ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  37.681ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0_14 (FF)
+  Destination:          senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg0/partial_one.last_srl17e/reg_array[14].srl16_used.u1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      2.314ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.005ns (0.013 - 0.018)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0_14 to senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg0/partial_one.last_srl17e/reg_array[14].srl16_used.u1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y33.XQ      Tcko                  0.591   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0(14)
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0_14
+    SLICE_X46Y28.BY      net (fanout=1)        1.281   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout0(14)
+    SLICE_X46Y28.CLK     Tds                   0.442   senior_project_final_3_9_x0/dafir_v9_0_2_dout1_net[16]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg0/partial_one.last_srl17e/reg_array[14].srl16_used.u1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.314ns (1.033ns logic, 1.281ns route)
+                                                       (44.6% logic, 55.4% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_5_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_5_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 50 
+ns;
+
+ 113 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.164ns.
+--------------------------------------------------------------------------------
+Slack:                  44.836ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/black_box/packet_counter_2 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_1 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      4.977ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.187ns (1.887 - 2.074)
+  Source Clock:         ce_5_sg_x0_REPLICA_30 rising
+  Destination Clock:    ce_5_sg_x0_REPLICA_32 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/black_box/packet_counter_2 to senior_project_final_3_9_x0/black_box/fd_temp_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y1.XQ       Tcko                  0.592   senior_project_final_3_9_x0/black_box/packet_counter[2]
+                                                       senior_project_final_3_9_x0/black_box/packet_counter_2
+    SLICE_X51Y1.F1       net (fanout=7)        1.107   senior_project_final_3_9_x0/black_box/packet_counter[2]
+    SLICE_X51Y1.X        Tif5x                 1.025   senior_project_final_3_9_x0/black_box/led7
+                                                       senior_project_final_3_9_x0/black_box/led7_mux00001
+                                                       senior_project_final_3_9_x0/black_box/led7_mux0000_f5
+    SLICE_X52Y1.F3       net (fanout=8)        1.361   senior_project_final_3_9_x0/black_box/led7_mux0000
+    SLICE_X52Y1.CLK      Tfck                  0.892   senior_project_final_3_9_x0/black_box/fd_temp[1]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[6]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.977ns (2.509ns logic, 2.468ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  44.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/black_box/packet_counter_2 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_5 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      4.341ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.679ns (1.395 - 2.074)
+  Source Clock:         ce_5_sg_x0_REPLICA_30 rising
+  Destination Clock:    ce_5_sg_x0_REPLICA_31 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/black_box/packet_counter_2 to senior_project_final_3_9_x0/black_box/fd_temp_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y1.XQ       Tcko                  0.592   senior_project_final_3_9_x0/black_box/packet_counter[2]
+                                                       senior_project_final_3_9_x0/black_box/packet_counter_2
+    SLICE_X51Y1.F1       net (fanout=7)        1.107   senior_project_final_3_9_x0/black_box/packet_counter[2]
+    SLICE_X51Y1.X        Tif5x                 1.025   senior_project_final_3_9_x0/black_box/led7
+                                                       senior_project_final_3_9_x0/black_box/led7_mux00001
+                                                       senior_project_final_3_9_x0/black_box/led7_mux0000_f5
+    SLICE_X49Y4.F1       net (fanout=8)        0.780   senior_project_final_3_9_x0/black_box/led7_mux0000
+    SLICE_X49Y4.CLK      Tfck                  0.837   senior_project_final_3_9_x0/black_box/fd_temp[5]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[2]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.341ns (2.454ns logic, 1.887ns route)
+                                                       (56.5% logic, 43.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  45.153ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/black_box/packet_counter_3 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_1 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      4.660ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.187ns (1.887 - 2.074)
+  Source Clock:         ce_5_sg_x0_REPLICA_30 rising
+  Destination Clock:    ce_5_sg_x0_REPLICA_32 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/black_box/packet_counter_3 to senior_project_final_3_9_x0/black_box/fd_temp_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y0.XQ       Tcko                  0.592   senior_project_final_3_9_x0/black_box/packet_counter[3]
+                                                       senior_project_final_3_9_x0/black_box/packet_counter_3
+    SLICE_X51Y1.F4       net (fanout=7)        0.790   senior_project_final_3_9_x0/black_box/packet_counter[3]
+    SLICE_X51Y1.X        Tif5x                 1.025   senior_project_final_3_9_x0/black_box/led7
+                                                       senior_project_final_3_9_x0/black_box/led7_mux00001
+                                                       senior_project_final_3_9_x0/black_box/led7_mux0000_f5
+    SLICE_X52Y1.F3       net (fanout=8)        1.361   senior_project_final_3_9_x0/black_box/led7_mux0000
+    SLICE_X52Y1.CLK      Tfck                  0.892   senior_project_final_3_9_x0/black_box/fd_temp[1]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[6]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.660ns (2.509ns logic, 2.151ns route)
+                                                       (53.8% logic, 46.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 
+100 ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_10_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 50 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 
+100 ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_20_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_20_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 50 
+ns;
+
+ 97 paths analyzed, 21 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.379ns.
+--------------------------------------------------------------------------------
+Slack:                  42.621ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_2 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_4 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      6.061ns (Levels of Logic = 3)
+  Clock Path Skew:      -1.318ns (1.644 - 2.962)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    ce_5_sg_x0_REPLICA_29 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_2 to senior_project_final_3_9_x0/black_box/fd_temp_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y3.YQ       Tcko                  0.587   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[2]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_2
+    SLICE_X49Y3.G3       net (fanout=5)        0.517   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[2]
+    SLICE_X49Y3.Y        Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(24)
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]811
+    SLICE_X57Y0.G2       net (fanout=12)       1.424   senior_project_final_3_9_x0/N10
+    SLICE_X57Y0.X        Tif5x                 1.025   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(16)
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0_F
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0
+    SLICE_X49Y0.F2       net (fanout=1)        0.967   N34
+    SLICE_X49Y0.CLK      Tfck                  0.837   senior_project_final_3_9_x0/black_box/fd_temp[4]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.061ns (3.153ns logic, 2.908ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  42.639ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_4 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      6.048ns (Levels of Logic = 3)
+  Clock Path Skew:      -1.313ns (1.644 - 2.957)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    ce_5_sg_x0_REPLICA_29 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3 to senior_project_final_3_9_x0/black_box/fd_temp_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y1.YQ       Tcko                  0.652   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3
+    SLICE_X49Y3.G2       net (fanout=4)        0.439   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[3]
+    SLICE_X49Y3.Y        Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(24)
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]811
+    SLICE_X57Y0.G2       net (fanout=12)       1.424   senior_project_final_3_9_x0/N10
+    SLICE_X57Y0.X        Tif5x                 1.025   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(16)
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0_F
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0
+    SLICE_X49Y0.F2       net (fanout=1)        0.967   N34
+    SLICE_X49Y0.CLK      Tfck                  0.837   senior_project_final_3_9_x0/black_box/fd_temp[4]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.048ns (3.218ns logic, 2.830ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  42.750ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4 (FF)
+  Destination:          senior_project_final_3_9_x0/black_box/fd_temp_4 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      5.937ns (Levels of Logic = 3)
+  Clock Path Skew:      -1.313ns (1.644 - 2.957)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    ce_5_sg_x0_REPLICA_29 rising
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4 to senior_project_final_3_9_x0/black_box/fd_temp_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y0.XQ       Tcko                  0.592   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4
+    SLICE_X49Y3.G4       net (fanout=2)        0.388   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]
+    SLICE_X49Y3.Y        Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(24)
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]811
+    SLICE_X57Y0.G2       net (fanout=12)       1.424   senior_project_final_3_9_x0/N10
+    SLICE_X57Y0.X        Tif5x                 1.025   senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/aligned_dout0(16)
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0_F
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]_SW0
+    SLICE_X49Y0.F2       net (fanout=1)        0.967   N34
+    SLICE_X49Y0.CLK      Tfck                  0.837   senior_project_final_3_9_x0/black_box/fd_temp[4]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_mux0000[3]
+                                                       senior_project_final_3_9_x0/black_box/fd_temp_4
+    -------------------------------------------------  ---------------------------
+    Total                                      5.937ns (3.158ns logic, 2.779ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_2_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_2_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_2_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_2_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_4_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 40 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_4_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_4_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 40 
+ns;
+
+ 782 paths analyzed, 80 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   8.408ns.
+--------------------------------------------------------------------------------
+Slack:                  31.592ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 (FF)
+  Destination:          senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[15].has_latency.u2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      8.386ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.022ns (0.017 - 0.039)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 to senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[15].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y24.YQ      Tcko                  0.652   senior_project_final_3_9_x0/dafir_v9_0_2_dout0_net[7]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2
+    SLICE_X37Y27.F2      net (fanout=1)        1.028   senior_project_final_3_9_x0/dafir_v9_0_2_dout1_net[7]
+    SLICE_X37Y27.X       Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(7)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.G2      net (fanout=1)        0.697   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.Y       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.F4      net (fanout=1)        0.023   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.X       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000046
+    SLICE_X49Y27.F4      net (fanout=1)        0.892   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero[0]
+    SLICE_X49Y27.COUT    Topcyf                1.162   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_lut[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[2].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[2]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[4].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[4]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[6].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[6]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[8].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[8]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[10].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[10]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[11]
+    SLICE_X49Y33.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[11]
+    SLICE_X49Y33.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[12].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[12]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[13]
+    SLICE_X49Y34.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[13]
+    SLICE_X49Y34.CLK     Tcinck                1.002   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[14].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[14]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_xor[15]
+                                                       senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[15].has_latency.u2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.386ns (5.746ns logic, 2.640ns route)
+                                                       (68.5% logic, 31.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  31.706ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 (FF)
+  Destination:          senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[13].has_latency.u2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      8.268ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.026ns (0.013 - 0.039)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 to senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[13].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y24.YQ      Tcko                  0.652   senior_project_final_3_9_x0/dafir_v9_0_2_dout0_net[7]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2
+    SLICE_X37Y27.F2      net (fanout=1)        1.028   senior_project_final_3_9_x0/dafir_v9_0_2_dout1_net[7]
+    SLICE_X37Y27.X       Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(7)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.G2      net (fanout=1)        0.697   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.Y       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.F4      net (fanout=1)        0.023   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.X       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000046
+    SLICE_X49Y27.F4      net (fanout=1)        0.892   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero[0]
+    SLICE_X49Y27.COUT    Topcyf                1.162   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_lut[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[2].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[2]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[4].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[4]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[6].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[6]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[8].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[8]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[10].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[10]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[11]
+    SLICE_X49Y33.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[11]
+    SLICE_X49Y33.CLK     Tcinck                1.002   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[12].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[12]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_xor[13]
+                                                       senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[13].has_latency.u2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.268ns (5.628ns logic, 2.640ns route)
+                                                       (68.1% logic, 31.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  31.824ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 (FF)
+  Destination:          senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[11].has_latency.u2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      8.150ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.026ns (0.013 - 0.039)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2 to senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[11].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y24.YQ      Tcko                  0.652   senior_project_final_3_9_x0/dafir_v9_0_2_dout0_net[7]
+                                                       senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg1/partial_one.last_srl17e/reg_array[7].fde_used.u2
+    SLICE_X37Y27.F2      net (fanout=1)        1.028   senior_project_final_3_9_x0/dafir_v9_0_2_dout1_net[7]
+    SLICE_X37Y27.X       Tilo                  0.704   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/sampled_dout1(7)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.G2      net (fanout=1)        0.697   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000024
+    SLICE_X40Y28.Y       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.F4      net (fanout=1)        0.023   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000025
+    SLICE_X40Y28.X       Tilo                  0.759   senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/aligned_dout0(1)
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero_0_mux000046
+    SLICE_X49Y27.F4      net (fanout=1)        0.892   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/one_or_zero[0]
+    SLICE_X49Y27.COUT    Topcyf                1.162   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_lut[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[0]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[1]
+    SLICE_X49Y28.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[2].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[2]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[3]
+    SLICE_X49Y29.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[4].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[4]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[5]
+    SLICE_X49Y30.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[6].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[6]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[7]
+    SLICE_X49Y31.COUT    Tbyp                  0.118   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[8].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[8]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.CIN     net (fanout=1)        0.000   senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[9]
+    SLICE_X49Y32.CLK     Tcinck                1.002   senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[10].has_latency.u2
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_cy[10]
+                                                       senior_project_final_3_9_x0/cic_4_out_q/std_conversion.conv_udp/ct_u0.quant_rtf/Madd_result_signed_xor[11]
+                                                       senior_project_final_3_9_x0/down_sample3/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[11].has_latency.u2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.150ns (5.510ns logic, 2.640ns route)
+                                                       (67.6% logic, 32.4% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_4_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_4_cd4c7e50_group" TO TIMEGRP "ce_5_cd4c7e50_group" 40 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_5_cd4c7e50_group" TO TIMEGRP "ce_10_cd4c7e50_group" 50 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_5_cd4c7e50_group_to_ce_20_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_5_cd4c7e50_group" TO TIMEGRP "ce_20_cd4c7e50_group" 50 
+ns;
+
+ 24 paths analyzed, 24 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.497ns.
+--------------------------------------------------------------------------------
+Slack:                  46.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 (FF)
+  Destination:          senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      3.497ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 to senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y1.XQ       Tcko                  0.592   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1
+    SLICE_X48Y0.G4       net (fanout=15)       1.620   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+    SLICE_X48Y0.CLK      Tgck                  1.285   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/Mcount_indx_cntr_xor[4]112
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/Mcount_indx_cntr_xor[4]11_f5
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.497ns (1.877ns logic, 1.620ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  46.568ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 (FF)
+  Destination:          senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      3.432ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 to senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y1.XQ       Tcko                  0.592   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1
+    SLICE_X48Y0.F4       net (fanout=15)       1.555   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+    SLICE_X48Y0.CLK      Tfck                  1.285   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[4]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/Mcount_indx_cntr_xor[4]111
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/Mcount_indx_cntr_xor[4]11_f5
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.432ns (1.877ns logic, 1.555ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  46.896ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 (FF)
+  Destination:          senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      3.104ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1 to senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y1.XQ       Tcko                  0.592   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_1
+    SLICE_X48Y1.G4       net (fanout=15)       1.620   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+    SLICE_X48Y1.CLK      Tgck                  0.892   senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr[1]
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/Mcount_indx_cntr_xor[3]12
+                                                       senior_project_final_3_9_x0/time_division_multiplexer/indx_cntr_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.104ns (1.484ns logic, 1.620ns route)
+                                                       (47.8% logic, 52.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_5_cd4c7e50_group" TO TIMEGRP "ce_2_cd4c7e50_group" 20 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_group = MAXDELAY 
+FROM TIMEGRP         "ce_5_cd4c7e50_group" TO TIMEGRP "ce_4_cd4c7e50_group" 40 
+ns;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[0]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.815ns.
+--------------------------------------------------------------------------------
+Slack:                  9.185ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[0] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU26 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.191ns (Levels of Logic = 1)
+  Clock Path Delay:     2.376ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[0] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J14.I                Tiopi                 1.300   data_in[0]
+                                                       data_in[0]
+                                                       data_in_0_IBUF
+    SLICE_X40Y48.BY      net (fanout=1)        1.509   data_in_0_IBUF
+    SLICE_X40Y48.CLK     Tdick                 0.382   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N287
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU26
+    -------------------------------------------------  ---------------------------
+    Total                                      3.191ns (1.682ns logic, 1.509ns route)
+                                                       (52.7% logic, 47.3% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X40Y48.CLK     net (fanout=3180)     0.134   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.376ns (2.206ns logic, 0.170ns route)
+                                                       (92.8% logic, 7.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[10]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.834ns.
+--------------------------------------------------------------------------------
+Slack:                  9.166ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[10] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.195ns (Levels of Logic = 1)
+  Clock Path Delay:     2.361ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[10] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    R16.I                Tiopi                 1.300   data_in[10]
+                                                       data_in[10]
+                                                       data_in_10_IBUF
+    SLICE_X48Y21.BY      net (fanout=1)        1.513   data_in_10_IBUF
+    SLICE_X48Y21.CLK     Tdick                 0.382   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N278
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    -------------------------------------------------  ---------------------------
+    Total                                      3.195ns (1.682ns logic, 1.513ns route)
+                                                       (52.6% logic, 47.4% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X48Y21.CLK     net (fanout=3180)     0.119   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.361ns (2.206ns logic, 0.155ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[11]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.772ns.
+--------------------------------------------------------------------------------
+Slack:                  9.228ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[11] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU70 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.124ns (Levels of Logic = 1)
+  Clock Path Delay:     2.352ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[11] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU70
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P17.I                Tiopi                 1.300   data_in[11]
+                                                       data_in[11]
+                                                       data_in_11_IBUF
+    SLICE_X45Y28.BX      net (fanout=1)        1.516   data_in_11_IBUF
+    SLICE_X45Y28.CLK     Tdick                 0.308   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N276
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU70
+    -------------------------------------------------  ---------------------------
+    Total                                      3.124ns (1.608ns logic, 1.516ns route)
+                                                       (51.5% logic, 48.5% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU70
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X45Y28.CLK     net (fanout=3180)     0.110   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.352ns (2.206ns logic, 0.146ns route)
+                                                       (93.8% logic, 6.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[12]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.850ns.
+--------------------------------------------------------------------------------
+Slack:                  9.150ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[12] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU74 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.204ns (Levels of Logic = 1)
+  Clock Path Delay:     2.354ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[12] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU74
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    M16.I                Tiopi                 1.300   data_in[12]
+                                                       data_in[12]
+                                                       data_in_12_IBUF
+    SLICE_X45Y31.BY      net (fanout=1)        1.543   data_in_12_IBUF
+    SLICE_X45Y31.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N275
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU74
+    -------------------------------------------------  ---------------------------
+    Total                                      3.204ns (1.661ns logic, 1.543ns route)
+                                                       (51.8% logic, 48.2% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU74
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X45Y31.CLK     net (fanout=3180)     0.112   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.354ns (2.206ns logic, 0.148ns route)
+                                                       (93.7% logic, 6.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[13]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.844ns.
+--------------------------------------------------------------------------------
+Slack:                  9.156ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[13] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU78 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.196ns (Levels of Logic = 1)
+  Clock Path Delay:     2.352ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[13] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU78
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    M14.I                Tiopi                 1.300   data_in[13]
+                                                       data_in[13]
+                                                       data_in_13_IBUF
+    SLICE_X45Y28.BY      net (fanout=1)        1.535   data_in_13_IBUF
+    SLICE_X45Y28.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N276
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU78
+    -------------------------------------------------  ---------------------------
+    Total                                      3.196ns (1.661ns logic, 1.535ns route)
+                                                       (52.0% logic, 48.0% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU78
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X45Y28.CLK     net (fanout=3180)     0.110   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.352ns (2.206ns logic, 0.146ns route)
+                                                       (93.8% logic, 6.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[14]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.497ns.
+--------------------------------------------------------------------------------
+Slack:                  9.503ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[14] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU82 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      2.850ns (Levels of Logic = 1)
+  Clock Path Delay:     2.353ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[14] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU82
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L16.I                Tiopi                 1.300   data_in[14]
+                                                       data_in[14]
+                                                       data_in_14_IBUF
+    SLICE_X49Y37.BY      net (fanout=1)        1.189   data_in_14_IBUF
+    SLICE_X49Y37.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N284
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU82
+    -------------------------------------------------  ---------------------------
+    Total                                      2.850ns (1.661ns logic, 1.189ns route)
+                                                       (58.3% logic, 41.7% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU82
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X49Y37.CLK     net (fanout=3180)     0.111   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.353ns (2.206ns logic, 0.147ns route)
+                                                       (93.8% logic, 6.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[15]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.472ns.
+--------------------------------------------------------------------------------
+Slack:                  9.528ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[15] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU86 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      2.838ns (Levels of Logic = 1)
+  Clock Path Delay:     2.366ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[15] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU86
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    K12.I                Tiopi                 1.300   data_in[15]
+                                                       data_in[15]
+                                                       data_in_15_IBUF
+    SLICE_X45Y39.BY      net (fanout=1)        1.177   data_in_15_IBUF
+    SLICE_X45Y39.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N272
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU86
+    -------------------------------------------------  ---------------------------
+    Total                                      2.838ns (1.661ns logic, 1.177ns route)
+                                                       (58.5% logic, 41.5% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU86
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X45Y39.CLK     net (fanout=3180)     0.124   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.366ns (2.206ns logic, 0.160ns route)
+                                                       (93.2% logic, 6.8% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[1]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.213ns.
+--------------------------------------------------------------------------------
+Slack:                  8.787ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[1] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU30 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.563ns (Levels of Logic = 1)
+  Clock Path Delay:     2.350ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[1] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J15.I                Tiopi                 1.300   data_in[1]
+                                                       data_in[1]
+                                                       data_in_1_IBUF
+    SLICE_X49Y35.BX      net (fanout=1)        1.955   data_in_1_IBUF
+    SLICE_X49Y35.CLK     Tdick                 0.308   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N286
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU30
+    -------------------------------------------------  ---------------------------
+    Total                                      3.563ns (1.608ns logic, 1.955ns route)
+                                                       (45.1% logic, 54.9% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X49Y35.CLK     net (fanout=3180)     0.108   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.350ns (2.206ns logic, 0.144ns route)
+                                                       (93.9% logic, 6.1% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[2]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.007ns.
+--------------------------------------------------------------------------------
+Slack:                  8.993ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[2] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU34 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.357ns (Levels of Logic = 1)
+  Clock Path Delay:     2.350ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[2] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU34
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    K15.I                Tiopi                 1.300   data_in[2]
+                                                       data_in[2]
+                                                       data_in_2_IBUF
+    SLICE_X49Y35.BY      net (fanout=1)        1.696   data_in_2_IBUF
+    SLICE_X49Y35.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N286
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU34
+    -------------------------------------------------  ---------------------------
+    Total                                      3.357ns (1.661ns logic, 1.696ns route)
+                                                       (49.5% logic, 50.5% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU34
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X49Y35.CLK     net (fanout=3180)     0.108   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.350ns (2.206ns logic, 0.144ns route)
+                                                       (93.9% logic, 6.1% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[3]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.449ns.
+--------------------------------------------------------------------------------
+Slack:                  9.551ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[3] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU38 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      2.802ns (Levels of Logic = 1)
+  Clock Path Delay:     2.353ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[3] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU38
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    K14.I                Tiopi                 1.300   data_in[3]
+                                                       data_in[3]
+                                                       data_in_3_IBUF
+    SLICE_X49Y37.BX      net (fanout=1)        1.194   data_in_3_IBUF
+    SLICE_X49Y37.CLK     Tdick                 0.308   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N284
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU38
+    -------------------------------------------------  ---------------------------
+    Total                                      2.802ns (1.608ns logic, 1.194ns route)
+                                                       (57.4% logic, 42.6% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU38
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X49Y37.CLK     net (fanout=3180)     0.111   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.353ns (2.206ns logic, 0.147ns route)
+                                                       (93.8% logic, 6.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[4]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.127ns.
+--------------------------------------------------------------------------------
+Slack:                  8.873ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[4] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU42 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.507ns (Levels of Logic = 1)
+  Clock Path Delay:     2.380ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[4] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU42
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J12.I                Tiopi                 1.300   data_in[4]
+                                                       data_in[4]
+                                                       data_in_4_IBUF
+    SLICE_X41Y44.BY      net (fanout=1)        1.846   data_in_4_IBUF
+    SLICE_X41Y44.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N283
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU42
+    -------------------------------------------------  ---------------------------
+    Total                                      3.507ns (1.661ns logic, 1.846ns route)
+                                                       (47.4% logic, 52.6% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU42
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X41Y44.CLK     net (fanout=3180)     0.138   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.380ns (2.206ns logic, 0.174ns route)
+                                                       (92.7% logic, 7.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[5]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.016ns.
+--------------------------------------------------------------------------------
+Slack:                  8.984ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[5] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU46 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.379ns (Levels of Logic = 1)
+  Clock Path Delay:     2.363ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[5] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU46
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G16.I                Tiopi                 1.300   data_in[5]
+                                                       data_in[5]
+                                                       data_in_5_IBUF
+    SLICE_X47Y49.BY      net (fanout=1)        1.718   data_in_5_IBUF
+    SLICE_X47Y49.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N281
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU46
+    -------------------------------------------------  ---------------------------
+    Total                                      3.379ns (1.661ns logic, 1.718ns route)
+                                                       (49.2% logic, 50.8% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU46
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X47Y49.CLK     net (fanout=3180)     0.121   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.363ns (2.206ns logic, 0.157ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[6]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.103ns.
+--------------------------------------------------------------------------------
+Slack:                  8.897ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[6] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU50 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.466ns (Levels of Logic = 1)
+  Clock Path Delay:     2.363ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[6] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU50
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F14.I                Tiopi                 1.300   data_in[6]
+                                                       data_in[6]
+                                                       data_in_6_IBUF
+    SLICE_X47Y49.BX      net (fanout=1)        1.858   data_in_6_IBUF
+    SLICE_X47Y49.CLK     Tdick                 0.308   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N281
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU50
+    -------------------------------------------------  ---------------------------
+    Total                                      3.466ns (1.608ns logic, 1.858ns route)
+                                                       (46.4% logic, 53.6% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU50
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X47Y49.CLK     net (fanout=3180)     0.121   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.363ns (2.206ns logic, 0.157ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[7]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.986ns.
+--------------------------------------------------------------------------------
+Slack:                  9.014ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[7] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU54 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.349ns (Levels of Logic = 1)
+  Clock Path Delay:     2.363ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[7] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU54
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H15.I                Tiopi                 1.300   data_in[7]
+                                                       data_in[7]
+                                                       data_in_7_IBUF
+    SLICE_X45Y55.BY      net (fanout=1)        1.688   data_in_7_IBUF
+    SLICE_X45Y55.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N280
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU54
+    -------------------------------------------------  ---------------------------
+    Total                                      3.349ns (1.661ns logic, 1.688ns route)
+                                                       (49.6% logic, 50.4% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU54
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X45Y55.CLK     net (fanout=3180)     0.121   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.363ns (2.206ns logic, 0.157ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[8]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.144ns.
+--------------------------------------------------------------------------------
+Slack:                  8.856ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[8] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.510ns (Levels of Logic = 1)
+  Clock Path Delay:     2.366ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[8] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U18.I                Tiopi                 1.300   data_in[8]
+                                                       data_in[8]
+                                                       data_in_8_IBUF
+    SLICE_X47Y21.BY      net (fanout=1)        1.849   data_in_8_IBUF
+    SLICE_X47Y21.CLK     Tdick                 0.361   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N279
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    -------------------------------------------------  ---------------------------
+    Total                                      3.510ns (1.661ns logic, 1.849ns route)
+                                                       (47.3% logic, 52.7% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X47Y21.CLK     net (fanout=3180)     0.124   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.366ns (2.206ns logic, 0.160ns route)
+                                                       (93.2% logic, 6.8% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "data_in[9]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.043ns.
+--------------------------------------------------------------------------------
+Slack:                  8.957ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               data_in[9] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU62 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      3.404ns (Levels of Logic = 1)
+  Clock Path Delay:     2.361ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: data_in[9] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU62
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    T18.I                Tiopi                 1.300   data_in[9]
+                                                       data_in[9]
+                                                       data_in_9_IBUF
+    SLICE_X48Y21.BX      net (fanout=1)        1.744   data_in_9_IBUF
+    SLICE_X48Y21.CLK     Tdick                 0.360   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N278
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU62
+    -------------------------------------------------  ---------------------------
+    Total                                      3.404ns (1.660ns logic, 1.744ns route)
+                                                       (48.8% logic, 51.2% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU62
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X48Y21.CLK     net (fanout=3180)     0.119   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.361ns (2.206ns logic, 0.155ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_addr[0]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_addr[1]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[0]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[1]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[2]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[3]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[4]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[5]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[6]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "f_data[7]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "fb[0]" OFFSET = IN 50 ns BEFORE COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "if_clk[0]" OFFSET = OUT 10 ns AFTER COMP "clk";
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "rst_ddc[0]" OFFSET = IN 10 ns BEFORE COMP "clk";
+
+ 17 paths analyzed, 17 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   3.760ns.
+--------------------------------------------------------------------------------
+Slack:                  6.240ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               rst_ddc[0] (PAD)
+  Destination:          senior_project_final_3_9_x0/down_sample4/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      6.136ns (Levels of Logic = 1)
+  Clock Path Delay:     2.376ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: rst_ddc[0] to senior_project_final_3_9_x0/down_sample4/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G18.I                Tiopi                 1.300   rst_ddc[0]
+                                                       rst_ddc[0]
+                                                       rst_ddc_0_IBUF
+    SLICE_X42Y21.BY      net (fanout=12)       4.454   rst_ddc
+    SLICE_X42Y21.CLK     Tdick                 0.382   senior_project_final_3_9_x0/down_sample4/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+                                                       senior_project_final_3_9_x0/down_sample4/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.136ns (1.682ns logic, 4.454ns route)
+                                                       (27.4% logic, 72.6% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/down_sample4/double_reg_test.reg2/has_only_1.srl17e_array0/reg_array[0].has_latency.u2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X42Y21.CLK     net (fanout=3180)     0.134   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.376ns (2.206ns logic, 0.170ns route)
+                                                       (92.8% logic, 7.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.442ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               rst_ddc[0] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      5.924ns (Levels of Logic = 1)
+  Clock Path Delay:     2.366ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: rst_ddc[0] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G18.I                Tiopi                 1.300   rst_ddc[0]
+                                                       rst_ddc[0]
+                                                       rst_ddc_0_IBUF
+    SLICE_X47Y21.CE      net (fanout=12)       4.069   rst_ddc
+    SLICE_X47Y21.CLK     Tceck                 0.555   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N279
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    -------------------------------------------------  ---------------------------
+    Total                                      5.924ns (1.855ns logic, 4.069ns route)
+                                                       (31.3% logic, 68.7% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU58
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X47Y21.CLK     net (fanout=3180)     0.124   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.366ns (2.206ns logic, 0.160ns route)
+                                                       (93.2% logic, 6.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.455ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               rst_ddc[0] (PAD)
+  Destination:          senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      5.906ns (Levels of Logic = 1)
+  Clock Path Delay:     2.361ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: rst_ddc[0] to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G18.I                Tiopi                 1.300   rst_ddc[0]
+                                                       rst_ddc[0]
+                                                       rst_ddc_0_IBUF
+    SLICE_X48Y21.CE      net (fanout=12)       4.051   rst_ddc
+    SLICE_X48Y21.CLK     Tceck                 0.555   senior_project_final_3_9_x0/scaling/comp0.core_instance0/N278
+                                                       senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    -------------------------------------------------  ---------------------------
+    Total                                      5.906ns (1.855ns logic, 4.051ns route)
+                                                       (31.4% logic, 68.6% route)
+
+  Minimum Clock Path: clk to senior_project_final_3_9_x0/scaling/comp0.core_instance0/BU66
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    U9.I                 Tiopi                 1.040   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.I0      net (fanout=1)        0.036   clk_BUFGP/IBUFG
+    BUFGMUX_X1Y1.O       Tgi0o                 1.166   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    SLICE_X48Y21.CLK     net (fanout=3180)     0.119   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.361ns (2.206ns logic, 0.155ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+data_in[0]  |    0.815(R)|    0.562(R)|clk_BUFGP         |   0.000|
+data_in[1]  |    1.213(R)|    0.233(R)|clk_BUFGP         |   0.000|
+data_in[2]  |    1.007(R)|    0.398(R)|clk_BUFGP         |   0.000|
+data_in[3]  |    0.449(R)|    0.846(R)|clk_BUFGP         |   0.000|
+data_in[4]  |    1.127(R)|    0.313(R)|clk_BUFGP         |   0.000|
+data_in[5]  |    1.016(R)|    0.396(R)|clk_BUFGP         |   0.000|
+data_in[6]  |    1.103(R)|    0.326(R)|clk_BUFGP         |   0.000|
+data_in[7]  |    0.986(R)|    0.421(R)|clk_BUFGP         |   0.000|
+data_in[8]  |    1.144(R)|    0.294(R)|clk_BUFGP         |   0.000|
+data_in[9]  |    1.043(R)|    0.374(R)|clk_BUFGP         |   0.000|
+data_in[10] |    0.834(R)|    0.541(R)|clk_BUFGP         |   0.000|
+data_in[11] |    0.772(R)|    0.586(R)|clk_BUFGP         |   0.000|
+data_in[12] |    0.850(R)|    0.526(R)|clk_BUFGP         |   0.000|
+data_in[13] |    0.844(R)|    0.529(R)|clk_BUFGP         |   0.000|
+data_in[14] |    0.497(R)|    0.808(R)|clk_BUFGP         |   0.000|
+data_in[15] |    0.472(R)|    0.833(R)|clk_BUFGP         |   0.000|
+rst_ddc[0]  |    3.760(R)|    0.267(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+if_clk[0]   |    6.648(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.760|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 83056 paths, 0 nets, and 17150 connections
+
+Design statistics:
+   Minimum period:   9.760ns{1}   (Maximum frequency: 102.459MHz)
+   Maximum path delay from/to any node:   8.408ns
+   Minimum input required time before clock:   3.760ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Aug 03 16:03:59 2011 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 189 MB
+
+
+

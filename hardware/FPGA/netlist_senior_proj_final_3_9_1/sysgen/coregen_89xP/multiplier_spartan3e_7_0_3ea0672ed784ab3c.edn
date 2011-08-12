@@ -1,0 +1,985 @@
+(edif test (edifVersion 2 0 0) (edifLevel 0) (keywordMap (keywordLevel 0))
+(status (written (timeStamp 2011 6 15 17 55 54)
+   (author "Xilinx, Inc.")
+   (program "Xilinx CORE Generator" (version "Xilinx CORE Generator 10.1.03; Cores Update # 3"))))
+   (comment "                                                                                
+      This file is owned and controlled by Xilinx and must be used              
+      solely for design, simulation, implementation and creation of             
+      design files limited to Xilinx devices or technologies. Use               
+      with non-Xilinx devices or technologies is expressly prohibited           
+      and immediately terminates your license.                                  
+                                                                                
+      XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION 'AS IS'             
+      SOLELY FOR USE IN DEVELOPING PROGRAMS AND SOLUTIONS FOR                   
+      XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION           
+      AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE, APPLICATION               
+      OR STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS                 
+      IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,                   
+      AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE          
+      FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY                  
+      WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE                   
+      IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR            
+      REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF           
+      INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS           
+      FOR A PARTICULAR PURPOSE.                                                 
+                                                                                
+      Xilinx products are not intended for use in life support                  
+      appliances, devices, or systems. Use in such applications are             
+      expressly prohibited.                                                     
+                                                                                
+      (c) Copyright 1995-2007 Xilinx, Inc.                                      
+      All rights reserved.                                                      
+                                                                                
+   ")
+   (comment "Core parameters: ")
+       (comment "c_a_type = 0 ")
+       (comment "c_mem_type = 0 ")
+       (comment "c_has_sclr = 1 ")
+       (comment "c_reg_a_b_inputs = 0 ")
+       (comment "c_has_q = 1 ")
+       (comment "InstanceName = multiplier_spartan3e_7_0_3ea0672ed784ab3c ")
+       (comment "c_has_o = 0 ")
+       (comment "bram_addr_width = 9 ")
+       (comment "c_v2_speed = 0 ")
+       (comment "c_baat = 16 ")
+       (comment "c_output_hold = 0 ")
+       (comment "c_b_constant = 1 ")
+       (comment "c_has_loadb = 0 ")
+       (comment "c_has_b = 0 ")
+       (comment "c_use_luts = 1 ")
+       (comment "c_has_rdy = 0 ")
+       (comment "c_has_nd = 0 ")
+       (comment "c_pipeline = 1 ")
+       (comment "c_has_a_signed = 0 ")
+       (comment "c_b_type = 1 ")
+       (comment "c_sqm_type = 0 ")
+       (comment "c_standalone = 1 ")
+       (comment "c_enable_rlocs = 0 ")
+       (comment "c_b_value = 100000000000000000 ")
+       (comment "c_mult_type = 2 ")
+       (comment "c_has_aclr = 0 ")
+       (comment "c_has_swapb = 0 ")
+       (comment "c_has_load_done = 0 ")
+       (comment "c_out_width = 35 ")
+       (comment "c_mem_init_prefix = mem ")
+       (comment "c_b_width = 18 ")
+       (comment "c_a_width = 16 ")
+       (comment "c_has_rfd = 0 ")
+       (comment "c_sync_enable = 1 ")
+       (comment "c_has_ce = 1 ")
+       (comment "c_stack_adders = 1 ")
+   (external xilinxun (edifLevel 0)
+      (technology (numberDefinition))
+       (cell VCC (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port P (direction OUTPUT))
+               )
+           )
+       )
+       (cell GND (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port G (direction OUTPUT))
+               )
+           )
+       )
+       (cell BUF (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port I (direction INPUT))
+                   (port O (direction OUTPUT))
+               )
+           )
+       )
+       (cell FDCE (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port D (direction INPUT))
+                   (port C (direction INPUT))
+                   (port CE (direction INPUT))
+                   (port CLR (direction INPUT))
+                   (port Q (direction OUTPUT))
+               )
+           )
+       )
+       (cell LUT4 (cellType GENERIC)
+           (view view_1 (viewType NETLIST)
+               (interface
+                   (port I0 (direction INPUT))
+                   (port I1 (direction INPUT))
+                   (port I2 (direction INPUT))
+                   (port I3 (direction INPUT))
+                   (port O (direction OUTPUT))
+               )
+           )
+       )
+   )
+(library test_lib (edifLevel 0) (technology (numberDefinition (scale 1 (E 1 -12) (unit Time))))
+(cell multiplier_spartan3e_7_0_3ea0672ed784ab3c
+ (cellType GENERIC) (view view_1 (viewType NETLIST)
+  (interface
+   (port ( rename clk "clk") (direction INPUT))
+   (port ( array ( rename a "a(15:0)") 16 ) (direction INPUT))
+   (port ( rename ce "ce") (direction INPUT))
+   (port ( rename sclr "sclr") (direction INPUT))
+   (port ( array ( rename q "q(34:0)") 35 ) (direction OUTPUT))
+   )
+  (contents
+   (instance VCC (viewRef view_1 (cellRef VCC  (libraryRef xilinxun))))
+   (instance GND (viewRef view_1 (cellRef GND  (libraryRef xilinxun))))
+   (instance BU25
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU26
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU29
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU30
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU33
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU34
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU37
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU38
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU41
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU42
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU45
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU46
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU49
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU50
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU53
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU54
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU57
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU58
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU61
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU62
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU65
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU66
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU69
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU70
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU73
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU74
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU77
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU78
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU81
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU82
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU85
+      (viewRef view_1 (cellRef LUT4 (libraryRef xilinxun)))
+      (property INIT (string "2222"))
+   )
+   (instance BU86
+      (viewRef view_1 (cellRef FDCE (libraryRef xilinxun)))
+   )
+   (instance BU87
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU88
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU89
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU90
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU91
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU92
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU93
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU94
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU95
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU96
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU97
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU98
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU99
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU100
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU101
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU102
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU103
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU104
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU105
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU106
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU107
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU108
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU109
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU110
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU111
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU112
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU113
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU114
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU115
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU116
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU117
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU118
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU119
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU120
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (instance BU121
+      (viewRef view_1 (cellRef BUF (libraryRef xilinxun)))
+   )
+   (net N0
+    (joined
+      (portRef G (instanceRef GND))
+      (portRef CLR (instanceRef BU26))
+      (portRef CLR (instanceRef BU30))
+      (portRef CLR (instanceRef BU34))
+      (portRef CLR (instanceRef BU38))
+      (portRef CLR (instanceRef BU42))
+      (portRef CLR (instanceRef BU46))
+      (portRef CLR (instanceRef BU50))
+      (portRef CLR (instanceRef BU54))
+      (portRef CLR (instanceRef BU58))
+      (portRef CLR (instanceRef BU62))
+      (portRef CLR (instanceRef BU66))
+      (portRef CLR (instanceRef BU70))
+      (portRef CLR (instanceRef BU74))
+      (portRef CLR (instanceRef BU78))
+      (portRef CLR (instanceRef BU82))
+      (portRef CLR (instanceRef BU86))
+      (portRef I (instanceRef BU87))
+      (portRef I (instanceRef BU88))
+      (portRef I (instanceRef BU89))
+      (portRef I (instanceRef BU90))
+      (portRef I (instanceRef BU91))
+      (portRef I (instanceRef BU92))
+      (portRef I (instanceRef BU93))
+      (portRef I (instanceRef BU94))
+      (portRef I (instanceRef BU95))
+      (portRef I (instanceRef BU96))
+      (portRef I (instanceRef BU97))
+      (portRef I (instanceRef BU98))
+      (portRef I (instanceRef BU99))
+      (portRef I (instanceRef BU100))
+      (portRef I (instanceRef BU101))
+      (portRef I (instanceRef BU102))
+      (portRef I (instanceRef BU103))
+      (portRef I2 (instanceRef BU25))
+      (portRef I3 (instanceRef BU25))
+      (portRef I2 (instanceRef BU29))
+      (portRef I3 (instanceRef BU29))
+      (portRef I2 (instanceRef BU33))
+      (portRef I3 (instanceRef BU33))
+      (portRef I2 (instanceRef BU37))
+      (portRef I3 (instanceRef BU37))
+      (portRef I2 (instanceRef BU41))
+      (portRef I3 (instanceRef BU41))
+      (portRef I2 (instanceRef BU45))
+      (portRef I3 (instanceRef BU45))
+      (portRef I2 (instanceRef BU49))
+      (portRef I3 (instanceRef BU49))
+      (portRef I2 (instanceRef BU53))
+      (portRef I3 (instanceRef BU53))
+      (portRef I2 (instanceRef BU57))
+      (portRef I3 (instanceRef BU57))
+      (portRef I2 (instanceRef BU61))
+      (portRef I3 (instanceRef BU61))
+      (portRef I2 (instanceRef BU65))
+      (portRef I3 (instanceRef BU65))
+      (portRef I2 (instanceRef BU69))
+      (portRef I3 (instanceRef BU69))
+      (portRef I2 (instanceRef BU73))
+      (portRef I3 (instanceRef BU73))
+      (portRef I2 (instanceRef BU77))
+      (portRef I3 (instanceRef BU77))
+      (portRef I2 (instanceRef BU81))
+      (portRef I3 (instanceRef BU81))
+      (portRef I2 (instanceRef BU85))
+      (portRef I3 (instanceRef BU85))
+    )
+   )
+   (net (rename N71 "q(34)")
+    (joined
+      (portRef (member q 0))
+      (portRef O (instanceRef BU121))
+    )
+   )
+   (net (rename N72 "q(33)")
+    (joined
+      (portRef (member q 1))
+      (portRef O (instanceRef BU120))
+    )
+   )
+   (net (rename N73 "q(32)")
+    (joined
+      (portRef (member q 2))
+      (portRef O (instanceRef BU119))
+    )
+   )
+   (net (rename N74 "q(31)")
+    (joined
+      (portRef (member q 3))
+      (portRef O (instanceRef BU118))
+    )
+   )
+   (net (rename N75 "q(30)")
+    (joined
+      (portRef (member q 4))
+      (portRef O (instanceRef BU117))
+    )
+   )
+   (net (rename N76 "q(29)")
+    (joined
+      (portRef (member q 5))
+      (portRef O (instanceRef BU116))
+    )
+   )
+   (net (rename N77 "q(28)")
+    (joined
+      (portRef (member q 6))
+      (portRef O (instanceRef BU115))
+    )
+   )
+   (net (rename N78 "q(27)")
+    (joined
+      (portRef (member q 7))
+      (portRef O (instanceRef BU114))
+    )
+   )
+   (net (rename N79 "q(26)")
+    (joined
+      (portRef (member q 8))
+      (portRef O (instanceRef BU113))
+    )
+   )
+   (net (rename N80 "q(25)")
+    (joined
+      (portRef (member q 9))
+      (portRef O (instanceRef BU112))
+    )
+   )
+   (net (rename N81 "q(24)")
+    (joined
+      (portRef (member q 10))
+      (portRef O (instanceRef BU111))
+    )
+   )
+   (net (rename N82 "q(23)")
+    (joined
+      (portRef (member q 11))
+      (portRef O (instanceRef BU110))
+    )
+   )
+   (net (rename N83 "q(22)")
+    (joined
+      (portRef (member q 12))
+      (portRef O (instanceRef BU109))
+    )
+   )
+   (net (rename N84 "q(21)")
+    (joined
+      (portRef (member q 13))
+      (portRef O (instanceRef BU108))
+    )
+   )
+   (net (rename N85 "q(20)")
+    (joined
+      (portRef (member q 14))
+      (portRef O (instanceRef BU107))
+    )
+   )
+   (net (rename N86 "q(19)")
+    (joined
+      (portRef (member q 15))
+      (portRef O (instanceRef BU106))
+    )
+   )
+   (net (rename N87 "q(18)")
+    (joined
+      (portRef (member q 16))
+      (portRef O (instanceRef BU105))
+    )
+   )
+   (net (rename N88 "q(17)")
+    (joined
+      (portRef (member q 17))
+      (portRef O (instanceRef BU104))
+    )
+   )
+   (net (rename N89 "q(16)")
+    (joined
+      (portRef (member q 18))
+      (portRef O (instanceRef BU103))
+    )
+   )
+   (net (rename N90 "q(15)")
+    (joined
+      (portRef (member q 19))
+      (portRef O (instanceRef BU102))
+    )
+   )
+   (net (rename N91 "q(14)")
+    (joined
+      (portRef (member q 20))
+      (portRef O (instanceRef BU101))
+    )
+   )
+   (net (rename N92 "q(13)")
+    (joined
+      (portRef (member q 21))
+      (portRef O (instanceRef BU100))
+    )
+   )
+   (net (rename N93 "q(12)")
+    (joined
+      (portRef (member q 22))
+      (portRef O (instanceRef BU99))
+    )
+   )
+   (net (rename N94 "q(11)")
+    (joined
+      (portRef (member q 23))
+      (portRef O (instanceRef BU98))
+    )
+   )
+   (net (rename N95 "q(10)")
+    (joined
+      (portRef (member q 24))
+      (portRef O (instanceRef BU97))
+    )
+   )
+   (net (rename N96 "q(9)")
+    (joined
+      (portRef (member q 25))
+      (portRef O (instanceRef BU96))
+    )
+   )
+   (net (rename N97 "q(8)")
+    (joined
+      (portRef (member q 26))
+      (portRef O (instanceRef BU95))
+    )
+   )
+   (net (rename N98 "q(7)")
+    (joined
+      (portRef (member q 27))
+      (portRef O (instanceRef BU94))
+    )
+   )
+   (net (rename N99 "q(6)")
+    (joined
+      (portRef (member q 28))
+      (portRef O (instanceRef BU93))
+    )
+   )
+   (net (rename N100 "q(5)")
+    (joined
+      (portRef (member q 29))
+      (portRef O (instanceRef BU92))
+    )
+   )
+   (net (rename N101 "q(4)")
+    (joined
+      (portRef (member q 30))
+      (portRef O (instanceRef BU91))
+    )
+   )
+   (net (rename N102 "q(3)")
+    (joined
+      (portRef (member q 31))
+      (portRef O (instanceRef BU90))
+    )
+   )
+   (net (rename N103 "q(2)")
+    (joined
+      (portRef (member q 32))
+      (portRef O (instanceRef BU89))
+    )
+   )
+   (net (rename N104 "q(1)")
+    (joined
+      (portRef (member q 33))
+      (portRef O (instanceRef BU88))
+    )
+   )
+   (net (rename N105 "q(0)")
+    (joined
+      (portRef (member q 34))
+      (portRef O (instanceRef BU87))
+    )
+   )
+   (net (rename N117 "clk")
+    (joined
+      (portRef clk)
+      (portRef C (instanceRef BU26))
+      (portRef C (instanceRef BU30))
+      (portRef C (instanceRef BU34))
+      (portRef C (instanceRef BU38))
+      (portRef C (instanceRef BU42))
+      (portRef C (instanceRef BU46))
+      (portRef C (instanceRef BU50))
+      (portRef C (instanceRef BU54))
+      (portRef C (instanceRef BU58))
+      (portRef C (instanceRef BU62))
+      (portRef C (instanceRef BU66))
+      (portRef C (instanceRef BU70))
+      (portRef C (instanceRef BU74))
+      (portRef C (instanceRef BU78))
+      (portRef C (instanceRef BU82))
+      (portRef C (instanceRef BU86))
+    )
+   )
+   (net (rename N118 "a(15)")
+    (joined
+      (portRef (member a 0))
+      (portRef I0 (instanceRef BU85))
+    )
+   )
+   (net (rename N119 "a(14)")
+    (joined
+      (portRef (member a 1))
+      (portRef I0 (instanceRef BU81))
+    )
+   )
+   (net (rename N120 "a(13)")
+    (joined
+      (portRef (member a 2))
+      (portRef I0 (instanceRef BU77))
+    )
+   )
+   (net (rename N121 "a(12)")
+    (joined
+      (portRef (member a 3))
+      (portRef I0 (instanceRef BU73))
+    )
+   )
+   (net (rename N122 "a(11)")
+    (joined
+      (portRef (member a 4))
+      (portRef I0 (instanceRef BU69))
+    )
+   )
+   (net (rename N123 "a(10)")
+    (joined
+      (portRef (member a 5))
+      (portRef I0 (instanceRef BU65))
+    )
+   )
+   (net (rename N124 "a(9)")
+    (joined
+      (portRef (member a 6))
+      (portRef I0 (instanceRef BU61))
+    )
+   )
+   (net (rename N125 "a(8)")
+    (joined
+      (portRef (member a 7))
+      (portRef I0 (instanceRef BU57))
+    )
+   )
+   (net (rename N126 "a(7)")
+    (joined
+      (portRef (member a 8))
+      (portRef I0 (instanceRef BU53))
+    )
+   )
+   (net (rename N127 "a(6)")
+    (joined
+      (portRef (member a 9))
+      (portRef I0 (instanceRef BU49))
+    )
+   )
+   (net (rename N128 "a(5)")
+    (joined
+      (portRef (member a 10))
+      (portRef I0 (instanceRef BU45))
+    )
+   )
+   (net (rename N129 "a(4)")
+    (joined
+      (portRef (member a 11))
+      (portRef I0 (instanceRef BU41))
+    )
+   )
+   (net (rename N130 "a(3)")
+    (joined
+      (portRef (member a 12))
+      (portRef I0 (instanceRef BU37))
+    )
+   )
+   (net (rename N131 "a(2)")
+    (joined
+      (portRef (member a 13))
+      (portRef I0 (instanceRef BU33))
+    )
+   )
+   (net (rename N132 "a(1)")
+    (joined
+      (portRef (member a 14))
+      (portRef I0 (instanceRef BU29))
+    )
+   )
+   (net (rename N133 "a(0)")
+    (joined
+      (portRef (member a 15))
+      (portRef I0 (instanceRef BU25))
+    )
+   )
+   (net (rename N226 "ce")
+    (joined
+      (portRef ce)
+      (portRef CE (instanceRef BU26))
+      (portRef CE (instanceRef BU30))
+      (portRef CE (instanceRef BU34))
+      (portRef CE (instanceRef BU38))
+      (portRef CE (instanceRef BU42))
+      (portRef CE (instanceRef BU46))
+      (portRef CE (instanceRef BU50))
+      (portRef CE (instanceRef BU54))
+      (portRef CE (instanceRef BU58))
+      (portRef CE (instanceRef BU62))
+      (portRef CE (instanceRef BU66))
+      (portRef CE (instanceRef BU70))
+      (portRef CE (instanceRef BU74))
+      (portRef CE (instanceRef BU78))
+      (portRef CE (instanceRef BU82))
+      (portRef CE (instanceRef BU86))
+    )
+   )
+   (net (rename N228 "sclr")
+    (joined
+      (portRef sclr)
+      (portRef I1 (instanceRef BU25))
+      (portRef I1 (instanceRef BU29))
+      (portRef I1 (instanceRef BU33))
+      (portRef I1 (instanceRef BU37))
+      (portRef I1 (instanceRef BU41))
+      (portRef I1 (instanceRef BU45))
+      (portRef I1 (instanceRef BU49))
+      (portRef I1 (instanceRef BU53))
+      (portRef I1 (instanceRef BU57))
+      (portRef I1 (instanceRef BU61))
+      (portRef I1 (instanceRef BU65))
+      (portRef I1 (instanceRef BU69))
+      (portRef I1 (instanceRef BU73))
+      (portRef I1 (instanceRef BU77))
+      (portRef I1 (instanceRef BU81))
+      (portRef I1 (instanceRef BU85))
+    )
+   )
+   (net N272
+    (joined
+      (portRef I (instanceRef BU119))
+      (portRef I (instanceRef BU120))
+      (portRef I (instanceRef BU121))
+      (portRef Q (instanceRef BU86))
+    )
+   )
+   (net N273
+    (joined
+      (portRef I (instanceRef BU118))
+      (portRef Q (instanceRef BU82))
+    )
+   )
+   (net N274
+    (joined
+      (portRef I (instanceRef BU117))
+      (portRef Q (instanceRef BU78))
+    )
+   )
+   (net N275
+    (joined
+      (portRef I (instanceRef BU116))
+      (portRef Q (instanceRef BU74))
+    )
+   )
+   (net N276
+    (joined
+      (portRef I (instanceRef BU115))
+      (portRef Q (instanceRef BU70))
+    )
+   )
+   (net N277
+    (joined
+      (portRef I (instanceRef BU114))
+      (portRef Q (instanceRef BU66))
+    )
+   )
+   (net N278
+    (joined
+      (portRef I (instanceRef BU113))
+      (portRef Q (instanceRef BU62))
+    )
+   )
+   (net N279
+    (joined
+      (portRef I (instanceRef BU112))
+      (portRef Q (instanceRef BU58))
+    )
+   )
+   (net N280
+    (joined
+      (portRef I (instanceRef BU111))
+      (portRef Q (instanceRef BU54))
+    )
+   )
+   (net N281
+    (joined
+      (portRef I (instanceRef BU110))
+      (portRef Q (instanceRef BU50))
+    )
+   )
+   (net N282
+    (joined
+      (portRef I (instanceRef BU109))
+      (portRef Q (instanceRef BU46))
+    )
+   )
+   (net N283
+    (joined
+      (portRef I (instanceRef BU108))
+      (portRef Q (instanceRef BU42))
+    )
+   )
+   (net N284
+    (joined
+      (portRef I (instanceRef BU107))
+      (portRef Q (instanceRef BU38))
+    )
+   )
+   (net N285
+    (joined
+      (portRef I (instanceRef BU106))
+      (portRef Q (instanceRef BU34))
+    )
+   )
+   (net N286
+    (joined
+      (portRef I (instanceRef BU105))
+      (portRef Q (instanceRef BU30))
+    )
+   )
+   (net N287
+    (joined
+      (portRef I (instanceRef BU104))
+      (portRef Q (instanceRef BU26))
+    )
+   )
+   (net N1623
+    (joined
+      (portRef D (instanceRef BU26))
+      (portRef O (instanceRef BU25))
+    )
+   )
+   (net N1634
+    (joined
+      (portRef D (instanceRef BU30))
+      (portRef O (instanceRef BU29))
+    )
+   )
+   (net N1645
+    (joined
+      (portRef D (instanceRef BU34))
+      (portRef O (instanceRef BU33))
+    )
+   )
+   (net N1656
+    (joined
+      (portRef D (instanceRef BU38))
+      (portRef O (instanceRef BU37))
+    )
+   )
+   (net N1667
+    (joined
+      (portRef D (instanceRef BU42))
+      (portRef O (instanceRef BU41))
+    )
+   )
+   (net N1678
+    (joined
+      (portRef D (instanceRef BU46))
+      (portRef O (instanceRef BU45))
+    )
+   )
+   (net N1689
+    (joined
+      (portRef D (instanceRef BU50))
+      (portRef O (instanceRef BU49))
+    )
+   )
+   (net N1700
+    (joined
+      (portRef D (instanceRef BU54))
+      (portRef O (instanceRef BU53))
+    )
+   )
+   (net N1711
+    (joined
+      (portRef D (instanceRef BU58))
+      (portRef O (instanceRef BU57))
+    )
+   )
+   (net N1722
+    (joined
+      (portRef D (instanceRef BU62))
+      (portRef O (instanceRef BU61))
+    )
+   )
+   (net N1733
+    (joined
+      (portRef D (instanceRef BU66))
+      (portRef O (instanceRef BU65))
+    )
+   )
+   (net N1744
+    (joined
+      (portRef D (instanceRef BU70))
+      (portRef O (instanceRef BU69))
+    )
+   )
+   (net N1755
+    (joined
+      (portRef D (instanceRef BU74))
+      (portRef O (instanceRef BU73))
+    )
+   )
+   (net N1766
+    (joined
+      (portRef D (instanceRef BU78))
+      (portRef O (instanceRef BU77))
+    )
+   )
+   (net N1777
+    (joined
+      (portRef D (instanceRef BU82))
+      (portRef O (instanceRef BU81))
+    )
+   )
+   (net N1788
+    (joined
+      (portRef D (instanceRef BU86))
+      (portRef O (instanceRef BU85))
+    )
+   )
+))))
+(design multiplier_spartan3e_7_0_3ea0672ed784ab3c (cellRef multiplier_spartan3e_7_0_3ea0672ed784ab3c (libraryRef test_lib))
+  (property X_CORE_INFO (string "mult_gen_v7_0, Xilinx CORE Generator 10.1.03_ip3"))
+  (property PART (string "xc3s100e-vq100-5") (owner "Xilinx"))
+))

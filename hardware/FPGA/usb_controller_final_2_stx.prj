@@ -1,0 +1,2 @@
+verilog isim_temp "usb_controller_final_2.v"
+verilog isim_temp "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

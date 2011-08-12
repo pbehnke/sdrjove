@@ -118,7 +118,7 @@ class RTConfigFrame(wx.Dialog):
     def OnSlideMixer(self, event):
         self.ce_freq_spin_ctrl.SetValue(self.ce_freq_slider.GetValue())
 
-    def OnSliderBW(self, event):
+    def OnSlideBW(self, event):
         self.bw_spin_ctrl.SetValue(self.bw_slider.GetValue())
 
 

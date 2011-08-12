@@ -1,0 +1,1477 @@
+Release 10.1.03 ngdbuild K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise C:/Documents
+and
+Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/senior_p
+roject_final_3_9_cw.ise -intstyle ise -dd _ngo -nt timestamp -i -p
+xc3s500e-fg320-4 senior_project_final_3_9_cw.ngc senior_project_final_3_9_cw.ngd
+
+Reading NGO file "C:/Documents and
+Settings/Danny/Desktop/senior_project_5/netlist_senior_proj_final_3_9_1/senior_p
+roject_final_3_9_cw.ngc" ...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/xlpersis
+tentdff.ngc"...
+Reading module "sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b.ngo" (
+"sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b.ngo" unchanged since
+last run )...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1\_ngo\sin
+e_cosine_look_up_table_spartan3e_5_0_14880184a763675b.ngo"...
+Reading module "multiplier_spartan3e_7_0_3ea0672ed784ab3c.ngo" (
+"multiplier_spartan3e_7_0_3ea0672ed784ab3c.ngo" unchanged since last run )...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1\_ngo\mul
+tiplier_spartan3e_7_0_3ea0672ed784ab3c.ngo"...
+Reading module "multiplier_spartan3e_10_1_e5c402dfa5ce3ecc.ngo" (
+"multiplier_spartan3e_10_1_e5c402dfa5ce3ecc.ngo" unchanged since last run )...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1\_ngo\mul
+tiplier_spartan3e_10_1_e5c402dfa5ce3ecc.ngo"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/multipli
+er_spartan3e_10_1_e5c402dfa5ce3ecc_mult_gen_v10_1_xst_1.ngc"...
+Reading module "binary_counter_spartan3e_10_0_4aaa5fd2f698d138.ngo" (
+"binary_counter_spartan3e_10_0_4aaa5fd2f698d138.ngo" unchanged since last run
+)...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1\_ngo\bin
+ary_counter_spartan3e_10_0_4aaa5fd2f698d138.ngo"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/binary_c
+ounter_spartan3e_10_0_4aaa5fd2f698d138_c_counter_binary_v10_0_xst_1.ngc"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/xlfir_mc
+h_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.ngc"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/xlfir_mc
+h_distributed_arithmetic_fir_filter_spartan3e_9_0_7845aeed558602934c92.ngc"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/xlfir_1c
+h_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0.ngc"...
+Loading design module "C:\Documents and
+Settings\Danny\Desktop\senior_project_5\netlist_senior_proj_final_3_9_1/xlfir_1c
+h_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f43361.ngc"...
+Reading in constraint information from 'senior_project_final_3_9_cw.ucf'...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/rst_ddc LOC = G18> is overridden on the
+   design object rst_ddc[0] by the constraint <NET "rst_ddc" LOC = "G18";>
+   [senior_project_final_3_9_cw.ucf(86)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/rst_ddc LOC = G18> is overridden on the
+   design object rst_ddc[0] by the constraint <NET "rst_ddc[0]"  LOC = "G18"  ;>
+   [senior_project_final_3_9_cw.ucf(123)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/if_clk[0] SLEW = FAST> is overridden on
+   the design object if_clk[0] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(121)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/if_clk LOC = T15> is overridden on the
+   design object if_clk[0] by the constraint <NET "if_clk" LOC = "T15";>
+   [senior_project_final_3_9_cw.ucf(85)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/if_clk LOC = T15> is overridden on the
+   design object if_clk[0] by the constraint <NET "if_clk[0]"  LOC = "T15" |>
+   [senior_project_final_3_9_cw.ucf(121)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/fb LOC = U14> is overridden on the
+   design object fb[0] by the constraint <NET "fb" LOC = "U14";>
+   [senior_project_final_3_9_cw.ucf(84)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/fb LOC = U14> is overridden on the
+   design object fb[0] by the constraint <NET "fb[0]"  LOC = "U14"  ;>
+   [senior_project_final_3_9_cw.ucf(117)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[7] LOC = R10> is overridden on
+   the design object f_data[7] by the constraint <NET "f_data[7]"  LOC = "R10"
+   |> [senior_project_final_3_9_cw.ucf(116)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[7] SLEW = FAST> is overridden on
+   the design object f_data[7] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(116)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[6] LOC = P10> is overridden on
+   the design object f_data[6] by the constraint <NET "f_data[6]"  LOC = "P10"
+   |> [senior_project_final_3_9_cw.ucf(115)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[6] SLEW = FAST> is overridden on
+   the design object f_data[6] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(115)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[5] LOC = R11> is overridden on
+   the design object f_data[5] by the constraint <NET "f_data[5]"  LOC = "R11"
+   |> [senior_project_final_3_9_cw.ucf(114)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[5] SLEW = FAST> is overridden on
+   the design object f_data[5] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(114)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[4] LOC = N11> is overridden on
+   the design object f_data[4] by the constraint <NET "f_data[4]"  LOC = "N11"
+   |> [senior_project_final_3_9_cw.ucf(113)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[4] SLEW = FAST> is overridden on
+   the design object f_data[4] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(113)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[3] LOC = T12> is overridden on
+   the design object f_data[3] by the constraint <NET "f_data[3]"  LOC = "T12"
+   |> [senior_project_final_3_9_cw.ucf(112)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[3] SLEW = FAST> is overridden on
+   the design object f_data[3] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(112)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[2] LOC = P13> is overridden on
+   the design object f_data[2] by the constraint <NET "f_data[2]"  LOC = "P13"
+   |> [senior_project_final_3_9_cw.ucf(111)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[2] SLEW = FAST> is overridden on
+   the design object f_data[2] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(111)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[1] LOC = R13> is overridden on
+   the design object f_data[1] by the constraint <NET "f_data[1]"  LOC = "R13"
+   |> [senior_project_final_3_9_cw.ucf(110)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[1] SLEW = FAST> is overridden on
+   the design object f_data[1] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(110)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[0] LOC = R14> is overridden on
+   the design object f_data[0] by the constraint <NET "f_data[0]"  LOC = "R14"
+   |> [senior_project_final_3_9_cw.ucf(109)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_data[0] SLEW = FAST> is overridden on
+   the design object f_data[0] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(109)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_addr[1] LOC = V13> is overridden on
+   the design object f_addr[1] by the constraint <NET "f_addr[1]"  LOC = "V13"
+   |> [senior_project_final_3_9_cw.ucf(108)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_addr[1] SLEW = FAST> is overridden on
+   the design object f_addr[1] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(108)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_addr[0] LOC = T14> is overridden on
+   the design object f_addr[0] by the constraint <NET "f_addr[0]"  LOC = "T14"
+   |> [senior_project_final_3_9_cw.ucf(107)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/f_addr[0] SLEW = FAST> is overridden on
+   the design object f_addr[0] by the constraint <SLEW = FAST ;>
+   [senior_project_final_3_9_cw.ucf(107)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[9] LOC = T18> is overridden on
+   the design object data_in[9] by the constraint <NET "data_in[9]"  LOC = "T18"
+    ;> [senior_project_final_3_9_cw.ucf(106)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[8] LOC = U18> is overridden on
+   the design object data_in[8] by the constraint <NET "data_in[8]"  LOC = "U18"
+    ;> [senior_project_final_3_9_cw.ucf(105)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[7] LOC = H15> is overridden on
+   the design object data_in[7] by the constraint <NET "data_in[7]"  LOC = "H15"
+    ;> [senior_project_final_3_9_cw.ucf(104)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[6] LOC = F14> is overridden on
+   the design object data_in[6] by the constraint <NET "data_in[6]"  LOC = "F14"
+    ;> [senior_project_final_3_9_cw.ucf(103)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[5] LOC = G16> is overridden on
+   the design object data_in[5] by the constraint <NET "data_in[5]"  LOC = "G16"
+    ;> [senior_project_final_3_9_cw.ucf(102)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[4] LOC = J12> is overridden on
+   the design object data_in[4] by the constraint <NET "data_in[4]"  LOC = "J12"
+    ;> [senior_project_final_3_9_cw.ucf(101)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[3] LOC = K14> is overridden on
+   the design object data_in[3] by the constraint <NET "data_in[3]"  LOC = "K14"
+    ;> [senior_project_final_3_9_cw.ucf(100)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[2] LOC = K15> is overridden on
+   the design object data_in[2] by the constraint <NET "data_in[2]"  LOC = "K15"
+    ;> [senior_project_final_3_9_cw.ucf(99)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[1] LOC = J15> is overridden on
+   the design object data_in[1] by the constraint <NET "data_in[1]"  LOC = "J15"
+    ;> [senior_project_final_3_9_cw.ucf(98)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[15] LOC = K12> is overridden on
+   the design object data_in[15] by the constraint <NET "data_in[15]"  LOC =
+   "K12"  ;> [senior_project_final_3_9_cw.ucf(97)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[14] LOC = L16> is overridden on
+   the design object data_in[14] by the constraint <NET "data_in[14]"  LOC =
+   "L16"  ;> [senior_project_final_3_9_cw.ucf(96)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[13] LOC = M14> is overridden on
+   the design object data_in[13] by the constraint <NET "data_in[13]"  LOC =
+   "M14"  ;> [senior_project_final_3_9_cw.ucf(95)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[12] LOC = M16> is overridden on
+   the design object data_in[12] by the constraint <NET "data_in[12]"  LOC =
+   "M16"  ;> [senior_project_final_3_9_cw.ucf(94)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[11] LOC = P17> is overridden on
+   the design object data_in[11] by the constraint <NET "data_in[11]"  LOC =
+   "P17"  ;> [senior_project_final_3_9_cw.ucf(93)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[10] LOC = R16> is overridden on
+   the design object data_in[10] by the constraint <NET "data_in[10]"  LOC =
+   "R16"  ;> [senior_project_final_3_9_cw.ucf(92)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/data_in[0] LOC = J14> is overridden on
+   the design object data_in[0] by the constraint <NET "data_in[0]"  LOC = "J14"
+    ;> [senior_project_final_3_9_cw.ucf(91)].
+WARNING:NgdBuild:1012 - The constraint <NET: UniqueName:
+   /senior_project_final_3_9_cw/EXPANDED/clk LOC = U9> is overridden on the
+   design object clk by the constraint <NET "clk"  LOC = "U9"  ;>
+   [senior_project_final_3_9_cw.ucf(90)].
+WARNING:NgdBuild:1012 - The constraint <NET "fb" LOC = "U14";>
+   [senior_project_final_3_9_cw.ucf(84)] is overridden on the design object
+   fb[0] by the constraint <NET "fb[0]"  LOC = "U14"  ;>
+   [senior_project_final_3_9_cw.ucf(117)].
+WARNING:NgdBuild:1012 - The constraint <NET "if_clk" LOC = "T15";>
+   [senior_project_final_3_9_cw.ucf(85)] is overridden on the design object
+   if_clk[0] by the constraint <NET "if_clk[0]"  LOC = "T15" |>
+   [senior_project_final_3_9_cw.ucf(121)].
+WARNING:NgdBuild:1012 - The constraint <NET "rst_ddc" LOC = "G18";>
+   [senior_project_final_3_9_cw.ucf(86)] is overridden on the design object
+   rst_ddc[0] by the constraint <NET "rst_ddc[0]"  LOC = "G18"  ;>
+   [senior_project_final_3_9_cw.ucf(123)].
+Done...
+Checking Partitions ...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_instance/BU3543'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_instance/BU3549'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_instance/BU3555'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/core_instance/BU3560'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[31].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_3/core_instance/valid_pipe/latency_gt
+   _0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/core_instance/BU6895'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/core_instance/BU6901'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/core_instance/BU6907'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/core_instance/BU6913'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/core_instance/BU6918'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg7/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg6/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg5/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg4/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg3/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[0].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[1].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[2].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[3].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[4].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[5].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[6].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[7].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[8].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[9].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[10].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[11].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[12].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[13].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[14].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[15].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[16].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[17].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[18].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[19].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[20].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[21].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[22].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[23].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[24].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[25].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[26].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[27].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[28].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[29].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/latency_gt_0.reg2/par
+   tial_one.last_srl17e/reg_array[30].fde_used.u2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_2/core_instance/valid_pipe/latency_gt
+   _0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/BU6662'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/BU6668'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/BU6674'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/BU6680'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/core_instance/BU6685'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0_1/core_instance/valid_pipe/latency_gt
+   _0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/core_instance/BU6662'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/core_instance/BU6668'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/core_instance/BU6674'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/core_instance/BU6680'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/core_instance/BU6685'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'senior_project_final_3_9_x0/dafir_v9_0/core_instance/valid_pipe/latency_gt_0
+   .fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp' has unconnected
+   output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 448
+
+Total memory usage is 113708 kilobytes
+
+Writing NGD file "senior_project_final_3_9_cw.ngd" ...
+
+Writing NGDBUILD log file "senior_project_final_3_9_cw.bld"...

@@ -1,0 +1,131 @@
+
+SETPROJECT ./
+SET BusFormat = BusFormatParen
+SET XilinxFamily = Spartan3E
+SET devicefamily = spartan3e
+SET OutputOption = OutputProducts
+SET FlowVendor = Other
+SET FormalVerification = None
+SET OutputProducts = ImpNetlist VHDLSim VerilogSim
+SET SimElabOptions = CreateNdf
+SELECT Sine-Cosine_Look-Up_Table Spartan3E Xilinx,_Inc. 5.0
+# 10.1.03i
+CSET aclr_pin = false
+CSET clock_enable = true
+CSET create_rpm = true
+CSET function = Sine_and_Cosine
+CSET handshaking_enabled = false
+CSET input_options = Non_Registered
+CSET memory_type = block_rom
+CSET negative_cosine = false
+CSET negative_sine = false
+CSET output_options = Non_Registered
+CSET output_symmetry = Symmetric
+CSET output_width = 19
+CSET pipeline_stages = 1
+CSET sclr_pin = false
+CSET theta_input_width = 10
+CSET component_name = sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b
+GENERATE
+
+SETPROJECT ./
+SET BusFormat = BusFormatParen
+SET XilinxFamily = Spartan3E
+SET devicefamily = spartan3e
+SET OutputOption = OutputProducts
+SET FlowVendor = Other
+SET FormalVerification = None
+SET OutputProducts = ImpNetlist VHDLSim VerilogSim
+SET SimElabOptions = CreateNdf
+SELECT Multiplier Spartan3E Xilinx,_Inc. 10.1
+# 10.1.03i
+CSET ccmimp = Distributed_Memory
+CSET clockenable = true
+CSET constvalue = 129
+CSET internaluser = 0
+CSET multiplier_construction = Use_Mults
+CSET multtype = Parallel_Multiplier
+CSET optgoal = Speed
+CSET outputwidthhigh = 37
+CSET outputwidthlow = 0
+CSET pipestages = 5
+CSET portatype = Signed
+CSET portawidth = 19
+CSET portbtype = Signed
+CSET portbwidth = 19
+CSET roundpoint = 0
+CSET sclrcepriority = CE_Overrides_SCLR
+CSET syncclear = true
+CSET use_custom_output_width = false
+CSET userounding = false
+CSET zerodetect = false
+CSET component_name = multiplier_spartan3e_10_1_e5c402dfa5ce3ecc
+GENERATE
+
+SETPROJECT ./
+SET BusFormat = BusFormatParen
+SET XilinxFamily = Spartan3E
+SET devicefamily = spartan3e
+SET OutputOption = OutputProducts
+SET FlowVendor = Other
+SET FormalVerification = None
+SET OutputProducts = ImpNetlist VHDLSim VerilogSim
+SET SimElabOptions = CreateNdf
+SELECT Multiplier Spartan3E Xilinx,_Inc. 7.0
+# 10.1.03i
+CSET asynchronous_clear = false
+CSET clk_cycles_per_input = 1
+CSET clock_enable = true
+CSET create_rpm = false
+CSET memory_type = Distributed_Memory
+CSET multiplier_type = Parallel
+CSET nd = false
+CSET output_hold_register = false
+CSET output_hold_register = true
+CSET output_options = Registered
+CSET output_width = 35
+CSET pipelined = Maximum
+CSET port_a_data = Signed
+CSET port_a_width = 16
+CSET port_b_constant = true
+CSET port_b_constant_value = 131072
+CSET port_b_data = Unsigned
+CSET port_b_width = 19
+CSET rdy = false
+CSET register_input = false
+CSET rfd = false
+CSET synchronous_clear = true
+CSET component_name = multiplier_spartan3e_7_0_3ea0672ed784ab3c
+GENERATE
+
+SETPROJECT ./
+SET BusFormat = BusFormatParen
+SET XilinxFamily = Spartan3E
+SET devicefamily = spartan3e
+SET OutputOption = OutputProducts
+SET FlowVendor = Other
+SET FormalVerification = None
+SET OutputProducts = ImpNetlist VHDLSim VerilogSim
+SET SimElabOptions = CreateNdf
+SELECT Binary_Counter Spartan3E Xilinx,_Inc. 10.0
+# 10.1.03i
+CSET ainit_value = 0
+CSET ce = true
+CSET count_mode = UP
+CSET fb_latency = 0
+CSET final_count_value = 8
+CSET implementation = Fabric
+CSET increment_value = C8
+CSET latency = 1
+CSET load = false
+CSET output_width = 10
+CSET restrict_count = false
+CSET sclr = false
+CSET sinit = true
+CSET sinit_value = 0
+CSET sset = false
+CSET sync_ce_priority = Sync_Overrides_CE
+CSET sync_threshold_output = false
+CSET syncctrlpriority = Reset_Overrides_Set
+CSET component_name = binary_counter_spartan3e_10_0_4aaa5fd2f698d138
+GENERATE

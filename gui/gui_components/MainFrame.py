@@ -529,6 +529,7 @@ class MainFrame(wx.Frame):
             print "Stopped."
 
         self.running=False
+        self.configState=0
 
         if event!= None:
             event.Skip()

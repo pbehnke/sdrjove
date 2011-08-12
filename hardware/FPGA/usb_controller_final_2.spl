@@ -1,0 +1,22 @@
+[Inputs]
+clk_usb
+flag
+en
+flaga
+=data_in[7:0]=
+[Outputs]
+ifclk
+sloe
+pktend
+slcs
+slrd
+slwr
+led3
+led1
+led7
+=fd[7:0]=
+=fifoad[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel usb_controller_final_2
+

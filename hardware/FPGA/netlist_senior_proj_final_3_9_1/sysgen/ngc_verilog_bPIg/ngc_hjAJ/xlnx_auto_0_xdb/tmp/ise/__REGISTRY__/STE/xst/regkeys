@@ -1,0 +1,6 @@
+CommandLine
+c:\xilinx\10.1\ise\bin\nt\unwrapped\xst.exe -ifn xst_xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.scr -ofn xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.results -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

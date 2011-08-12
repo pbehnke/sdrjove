@@ -1,0 +1,2 @@
+C:/Xilinx/10.1/DSP_Tools/sysgen/bin/saferun.exe -a ngdbuild.log -- c:/xilinx/10.1/ise/bin/nt/ngdbuild.exe xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91 xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.ngd
+C:/Xilinx/10.1/DSP_Tools/sysgen/bin/saferun.exe -a netgen.log -- c:/xilinx/10.1/ise/bin/nt/netgen.exe -ofmt verilog -sim xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.ngd

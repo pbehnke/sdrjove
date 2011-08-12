@@ -1,0 +1,57 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 10.1.3.1386            C:/Xilinx/10.1/DSP_Tools/common/bin/../../sysgen
+AccelDSP 10.1.3.1386                    C:/Xilinx/10.1/DSP_Tools/AccelDSP
+Matlab 7.6.0.324 (R2008a)               C:/Program Files/MATLAB/R2008a
+ISE 10.1.03i                            C:/Xilinx/10.1/ISE
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Multiple Clock Support Design Rule Check Failed
+     Block: 'senior_project_final_3_9/DAFIR v9_0 '
+Error 0002: Multiple Clock Support Design Rule Check Failed
+     Block: 'senior_project_final_3_9/DAFIR v9_0 1'
+Error 0003: Multiple Clock Support Design Rule Check Failed
+     Block: 'senior_project_final_3_9/DAFIR v9_0 2'
+Error 0004: Multiple Clock Support Design Rule Check Failed
+     Block: 'senior_project_final_3_9/DAFIR v9_0 3'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'senior_project_final_3_9/DAFIR v9_0 '
+
+Details:
+DAFIR block cannot be adapted to the use of multiple synchronous
+clocks in sysgen.
+--------------------------------------------------------------------------------
+
+Error 0002:
+
+Reported by:
+  'senior_project_final_3_9/DAFIR v9_0 1'
+
+Details:
+DAFIR block cannot be adapted to the use of multiple synchronous
+clocks in sysgen.
+--------------------------------------------------------------------------------
+
+Error 0003:
+
+Reported by:
+  'senior_project_final_3_9/DAFIR v9_0 2'
+
+Details:
+DAFIR block cannot be adapted to the use of multiple synchronous
+clocks in sysgen.
+--------------------------------------------------------------------------------
+
+Error 0004:
+
+Reported by:
+  'senior_project_final_3_9/DAFIR v9_0 3'
+
+Details:
+DAFIR block cannot be adapted to the use of multiple synchronous
+clocks in sysgen.
+--------------------------------------------------------------------------------

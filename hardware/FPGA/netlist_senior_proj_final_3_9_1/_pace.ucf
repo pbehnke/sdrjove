@@ -1,0 +1,133 @@
+
+
+# Global period constraint
+NET "clk" TNM_NET = "clk_cd4c7e50";
+TIMESPEC "TS_clk_cd4c7e50" = PERIOD "clk_cd4c7e50" 10.0 ns HIGH 50 %;
+
+# ce_10_cd4c7e50_group and inner group constraint
+NET "ce_10_sg_x0*" TNM_NET = "ce_10_cd4c7e50_group";
+TIMESPEC "TS_ce_10_cd4c7e50_group_to_ce_10_cd4c7e50_group" = FROM "ce_10_cd4c7e50_group" TO "ce_10_cd4c7e50_group" 100.0 ns;
+
+# ce_20_cd4c7e50_group and inner group constraint
+NET "ce_20_sg_x0*" TNM_NET = "ce_20_cd4c7e50_group";
+TIMESPEC "TS_ce_20_cd4c7e50_group_to_ce_20_cd4c7e50_group" = FROM "ce_20_cd4c7e50_group" TO "ce_20_cd4c7e50_group" 200.0 ns;
+
+# ce_2_cd4c7e50_group and inner group constraint
+NET "ce_2_sg_x0*" TNM_NET = "ce_2_cd4c7e50_group";
+TIMESPEC "TS_ce_2_cd4c7e50_group_to_ce_2_cd4c7e50_group" = FROM "ce_2_cd4c7e50_group" TO "ce_2_cd4c7e50_group" 20.0 ns;
+
+# ce_4_cd4c7e50_group and inner group constraint
+NET "ce_4_sg_x0*" TNM_NET = "ce_4_cd4c7e50_group";
+TIMESPEC "TS_ce_4_cd4c7e50_group_to_ce_4_cd4c7e50_group" = FROM "ce_4_cd4c7e50_group" TO "ce_4_cd4c7e50_group" 40.0 ns;
+
+# ce_5_cd4c7e50_group and inner group constraint
+NET "ce_5_sg_x0*" TNM_NET = "ce_5_cd4c7e50_group";
+TIMESPEC "TS_ce_5_cd4c7e50_group_to_ce_5_cd4c7e50_group" = FROM "ce_5_cd4c7e50_group" TO "ce_5_cd4c7e50_group" 50.0 ns;
+
+# Group-to-group constraints
+TIMESPEC "TS_ce_10_cd4c7e50_group_to_ce_20_cd4c7e50_group" = FROM "ce_10_cd4c7e50_group" TO "ce_20_cd4c7e50_group" 100.0 ns;
+TIMESPEC "TS_ce_10_cd4c7e50_group_to_ce_2_cd4c7e50_group" = FROM "ce_10_cd4c7e50_group" TO "ce_2_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_10_cd4c7e50_group_to_ce_4_cd4c7e50_group" = FROM "ce_10_cd4c7e50_group" TO "ce_4_cd4c7e50_group" 40.0 ns;
+TIMESPEC "TS_ce_10_cd4c7e50_group_to_ce_5_cd4c7e50_group" = FROM "ce_10_cd4c7e50_group" TO "ce_5_cd4c7e50_group" 50.0 ns;
+TIMESPEC "TS_ce_20_cd4c7e50_group_to_ce_10_cd4c7e50_group" = FROM "ce_20_cd4c7e50_group" TO "ce_10_cd4c7e50_group" 100.0 ns;
+TIMESPEC "TS_ce_20_cd4c7e50_group_to_ce_2_cd4c7e50_group" = FROM "ce_20_cd4c7e50_group" TO "ce_2_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_20_cd4c7e50_group_to_ce_4_cd4c7e50_group" = FROM "ce_20_cd4c7e50_group" TO "ce_4_cd4c7e50_group" 40.0 ns;
+TIMESPEC "TS_ce_20_cd4c7e50_group_to_ce_5_cd4c7e50_group" = FROM "ce_20_cd4c7e50_group" TO "ce_5_cd4c7e50_group" 50.0 ns;
+TIMESPEC "TS_ce_2_cd4c7e50_group_to_ce_10_cd4c7e50_group" = FROM "ce_2_cd4c7e50_group" TO "ce_10_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_2_cd4c7e50_group_to_ce_20_cd4c7e50_group" = FROM "ce_2_cd4c7e50_group" TO "ce_20_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_2_cd4c7e50_group_to_ce_4_cd4c7e50_group" = FROM "ce_2_cd4c7e50_group" TO "ce_4_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_2_cd4c7e50_group_to_ce_5_cd4c7e50_group" = FROM "ce_2_cd4c7e50_group" TO "ce_5_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_4_cd4c7e50_group_to_ce_10_cd4c7e50_group" = FROM "ce_4_cd4c7e50_group" TO "ce_10_cd4c7e50_group" 40.0 ns;
+TIMESPEC "TS_ce_4_cd4c7e50_group_to_ce_20_cd4c7e50_group" = FROM "ce_4_cd4c7e50_group" TO "ce_20_cd4c7e50_group" 40.0 ns;
+TIMESPEC "TS_ce_4_cd4c7e50_group_to_ce_2_cd4c7e50_group" = FROM "ce_4_cd4c7e50_group" TO "ce_2_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_4_cd4c7e50_group_to_ce_5_cd4c7e50_group" = FROM "ce_4_cd4c7e50_group" TO "ce_5_cd4c7e50_group" 40.0 ns;
+TIMESPEC "TS_ce_5_cd4c7e50_group_to_ce_10_cd4c7e50_group" = FROM "ce_5_cd4c7e50_group" TO "ce_10_cd4c7e50_group" 50.0 ns;
+TIMESPEC "TS_ce_5_cd4c7e50_group_to_ce_20_cd4c7e50_group" = FROM "ce_5_cd4c7e50_group" TO "ce_20_cd4c7e50_group" 50.0 ns;
+TIMESPEC "TS_ce_5_cd4c7e50_group_to_ce_2_cd4c7e50_group" = FROM "ce_5_cd4c7e50_group" TO "ce_2_cd4c7e50_group" 20.0 ns;
+TIMESPEC "TS_ce_5_cd4c7e50_group_to_ce_4_cd4c7e50_group" = FROM "ce_5_cd4c7e50_group" TO "ce_4_cd4c7e50_group" 40.0 ns;
+
+# Offset in constraints
+NET "data_in[0]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[1]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[2]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[3]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[4]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[5]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[6]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[7]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[8]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[9]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[10]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[11]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[12]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[13]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[14]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "data_in[15]" OFFSET = IN : 10.0 : BEFORE "clk";
+NET "fb[0]" OFFSET = IN : 50.0 : BEFORE "clk";
+NET "rst_ddc[0]" OFFSET = IN : 10.0 : BEFORE "clk";
+
+# Offset out constraints
+NET "f_addr[0]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_addr[1]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[0]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[1]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[2]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[3]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[4]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[5]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[6]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "f_data[7]" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "if_clk[0]" OFFSET = OUT : 10.0 : AFTER "clk";
+# Offset inout constraints
+
+# LOC constraints
+NET "fb" LOC = "U14";
+NET "if_clk" LOC = "T15";
+NET "rst_ddc" LOC = "G18";
+#PACE: Start of Constraints generated by PACE
+
+#PACE: Start of PACE I/O Pin Assignments
+NET "clk"  LOC = "U9"  ; 
+NET "data_in[0]"  LOC = "J14"  ; 
+NET "data_in[10]"  LOC = "R16"  ; 
+NET "data_in[11]"  LOC = "P17"  ; 
+NET "data_in[12]"  LOC = "M16"  ; 
+NET "data_in[13]"  LOC = "M14"  ; 
+NET "data_in[14]"  LOC = "L16"  ; 
+NET "data_in[15]"  LOC = "K12"  ; 
+NET "data_in[1]"  LOC = "J15"  ; 
+NET "data_in[2]"  LOC = "K15"  ; 
+NET "data_in[3]"  LOC = "K14"  ; 
+NET "data_in[4]"  LOC = "J12"  ; 
+NET "data_in[5]"  LOC = "G16"  ; 
+NET "data_in[6]"  LOC = "F14"  ; 
+NET "data_in[7]"  LOC = "H15"  ; 
+NET "data_in[8]"  LOC = "U18"  ; 
+NET "data_in[9]"  LOC = "T18"  ; 
+NET "f_addr[0]"  LOC = "T14" | SLEW = FAST ; 
+NET "f_addr[1]"  LOC = "V13" | SLEW = FAST ; 
+NET "f_data[0]"  LOC = "R14" | SLEW = FAST ; 
+NET "f_data[1]"  LOC = "R13" | SLEW = FAST ; 
+NET "f_data[2]"  LOC = "P13" | SLEW = FAST ; 
+NET "f_data[3]"  LOC = "T12" | SLEW = FAST ; 
+NET "f_data[4]"  LOC = "N11" | SLEW = FAST ; 
+NET "f_data[5]"  LOC = "R11" | SLEW = FAST ; 
+NET "f_data[6]"  LOC = "P10" | SLEW = FAST ; 
+NET "f_data[7]"  LOC = "R10" | SLEW = FAST ; 
+NET "fb[0]"  LOC = "U14"  ;
+NET "gateway_out1[0]"  LOC = "R4"  ;
+NET "gateway_out2[0]"  LOC = "F4"  ;
+NET "gateway_out[0]"  LOC = "P15"  ;
+NET "if_clk[0]"  LOC = "T15" | SLEW = FAST ;
+NET "pktend[0]"  LOC = "V12"  ;
+NET "rst_ddc[0]"  LOC = "G18"  ;
+NET "slcs[0]"  LOC = "T16"  ;
+NET "sloe[0]"  LOC = "V15"  ;
+NET "slrd[0]"  LOC = "N9"  ;
+NET "slwr[0]"  LOC = "V9"  ;
+
+#PACE: Start of PACE Area Constraints
+
+#PACE: Start of PACE Prohibit Constraints
+
+#PACE: End of Constraints generated by PACE

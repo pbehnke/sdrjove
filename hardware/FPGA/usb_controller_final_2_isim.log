@@ -1,0 +1,23 @@
+Command line:
+   xsim
+     -log  C:/Documents and Settings/Danny/Desktop/senior_project_5/usb_controller_final_2_isim.log
+     -sysgen
+
+Wed Aug 03 15:30:50 2011
+
+Total Line Count : 77
+
+ Elaboration Time: 0.010015 sec
+
+ Current Memory Usage: 911.835 Meg
+
+ Total Signals          : 53
+ Total Nets             : 68
+ Total Signal Drivers   : 29
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 33
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 167
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

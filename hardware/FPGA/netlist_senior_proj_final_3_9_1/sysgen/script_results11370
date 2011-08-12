@@ -1,0 +1,167 @@
+[
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  [
+    [
+      'xlpersistentdff.ngc',
+      undef,
+    ],
+    'perl_results.v',
+  ],
+  [
+    [
+      'binary_counter_spartan3e_10_0_4aaa5fd2f698d138.edn',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'binary_counter_spartan3e_10_0_4aaa5fd2f698d138.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'binary_counter_spartan3e_10_0_4aaa5fd2f698d138.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'binary_counter_spartan3e_10_0_4aaa5fd2f698d138_c_counter_binary_v10_0_xst_1.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'memlp.mif',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'mempp.mif',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_10_1_e5c402dfa5ce3ecc.edn',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_10_1_e5c402dfa5ce3ecc.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_10_1_e5c402dfa5ce3ecc.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_10_1_e5c402dfa5ce3ecc_mult_gen_v10_1_xst_1.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_7_0_3ea0672ed784ab3c.edn',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_7_0_3ea0672ed784ab3c.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'multiplier_spartan3e_7_0_3ea0672ed784ab3c.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b.edn',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'sine_cosine_look_up_table_spartan3e_5_0_14880184a763675b_TRIG_ROM.mif',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+  ],
+  [
+    'xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0.ngc',
+    'xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f4caf0.v',
+    'xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_7845aeed558602934c92.ngc',
+    'xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_7845aeed558602934c92.v',
+    'xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.ngc',
+    'xlfir_mch_distributed_arithmetic_fir_filter_spartan3e_9_0_a0f16f33fe1e1e5f2b91.v',
+    'xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f43361.ngc',
+    'xlfir_1ch_distributed_arithmetic_fir_filter_spartan3e_9_0_f05c7a1835c759f43361.v',
+  ],
+]
