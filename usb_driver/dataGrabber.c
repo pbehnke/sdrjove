@@ -27,6 +27,7 @@ static FILE *fp;
 
 char filename[50];
 int live_mode=0;
+int command_line_only=0;
 
 /* This is the string sent every 61 bytes by the FPGA.  Used to verify the data was sent correctly */
 const unsigned char EOP[] = {'N','Y','A','N'};
@@ -251,7 +252,7 @@ void init(int argc, char *argv[])
     extern char *optarg;
     extern int optind, opterr, optopt;
 
-    while ((opt = getopt(argc, argv, "f:l::")) != -1) {
+    while ((opt = getopt(argc, argv, "f:l:c::")) != -1) {
         switch (opt) {
         case 'f':
             strcpy(filename,optarg);
@@ -259,6 +260,9 @@ void init(int argc, char *argv[])
         case 'l':
 	    live_mode=1;
             break;
+	case 'c':
+	    command_line_only=1;
+	    break;
         default:
             fprintf(stderr,
                     "Usage: %s -f filename [-l]\n",
@@ -351,7 +355,9 @@ int main(int argc, char *argv[]){
 	}
 
 	//wait for a SIGUSR1 
-	pause();
+	if(!command_line_only){
+		pause();
+	}
 
 	//open the file
 	if(_continue){
