@@ -252,18 +252,22 @@ void init(int argc, char *argv[])
     extern char *optarg;
     extern int optind, opterr, optopt;
 
-    while ((opt = getopt(argc, argv, "f:l:c::")) != -1) {
+    while ((opt = getopt(argc, argv, "f:l::c::")) != -1) {
         switch (opt) {
         case 'f':
             strcpy(filename,optarg);
+	    printf("[DRIVER: Using file - %s]\n",filename);
             break;
         case 'l':
 	    live_mode=1;
+	    printf("[DRIVER: Live Mode Active]\n");
             break;
 	case 'c':
 	    command_line_only=1;
+	    printf("[DRIVER: Command line Mode Active]\n");
 	    break;
         default:
+	    printf("Unknown option: %c\n",opt);
             fprintf(stderr,
                     "Usage: %s -f filename [-l]\n",
                     argv[0]);
