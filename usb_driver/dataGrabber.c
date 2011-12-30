@@ -163,13 +163,45 @@ void transfer_factory(void *param){
 	//create a packet
 
 	fill_buffer1=malloc(3072*NUM_PACKETS);
+	if(fill_buffer1==NULL){
+		printf("Malloc 1 failed.\n");
+		exit(1);
+	}
 	fill_buffer2=malloc(3072*NUM_PACKETS);
+	if(fill_buffer2==NULL){
+		printf ("Malloc 2 failed.\n");
+		exit(1);
+	}
 	fill_buffer3=malloc(3072*NUM_PACKETS);
+	if(fill_buffer3==NULL){
+		printf ("Malloc 3 failed.\n");
+		exit(1);
+	}
 	fill_buffer4=malloc(3072*NUM_PACKETS);
+	if(fill_buffer4==NULL){
+		printf ("Malloc 4 failed.\n");
+		exit(1);
+	}	
 	fill_buffer5=malloc(3072*NUM_PACKETS);
+	if(fill_buffer5==NULL){
+		printf ("Malloc 5 failed.\n");
+		exit(1);
+	}
 	fill_buffer6=malloc(3072*NUM_PACKETS);
+	if(fill_buffer6==NULL){
+		printf ("Malloc 6 failed.\n");
+		exit(1);
+	}
 	fill_buffer7=malloc(3072*NUM_PACKETS);
+	if(fill_buffer7==NULL){
+		printf ("Malloc 7 failed.\n");
+		exit(1);
+	}
 	fill_buffer8=malloc(3072*NUM_PACKETS);
+	if(fill_buffer8==NULL){
+		printf("Malloc 8 failed.\n");
+		exit(1);
+	}
 
 	//create a new packet
 	iso_xfer1=libusb_alloc_transfer(NUM_PACKETS);
