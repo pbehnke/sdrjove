@@ -29,7 +29,7 @@ char filename[50];
 int live_mode=0;
 int command_line_only=0;
 
-/* This is the string sent every 61 bytes by the FPGA.  Used to verify the data was sent correctly */
+/* This is the string sent every 64 bytes by the FPGA.  Used to verify the data was sent correctly */
 const unsigned char EOP[] = {'N','Y','A','N'};
 
 /* Constant string of 0x00.  We only get a lot of zeros when we don't send enough data */
@@ -90,8 +90,6 @@ void callback_fn(struct libusb_transfer *transfer){
 	unsigned char tmp[64];
 	unsigned char i_1,i_2,j_1,j_2; //dont confuse these with our counter vars.
 
-	//gettimeofday(&t1, NULL);
-
 	//find position of the first packet marker
 	i=getNextPacket(i,transfer);	
 
@@ -117,35 +115,12 @@ void callback_fn(struct libusb_transfer *transfer){
 			fwrite(tmp,(size_t)1,(size_t)64,fp);
 
 		}
-		/*else if(!memcmp(&(transfer->buffer[i]),EOP,2)){
-			memcpy(tmp,&(transfer->buffer[i-64]),64);
-
-			//reshuffle the data for the i and j components
-			for(j=0;j<64;j+=4){
-				i_1=tmp[j];
-				i_2=tmp[j+2];
-				j_1=tmp[j+1];
-				j_2=tmp[j+3];
-
-				tmp[j+1]=i_2;
-				tmp[j+2]=j_1;
-				tmp[j+3]=j_2;
-			}
-			//CHANGE ME BACK!!
-			fwrite(tmp,(size_t)1,(size_t)64,fp);
-		}*/
 		else{
 			i=getNextPacket(i,transfer);
 		}	
 	}while(i<(3072*NUM_PACKETS)-1);
 
 	fflush(fp);
-
-	//gettimeofday(&t2, NULL);  
-
-	//elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
-    	//elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
-	//printf("%f\n",elapsedTime);
 
     //continue by resubmitting the xfer request
 	if(_continue){
